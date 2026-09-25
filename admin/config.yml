@@ -1,0 +1,149 @@
+# Central UVERGS: o que a diretoria pode cadastrar sem mexer no código.
+# Cada "Publicar" grava no GitHub e a Vercel atualiza o site em cerca de 1 minuto.
+
+backend:
+  name: github
+  repo: Wspinheiro111/site-uvergs-2027
+  branch: main
+  auth_endpoint: api/auth
+  commit_messages:
+    create: 'Central: novo item em {{collection}}: {{slug}}'
+    update: 'Central: atualiza {{collection}}: {{slug}}'
+    delete: 'Central: remove {{collection}}: {{slug}}'
+    uploadMedia: 'Central: envia foto {{path}}'
+    deleteMedia: 'Central: remove foto {{path}}'
+
+locale: pt
+logo_url: /img/logo.png
+media_folder: img/uploads
+public_folder: /img/uploads
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: '-'
+
+collections:
+
+  - name: eventos
+    label: Eventos
+    label_singular: Evento
+    description: >
+      Os eventos com data futura aparecem em "Próximos eventos", na contagem regressiva
+      e no formulário de pré-inscrição. Depois que a data final passa, o evento vai
+      sozinho para "Eventos realizados".
+    folder: conteudo/eventos
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: titulo
+    slug: '{{titulo}}'
+    summary: '{{titulo}} · {{inicio | date("DD/MM/YYYY")}}'
+    sortable_fields: ['inicio', 'titulo']
+    editor: { preview: false }
+    fields:
+      - { label: Nome do evento, name: titulo, widget: string, hint: 'Ex.: Outubro Rosa UVERGS' }
+      - { label: Nome curto, name: nome_curto, widget: string, required: false, hint: 'Aparece no formulário de pré-inscrição. Ex.: Outubro Rosa. Se ficar vazio, usa o nome do evento.' }
+      - { label: Tipo de evento, name: tipo, widget: string, hint: 'Ex.: Encontro de formação, Seminário Estadual, Curso' }
+      - { label: Etiqueta, name: selo, widget: string, default: 'Vagas abertas', hint: 'Texto do selo no cartão. Ex.: Vagas abertas, Últimas vagas, Shows confirmados' }
+      - { label: Mostrar no site, name: publicado, widget: boolean, default: true, hint: 'Desligue para esconder o evento sem apagar.' }
+      - { label: Início (dia e hora), name: inicio, widget: datetime, format: 'YYYY-MM-DDTHH:mm', date_format: 'DD/MM/YYYY', time_format: 'HH:mm', hint: 'Horário de Brasília. A contagem regressiva usa esta hora.' }
+      - { label: Último dia, name: fim, widget: datetime, format: 'YYYY-MM-DD', date_format: 'DD/MM/YYYY', time_format: false, required: false, hint: 'Deixe vazio se o evento é de um dia só.' }
+      - { label: Texto da data, name: rotulo_data, widget: string, required: false, hint: 'Só se quiser trocar o texto automático da data. Ex.: Março' }
+      - { label: Local completo, name: local, widget: string, required: false, hint: 'Ex.: AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre' }
+      - { label: Local resumido, name: local_curto, widget: string, required: false, hint: 'Aparece na contagem regressiva. Ex.: AIAMU, Porto Alegre' }
+      - { label: Link do mapa, name: mapa, widget: string, required: false, hint: 'Cole o link do Google Maps (opcional).' }
+      - { label: Resumo, name: resumo, widget: text, required: false, hint: 'Duas ou três frases que aparecem no cartão do evento.' }
+      - { label: Foto de capa, name: capa, widget: image, hint: 'De preferência deitada (horizontal). Fotos grandes são reduzidas automaticamente.' }
+      - { label: Descrição da foto, name: capa_alt, widget: string, required: false, hint: 'Para leitores de tela. Ex.: Auditório lotado na abertura do seminário' }
+      - { label: Foto encostada no topo, name: capa_topo, widget: boolean, default: false, required: false, hint: 'Ligue se o rosto das pessoas está sendo cortado na miniatura.' }
+      - label: Valores da inscrição
+        name: precos
+        widget: object
+        required: false
+        collapsed: true
+        hint: 'Deixe em branco se não houver valor definido.'
+        fields:
+          - { label: Câmara associada (R$), name: associada, widget: number, value_type: int, required: false }
+          - { label: Câmara não associada (R$), name: nao_associada, widget: number, value_type: int, required: false }
+      - { label: Programação e detalhes, name: programacao, widget: markdown, required: false, buttons: [bold, italic, heading-three, bulleted-list, numbered-list, link], editor_components: [], hint: 'Aparece na página própria do evento. Pode usar títulos e listas.' }
+      - label: Fotos do evento
+        name: fotos
+        widget: list
+        required: false
+        collapsed: true
+        summary: '{{legenda}}'
+        hint: 'Depois que o evento acontecer, coloque aqui as fotos. Elas aparecem na página do evento.'
+        fields:
+          - { label: Foto, name: imagem, widget: image }
+          - { label: Legenda, name: legenda, widget: string, required: false }
+      - label: Ofício de participação
+        name: oficio
+        widget: object
+        required: false
+        collapsed: true
+        hint: 'Opcional. Melhora o texto do ofício que o vereador gera para pedir autorização à Câmara.'
+        fields:
+          - { label: Tipo no ofício, name: tipo, widget: string, required: false, hint: 'Ex.: Seminário Estadual de Vereadores. Se ficar vazio, usa o tipo do evento.' }
+          - { label: Local com preposição, name: local, widget: string, required: false, hint: 'Ex.: na AIAMU, Rua dos Andradas, 1234, 8º andar, Centro, Porto Alegre/RS' }
+          - { label: Temas, name: temas, widget: list, required: false, field: { label: Tema, name: tema, widget: string } }
+          - { label: Observação, name: extra, widget: text, required: false }
+      - label: Avançado
+        name: avancado
+        widget: object
+        required: false
+        collapsed: true
+        hint: 'Normalmente não precisa mexer.'
+        fields:
+          - { label: Link para mais informações, name: link_externo, widget: string, required: false, hint: 'Ex.: notícia do evento em uvergs.com.br. Nos eventos realizados, o cartão abre este link.' }
+          - { label: Página especial do evento, name: pagina, widget: string, required: false, hint: 'Só para eventos com página feita sob medida. Ex.: eventos/outubro-rosa.html' }
+
+  - name: noticias
+    label: Notícias
+    label_singular: Notícia
+    description: As quatro notícias mais recentes aparecem em "Acontece na UVERGS".
+    folder: conteudo/noticias
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: titulo
+    slug: '{{titulo}}'
+    summary: '{{titulo}} · {{data | date("DD/MM/YYYY")}}'
+    sortable_fields: ['data', 'titulo']
+    editor: { preview: false }
+    fields:
+      - { label: Título, name: titulo, widget: string }
+      - { label: Data, name: data, widget: datetime, format: 'YYYY-MM-DD', date_format: 'DD/MM/YYYY', time_format: false }
+      - { label: Mostrar no site, name: publicado, widget: boolean, default: true }
+      - { label: Foto, name: capa, widget: image }
+      - { label: Texto da notícia, name: texto, widget: markdown, required: false, buttons: [bold, italic, heading-three, bulleted-list, numbered-list, link, quote], editor_components: [], hint: 'Se escrever o texto aqui, a notícia ganha uma página própria no site.' }
+      - { label: Link externo, name: link_externo, widget: string, required: false, hint: 'Use em vez do texto se a notícia já está publicada em outro site (ex.: uvergs.com.br).' }
+
+  - name: paginas
+    label: Galeria e avisos
+    editor: { preview: false }
+    files:
+      - name: galeria
+        label: Galeria de fotos
+        file: conteudo/galeria.json
+        description: Fotos da seção "Como são os nossos eventos". A primeira aparece em destaque.
+        fields:
+          - label: Fotos
+            name: fotos
+            widget: list
+            summary: '{{legenda}}'
+            fields:
+              - { label: Foto, name: imagem, widget: image }
+              - { label: Legenda, name: legenda, widget: string }
+              - { label: Descrição da foto, name: alt, widget: string, required: false, hint: 'Para leitores de tela.' }
+              - { label: Formato, name: formato, widget: select, default: normal, options: [ { label: Normal, value: normal }, { label: Grande (destaque), value: grande }, { label: Alta (em pé), value: alta } ] }
+      - name: aviso
+        label: Aviso no topo do site
+        file: conteudo/aviso.json
+        description: Uma faixa amarela no alto da página inicial, para recados rápidos.
+        fields:
+          - { label: Mostrar aviso, name: ativo, widget: boolean, default: false }
+          - { label: Texto do aviso, name: texto, widget: string, required: false, hint: 'Ex.: Inscrições do Outubro Rosa encerram dia 3/10!' }
+          - { label: Texto do botão, name: texto_link, widget: string, required: false, hint: 'Ex.: Garanta sua vaga' }
+          - { label: Link do botão, name: link, widget: string, required: false, hint: 'Ex.: #inscricao ou um endereço completo' }

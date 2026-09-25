@@ -1,0 +1,13 @@
+{
+  "titulo": "UVERGS Summit",
+  "tipo": "Summit",
+  "selo": "Realizado",
+  "publicado": true,
+  "inicio": "2026-03-01T09:00",
+  "rotulo_data": "Março",
+  "capa": "/img/summit-3.jpg",
+  "capa_alt": "Participantes do UVERGS Summit",
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/o-uvergs-summit-entra-para-a-historia-como-o-maior-e-mais-marcante-evento-da-uvergs"
+  }
+}

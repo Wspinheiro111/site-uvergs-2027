@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Central UVERGS</title>
+<link rel="icon" href="/img/logo.png">
+<style>
+  /* deixa a tela de entrada com a cara da UVERGS */
+  body{background:#F3F6FC}
+  [class*="AuthenticationPage"] button{background:#0B3FB8 !important;color:#fff !important}
+</style>
+</head>
+<body>
+<script>window.CMS_MANUAL_INIT = true;</script>
+<script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js" integrity="sha384-A/Gdn928CNLufmnGWGs9RM4Q9o8bSNLeJERqBFrBjwzL7FRpoLT3MPF8Tl0+Wd2p" crossorigin="anonymous"></script>
+<script>
+  // o endereço do site é lido na hora, então a central continua funcionando
+  // quando a UVERGS trocar para o domínio próprio
+  CMS.init({
+    config: {
+      backend: { base_url: location.origin },
+      site_url: location.origin,
+      display_url: location.origin
+    }
+  });
+</script>
+</body>
+</html>

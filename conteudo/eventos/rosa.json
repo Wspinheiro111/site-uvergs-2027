@@ -1,0 +1,35 @@
+{
+  "titulo": "Outubro Rosa UVERGS",
+  "nome_curto": "Outubro Rosa",
+  "tipo": "Encontro de formação",
+  "selo": "Vagas abertas",
+  "publicado": true,
+  "inicio": "2026-10-06T08:30",
+  "fim": "2026-10-09",
+  "local": "AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre",
+  "local_curto": "AIAMU, Porto Alegre",
+  "resumo": "Um encontro de formação que une conhecimento, capacitação e a importância de cuidar da saúde, com programação preparada para fortalecer e valorizar quem faz parte do Legislativo gaúcho.",
+  "capa": "/img/ev-rosa-capa.jpg",
+  "capa_alt": "Arte do Outubro Rosa UVERGS",
+  "precos": {
+    "associada": 1200,
+    "nao_associada": 1700
+  },
+  "oficio": {
+    "tipo": "encontro de formação",
+    "local": "na AIAMU, Rua dos Andradas, 1234, 8º andar, Centro, Porto Alegre/RS",
+    "temas": [
+      "Compras e contratos administrativos na Lei Federal nº 14.133/2021",
+      "O papel do vereador e o processo legislativo",
+      "Reforma tributária e recuperação fiscal",
+      "Responsabilidade de prefeitos e vereadores por infração político-administrativa",
+      "As relações entre os Parlamentos Municipais e o Tribunal de Contas",
+      "O empoderamento da mulher na política"
+    ],
+    "extra": "No primeiro dia, 6 de outubro, a UVERGS oferece atendimento de consultoria técnica e jurídica aos participantes."
+  },
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao",
+    "pagina": "eventos/outubro-rosa.html"
+  }
+}

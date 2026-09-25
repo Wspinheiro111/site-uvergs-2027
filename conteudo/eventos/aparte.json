@@ -1,0 +1,23 @@
+{
+  "titulo": "Aparte Artístico UVERGS",
+  "nome_curto": "Aparte Artístico",
+  "tipo": "Seminário Estadual + cultura",
+  "selo": "Shows confirmados",
+  "publicado": true,
+  "inicio": "2026-11-03T08:30",
+  "fim": "2026-11-06",
+  "local": "Sindilojas, R. dos Andradas, 1234, 9º andar, e CTG Estância da Azenha, Porto Alegre",
+  "local_curto": "Sindilojas e CTG Estância da Azenha, Porto Alegre",
+  "resumo": "O Seminário Estadual de Vereadores com noites de música e tradição gaúcha no CTG Estância da Azenha: Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial.",
+  "capa": "/img/aparte-capa.jpg",
+  "capa_alt": "Atrações do Aparte Artístico 2026: Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial",
+  "oficio": {
+    "tipo": "Seminário Estadual de Vereadores",
+    "local": "no Sindilojas, Rua dos Andradas, 1234, 9º andar, Centro, Porto Alegre/RS",
+    "extra": "O seminário reúne vereadores, assessores e servidores de Câmaras de todo o Rio Grande do Sul em torno de temas do Legislativo municipal."
+  },
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/aparte-artistico-uvergs",
+    "pagina": "eventos/aparte-artistico.html"
+  }
+}

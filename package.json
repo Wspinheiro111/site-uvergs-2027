@@ -1,0 +1,15 @@
+{
+  "name": "site-uvergs",
+  "private": true,
+  "description": "Site da UVERGS com a Central de conteúdo",
+  "scripts": {
+    "build": "node cms/montar.mjs"
+  },
+  "dependencies": {
+    "marked": "^18.0.0",
+    "sharp": "^0.35.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

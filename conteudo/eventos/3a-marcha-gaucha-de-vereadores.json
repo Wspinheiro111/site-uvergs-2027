@@ -1,0 +1,13 @@
+{
+  "titulo": "3ª Marcha Gaúcha de Vereadores",
+  "tipo": "Marcha",
+  "selo": "Realizado",
+  "publicado": true,
+  "inicio": "2026-08-18T09:00",
+  "fim": "2026-08-21",
+  "capa": "/img/marcha.jpg",
+  "capa_alt": "Auditório lotado na 3ª Marcha Gaúcha de Vereadores",
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/auditorio-lotado-marca-a-3a-marcha-gaucha-de-vereadores"
+  }
+}

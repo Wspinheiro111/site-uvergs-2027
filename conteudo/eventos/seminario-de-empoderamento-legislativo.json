@@ -1,0 +1,14 @@
+{
+  "titulo": "Seminário de Empoderamento Legislativo: Controladoria e Ética na Gestão",
+  "tipo": "Seminário",
+  "selo": "Realizado",
+  "publicado": true,
+  "inicio": "2026-09-15T09:00",
+  "fim": "2026-09-18",
+  "capa": "/img/ev-empod.jpg",
+  "capa_alt": "Brinde do Seminário de Empoderamento Legislativo",
+  "capa_topo": true,
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/seminario-de-empoderamento-legislativo-controladoria-e-etica-na-gestao"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "titulo": "Inauguração da nova sede",
+  "tipo": "Inauguração",
+  "selo": "Realizado",
+  "publicado": true,
+  "inicio": "2026-05-19T09:00",
+  "capa": "/img/sede.jpg",
+  "capa_alt": "Corte da fita na nova sede da UVERGS",
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/um-marco-historico-da-uvergs-na-presidencia-do-dr-silomar-garcia-a-conquista-do-novo-espaco"
+  }
+}

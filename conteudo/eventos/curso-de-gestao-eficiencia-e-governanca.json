@@ -1,0 +1,13 @@
+{
+  "titulo": "Curso de Gestão: Eficiência e Governança",
+  "tipo": "Curso",
+  "selo": "Realizado",
+  "publicado": true,
+  "inicio": "2026-09-01T09:00",
+  "fim": "2026-09-04",
+  "capa": "/img/ev-curso-capa.jpg",
+  "capa_alt": "Programação do Curso de Gestão",
+  "avancado": {
+    "link_externo": "https://uvergs.com.br/curso-de-gestao-eficiencia-e-governanca"
+  }
+}

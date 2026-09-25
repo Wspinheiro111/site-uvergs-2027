@@ -1,0 +1,46 @@
+{
+  "fotos": [
+    {
+      "imagem": "/img/summit-6.jpg",
+      "legenda": "UVERGS Summit",
+      "alt": "Plateia do UVERGS Summit",
+      "formato": "grande"
+    },
+    {
+      "imagem": "/img/summit-7.jpg",
+      "legenda": "Painel no Summit",
+      "alt": "Painel no UVERGS Summit",
+      "formato": "normal"
+    },
+    {
+      "imagem": "/img/galeria-marcha-5.jpg",
+      "legenda": "3ª Marcha Gaúcha",
+      "alt": "Palestrante na 3ª Marcha Gaúcha de Vereadores",
+      "formato": "alta"
+    },
+    {
+      "imagem": "/img/summit-4.jpg",
+      "legenda": "Vereadoras e vereadores",
+      "alt": "Vereadores reunidos no UVERGS Summit",
+      "formato": "normal"
+    },
+    {
+      "imagem": "/img/sede-capa.jpg",
+      "legenda": "Nova sede",
+      "alt": "Inauguração da nova sede da UVERGS",
+      "formato": "normal"
+    },
+    {
+      "imagem": "/img/summit-5.jpg",
+      "legenda": "Networking",
+      "alt": "Participantes conversando no UVERGS Summit",
+      "formato": "normal"
+    },
+    {
+      "imagem": "/img/galeria-marcha-4.jpg",
+      "legenda": "Marcha Gaúcha",
+      "alt": "Participantes na 3ª Marcha Gaúcha de Vereadores",
+      "formato": "normal"
+    }
+  ]
+}

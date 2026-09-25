@@ -858,7 +858,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 <script>
 (function(){
   var CAM=["Aceguá", "Alegrete", "Alegria", "Alpestre", "Amaral Ferrador", "André da Rocha", "Arroio dos Ratos", "Arroio do Tigre", "Bagé", "Barão do Triunfo", "Barros Cassal", "Boa Vista das Missões", "Bossoroca", "Butiá", "Caçapava do Sul", "Cacequi", "Cachoeira do Sul", "Caibaté", "Camaquã", "Candelária", "Candiota", "Capão do Cipó", "Capão do Leão", "Capivari do Sul", "Caxias do Sul", "Cerro Branco", "Cerro Grande do Sul", "Charqueadas", "Cidreira", "Ciríaco", "Colorado", "Cruz Alta", "Cruzeiro do Sul", "Dom Feliciano", "Dom Pedrito", "Encruzilhada do Sul", "Engenho Velho", "Espumoso", "Estrela Velha", "Eugênio de Castro", "Formigueiro", "Fortaleza dos Valos", "Frederico Westphalen", "Ibiaçá", "Ibirapuitã", "Ibirubá", "Ivoti", "Jóia", "Lagoa Bonita do Sul", "Lindolfo Collor", "Maçambará", "Manoel Viana", "Marcelino Ramos", "Minas do Leão", "Miraguaí", "Monte Belo do Sul", "Mormaço", "Morro Redondo", "Não-Me-Toque", "Nicolau Vergueiro", "Nonoai", "Nova Bréscia", "Nova Esperança do Sul", "Nova Petrópolis", "Nova Prata", "Palmares do Sul", "Pantano Grande", "Parobé", "Passo do Sobrado", "Pelotas", "Pinheirinho do Vale", "Porto Lucena", "Pouso Novo", "Progresso", "Quaraí", "Redentora", "Rodeio Bonito", "Rosário do Sul", "Salto do Jacuí", "Santa Cecília do Sul", "Santa Maria", "Santana da Boa Vista", "Sant' Ana do Livramento", "Santiago", "Santo Antônio da Patrulha", "São Borja", "São Gabriel", "São João da Urtiga", "São João do Polêsine", "São José do Norte", "São Lourenço do Sul", "São Luiz Gonzaga", "São Vicente do Sul", "Sede Nova", "Segredo", "Sentinela do Sul", "Serafina Corrêa", "Sertão", "Soledade", "Tapes", "Taquari", "Tramandaí", "Vale do Sol", "Vera Cruz", "Victor Graeff", "Vila Nova do Sul", "Vale Verde"];
-  var EV={
+  var EV=/*cms:oficio*/{
     rosa:{nome:'Outubro Rosa UVERGS',tipo:'encontro de formação',ini:'2026-10-06',fim:'2026-10-09',quando:'de 6 a 9 de outubro de 2026',
       local:'na AIAMU, Rua dos Andradas, 1234, 8º andar, Centro, Porto Alegre/RS',dias:4,preco:[1200,1700],
       pagina:'https://uvergs-kappa.vercel.app/eventos/outubro-rosa.html',rel:'../eventos/outubro-rosa.html',
@@ -868,7 +868,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
       local:'no Sindilojas, Rua dos Andradas, 1234, 9º andar, Centro, Porto Alegre/RS',dias:4,preco:null,
       pagina:'https://uvergs-kappa.vercel.app/eventos/aparte-artistico.html',rel:'../eventos/aparte-artistico.html',
       temas:null,extra:'O seminário reúne vereadores, assessores e servidores de Câmaras de todo o Rio Grande do Sul em torno de temas do Legislativo municipal.'}
-  };
+  }/*/cms:oficio*/;
   var CARGO={vereador:['Vereador','vereador'],vereadora:['Vereadora','vereadora'],presidente:['Presidente da Câmara Municipal','Presidente desta Casa'],assessor:['Assessor(a) Parlamentar','assessor(a) parlamentar'],servidor:['Servidor(a) da Câmara Municipal','servidor(a)']};
   var $=function(id){return document.getElementById(id)};
   var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
