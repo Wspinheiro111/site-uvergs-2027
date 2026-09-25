@@ -472,7 +472,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 .event:hover .date{transform:translateY(-4px) scale(1.07)}
 /* 5 fotos ganham foco ao rolar */
 @media (prefers-reduced-motion:no-preference){@supports ((animation-timeline:view()) and (animation-range:entry)){
- .mosaic figure,.done img{animation:focusin linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .mosaic figure{animation:focusin linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
  @keyframes focusin{from{opacity:.25;scale:.9;filter:blur(6px)}to{opacity:1;scale:1;filter:none}}}}
 /* 6 foto que se expande */
 .mosaic figure{cursor:zoom-in}
@@ -493,6 +493,77 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 .wa-bubble button{position:absolute;top:4px;right:4px;width:28px;height:28px;border:0;background:none;color:var(--muted);font-size:1.2rem;line-height:1;cursor:pointer;border-radius:50%}
 @keyframes wapop{from{transform:scale(.6) translateY(10px);opacity:0}}
 @media (max-width:520px){.wa-bubble{right:84px;max-width:200px;font-size:.84rem}}
+/* ===== v8 ===== */
+/* 13 barra de leitura nas cores do RS */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:4px;z-index:70;pointer-events:none;background:linear-gradient(90deg,var(--rs-green) 0 33.34%,var(--rs-red) 0 66.67%,var(--rs-yellow) 0);clip-path:inset(0 calc((1 - var(--p,0)) * 100%) 0 0)}
+@supports (animation-timeline:scroll()){@media (prefers-reduced-motion:no-preference){.progress{animation:readbar linear both;animation-timeline:scroll(root)}}}
+@keyframes readbar{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+/* 8 topo com fotos em movimento */
+.hero-slides{position:absolute;inset:0;overflow:hidden}
+.hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.hero-slides img:first-child{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+ .hero-slides img{animation:kb 24s linear infinite both;will-change:opacity,transform}
+ .hero-slides img:nth-child(1){animation-delay:-1.44s}
+ .hero-slides img:nth-child(2){animation-delay:4.56s}
+ .hero-slides img:nth-child(3){animation-delay:10.56s}
+ .hero-slides img:nth-child(4){animation-delay:16.56s}}
+@keyframes kb{0%{opacity:0;transform:scale(1.12)}6%{opacity:1}31%{opacity:1}37%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+/* 9 mapa que acende a partir de Porto Alegre (e filiadas destacadas no modo escuro) */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mun.on{fill:var(--blue)}:root:not([data-theme="light"]) .mun:hover,:root:not([data-theme="light"]) .mun.sel{fill:var(--rs-yellow)}:root:not([data-theme="light"]) .mun.on:hover,:root:not([data-theme="light"]) .mun.on.sel{fill:#FFB800}}
+:root[data-theme="dark"] .mun.on{fill:var(--blue)}:root[data-theme="dark"] .mun:hover,:root[data-theme="dark"] .mun.sel{fill:var(--rs-yellow)}:root[data-theme="dark"] .mun.on:hover,:root[data-theme="dark"] .mun.on.sel{fill:#FFB800}
+.wave:not(.lit) .mun.on{fill:#DCE4F2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wave:not(.lit) .mun.on{fill:#1C2E5A}}
+:root[data-theme="dark"] .wave:not(.lit) .mun.on{fill:#1C2E5A}
+.wave.playing .mun.on{transition:fill .55s ease}
+.wave .pin{transform-box:fill-box;transform-origin:center;transition:opacity .35s,transform .5s cubic-bezier(.3,1.6,.5,1)}
+.wave:not(.lit) .pin{opacity:0;transform:scale(0)}
+.wave.reset .mun.on,.wave.reset .pin{transition:none}
+.wave-ring{fill:none;stroke:var(--rs-yellow);stroke-width:2.5;opacity:0;transform-box:fill-box;transform-origin:center;pointer-events:none}
+.playing .wave-ring{animation:wavering 1.8s ease-out 3}
+@keyframes wavering{from{opacity:.95;transform:scale(1)}to{opacity:0;transform:scale(9)}}
+/* 10 linha do tempo dos 51 anos */
+.timeline{position:relative}
+.timeline li{z-index:1}
+.tl-ph{display:block;width:100%;max-width:300px;aspect-ratio:16/9;object-fit:cover;object-position:center 22%;border-radius:8px;margin-top:10px}
+.tl-future .fut{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;border-radius:12px;padding:12px 16px;box-shadow:var(--shadow)}
+.tl-future .fut small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rs-yellow)}
+.tl-future .fut b{color:#fff}
+.tl-future .fut p{color:#D8E3FF}
+@media (prefers-reduced-motion:no-preference){@supports ((animation-timeline:view()) and (animation-range:entry)){
+ .timeline{view-timeline:--hist block}
+ .timeline::after{content:"";position:absolute;left:-3px;top:0;bottom:0;width:3px;z-index:0;background:linear-gradient(var(--rs-green),var(--rs-red) 50%,var(--rs-yellow));transform-origin:top;animation:tlfill linear both;animation-timeline:--hist;animation-range:cover 25% cover 70%}
+ .timeline li{animation:tlin linear both;animation-timeline:view();animation-range:entry 10% entry 100%}
+ @keyframes tlfill{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+ @keyframes tlin{from{opacity:0;transform:translateX(-18px)}}}}
+/* 11 carrossel dos eventos realizados */
+.done-list{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:8px calc(50% - min(220px,36vw)) 20px;position:relative;cursor:grab;overscroll-behavior-x:contain;-webkit-user-select:none;user-select:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.done-list::-webkit-scrollbar{display:none}
+.done-list.nosnap{scroll-snap-type:none}
+.done-list.grabbing{cursor:grabbing}
+.done-list:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.done-list .done{flex:0 0 min(440px,72vw);scroll-snap-align:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 10px 18px;color:inherit;box-shadow:var(--shadow)}
+.done-list .done time,.done-list .done h3{padding-inline:8px}
+.done-list img{-webkit-user-drag:none}
+.car-nav{display:flex;align-items:center;gap:10px}
+.car-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--blue);display:grid;place-items:center;cursor:pointer;padding:0}
+.car-nav button:hover:not(:disabled){background:var(--blue);color:#fff;border-color:var(--blue)}
+.car-nav button:disabled{opacity:.4;cursor:default}
+.car-nav button svg{width:18px;height:18px}
+.car-nav #car-prev svg{transform:scaleX(-1)}
+.car-nav span{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums;min-width:4.4ch;text-align:center;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){@supports ((animation-timeline:view()) and (animation-range:entry)){
+ .done-list .done{animation:focusslide linear both;animation-timeline:view(inline);animation-range:cover 0% cover 100%}
+ @keyframes focusslide{0%,100%{scale:.86;opacity:.45}50%{scale:1;opacity:1}}}}
+/* 12 páginas de evento com transição suave */
+@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;types:ev}}
+html:active-view-transition-type(ev) header.site{view-transition-name:site-header}
+html:active-view-transition-type(ev) .event[data-ev="rosa"] .ph img{view-transition-name:ev-rosa-img}
+html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-transition-name:ev-aparte-img}
+::view-transition-group(*){animation-duration:.5s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+.event h3 a{color:inherit;text-decoration:none}
+.event h3 a:hover{color:var(--blue)}
+.event .ph>a{display:block}
 </style>
 </head>
 <body>
@@ -523,6 +594,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
   <symbol id="logo-mark" viewBox="0 0 46 52"><path d="M23 1 44 8v17c0 13-9 22-21 26C11 47 2 38 2 25V8z" fill="#0B3FB8"/><path d="M23 6 39 11.5V25c0 10-7 17.5-16 21-9-3.5-16-11-16-21V11.5z" fill="none" stroke="#F4B400" stroke-width="2"/><path d="M14 16v10a9 9 0 0 0 18 0V16" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><path d="M19 35l4 6 4-6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
+<div class="progress" aria-hidden="true"></div>
 <div class="topbar">
   <div class="wrap">
     <div class="info">
@@ -561,7 +633,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 
 <main id="inicio">
   <section class="hero">
-    <div class="hero-bg" role="img" aria-label="Auditório lotado na 3ª Marcha Gaúcha de Vereadores"></div>
+    <div class="hero-bg" role="img" aria-label="Fotos dos eventos da UVERGS: auditório lotado na 3ª Marcha Gaúcha de Vereadores e UVERGS Summit"><div class="hero-slides" aria-hidden="true"><img src="img/marcha-capa.jpg" alt=""><img src="img/summit-6.jpg" alt="" decoding="async"><img src="img/galeria-marcha-1.jpg" alt="" decoding="async"><img src="img/summit-8.jpg" alt="" decoding="async"></div></div>
     <div class="wrap">
       <div>
         <span class="eyebrow" style="color:var(--gold)">Eventos UVERGS 2026</span>
@@ -615,24 +687,24 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
         <a class="more" href="#realizados">Eventos realizados <svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="events">
-        <article class="event" data-end="2026-10-09">
-          <div class="ph"><img src="img/ev-rosa-capa.jpg" alt="Arte do Outubro Rosa UVERGS" loading="lazy"><div class="date"><b>06–09</b><small>Out</small></div></div>
+        <article class="event" data-end="2026-10-09" data-ev="rosa">
+          <div class="ph"><a href="eventos/outubro-rosa.html" tabindex="-1" aria-hidden="true"><img src="img/ev-rosa-capa.jpg" alt="Arte do Outubro Rosa UVERGS" loading="lazy"></a><div class="date"><b>06–09</b><small>Out</small></div></div>
           <div class="bd">
             <div class="top"><span class="type">Encontro de formação</span><span class="pill">Vagas abertas</span></div>
-            <h3>Outubro Rosa UVERGS</h3>
+            <h3><a href="eventos/outubro-rosa.html">Outubro Rosa UVERGS</a></h3>
             <p>Um encontro de formação que une conhecimento, capacitação e a importância de cuidar da saúde, com programação preparada para fortalecer e valorizar quem faz parte do Legislativo gaúcho.</p>
             <div class="meta"><span><svg class="i"><use href="#i-pin"/></svg>AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre</span></div>
-            <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Outubro Rosa UVERGS">Quero participar</a><details class="addcal" data-cal="rosa"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao" target="_blank" rel="noopener" style="align-self:center">Programação</a></div>
+            <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Outubro Rosa UVERGS">Quero participar</a><details class="addcal" data-cal="rosa"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="eventos/outubro-rosa.html" style="align-self:center">Ver programação <svg class="i"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
-        <article class="event" data-end="2026-11-06">
-          <div class="ph"><img src="img/aparte-capa.jpg" alt="Atrações do Aparte Artístico 2026: Dartagnan Portella, Desidério Souza, Camila Regio e Quinto Manancial" loading="lazy"><div class="date"><b>03–06</b><small>Nov</small></div></div>
+        <article class="event" data-end="2026-11-06" data-ev="aparte">
+          <div class="ph"><a href="eventos/aparte-artistico.html" tabindex="-1" aria-hidden="true"><img src="img/aparte-capa.jpg" alt="Atrações do Aparte Artístico 2026: Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial" loading="lazy"></a><div class="date"><b>03–06</b><small>Nov</small></div></div>
           <div class="bd">
             <div class="top"><span class="type">Seminário Estadual + cultura</span><span class="pill">Shows confirmados</span></div>
-            <h3>Aparte Artístico UVERGS</h3>
-            <p>O Seminário Estadual de Vereadores com noites de música e tradição gaúcha no CTG Estância da Azenha: Dartagnan Portella, Desidério Souza, Camila Regio e Quinto Manancial.</p>
+            <h3><a href="eventos/aparte-artistico.html">Aparte Artístico UVERGS</a></h3>
+            <p>O Seminário Estadual de Vereadores com noites de música e tradição gaúcha no CTG Estância da Azenha: Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial.</p>
             <div class="meta"><span><svg class="i"><use href="#i-pin"/></svg>Sindilojas, R. dos Andradas, 1234, 9º andar, e CTG Estância da Azenha, Porto Alegre</span></div>
-            <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Aparte Artístico UVERGS">Quero participar</a><details class="addcal" data-cal="aparte"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="https://uvergs.com.br/aparte-artistico-uvergs" target="_blank" rel="noopener" style="align-self:center">Programação</a></div>
+            <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Aparte Artístico UVERGS">Quero participar</a><details class="addcal" data-cal="aparte"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="eventos/aparte-artistico.html" style="align-self:center">Ver página do evento <svg class="i"><use href="#i-arrow"/></svg></a></div>
           </div>
         </article>
       </div>
@@ -817,9 +889,10 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
   <section class="block" id="realizados">
     <div class="wrap">
       <div class="head">
-        <div><span class="eyebrow f">Já aconteceu</span><h2>Eventos realizados em 2026</h2></div>
+        <div><span class="eyebrow f">Já aconteceu</span><h2>Eventos realizados em 2026</h2><p>Arraste para o lado ou use as setas para ver todos.</p></div>
+        <div class="car-nav"><button type="button" id="car-prev" aria-label="Evento anterior"><svg class="i"><use href="#i-arrow"/></svg></button><span id="car-count" aria-live="polite">1 / 6</span><button type="button" id="car-next" aria-label="Próximo evento"><svg class="i"><use href="#i-arrow"/></svg></button></div>
       </div>
-      <div class="done-list">
+      <div class="done-list" id="done-strip" tabindex="0" role="region" aria-label="Eventos realizados em 2026">
         <a class="done" href="https://uvergs.com.br/seminario-de-empoderamento-legislativo-controladoria-e-etica-na-gestao" target="_blank" rel="noopener"><img src="img/ev-empod.jpg" alt="Brinde do Seminário de Empoderamento Legislativo" loading="lazy" style="object-position:top"><time>15 a 18 de setembro</time><h3>Seminário de Empoderamento Legislativo: Controladoria e Ética na Gestão</h3></a>
         <a class="done" href="https://uvergs.com.br/curso-de-gestao-eficiencia-e-governanca" target="_blank" rel="noopener"><img src="img/ev-curso-capa.jpg" alt="Programação do Curso de Gestão" loading="lazy"><time>1º a 4 de setembro</time><h3>Curso de Gestão: Eficiência e Governança</h3></a>
         <a class="done" href="https://uvergs.com.br/auditorio-lotado-marca-a-3a-marcha-gaucha-de-vereadores" target="_blank" rel="noopener"><img src="img/marcha.jpg" alt="Auditório lotado na 3ª Marcha Gaúcha de Vereadores" loading="lazy"><time>18 a 21 de agosto</time><h3>3ª Marcha Gaúcha de Vereadores</h3></a>
@@ -928,15 +1001,15 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
           </div>
         </div>
         <div>
-          <h3 class="sub">Nossa história</h3>
+          <h3 class="sub">51 anos de história</h3>
           <ol class="timeline">
             <li style="--c:var(--rs-green)"><b>1975</b><p>Fundação da União dos Vereadores do Rio Grande do Sul, em 23 de maio.</p></li>
-            <li style="--c:var(--rs-red)"><b>2003</b><p>A Lei Estadual n.º 12.023/03, de autoria de Jerônimo Goergen, reconhece a UVERGS como entidade oficial dos vereadores do RS.</p></li>
+            <li style="--c:var(--rs-red)"><b>2003</b><p>A Lei Estadual n.º 12.023/03, de autoria de Jerônimo Goergen, reconhece a UVERGS como entidade oficial dos vereadores do RS.</p><img class="tl-ph" src="img/goergen.jpg" alt="Jerônimo Goergen, à esquerda, com o Dr. Silomar Garcia, presidente da UVERGS" loading="lazy"></li>
             <li style="--c:var(--rs-yellow)"><b>2019</b><p>Posse do Dr. Silomar Garcia Silveira na presidência.</p></li>
             <li style="--c:var(--blue)"><b>2024</b><p>A enchente atinge a sede da entidade no Centro Administrativo do Estado.</p></li>
             <li style="--c:var(--rs-green)"><b>2025</b><p>UVERGS 50 anos e reconstrução da sede, com novo auditório.</p></li>
-            <li style="--c:var(--rs-red)"><b>2026</b><p>Inauguração do novo espaço, UVERGS Summit e 3ª Marcha Gaúcha de Vereadores.</p></li>
-            <li style="--c:var(--rs-yellow)"><b>2027</b><p>A nova UVERGS: digital, 360 e referência no Brasil.</p></li>
+            <li style="--c:var(--rs-red)"><b>2026</b><p>Inauguração do novo espaço, UVERGS Summit e 3ª Marcha Gaúcha de Vereadores.</p><img class="tl-ph" src="img/sede.jpg" alt="Corte da fita na nova sede da UVERGS" loading="lazy" style="object-position:center"></li>
+            <li class="tl-future" style="--c:var(--rs-yellow)"><div class="fut"><small>Próximo capítulo</small><b>2027</b><p>A nova UVERGS: digital, 360 e referência no Brasil.</p></div></li>
           </ol>
         </div>
       </div>
@@ -987,6 +1060,10 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
     [].forEach.call(document.querySelectorAll('.opts input'),function(c){if(c.value===a.dataset.event)c.checked=true});
   });
 
+  // vindo da página de um evento: já marca o evento no formulário
+  var qe=new URLSearchParams(location.search).get('evento');
+  if(qe)[].forEach.call(document.querySelectorAll('.opts input'),function(c){if(c.value===qe)c.checked=true});
+
   // eventos que já terminaram viram "Realizado"
   var now=new Date();
   [].forEach.call(document.querySelectorAll('.event[data-end]'),function(ev){
@@ -1024,7 +1101,7 @@ window.UVERGS_FILIADAS=["4300034", "4300406", "4300455", "4300505", "4300638", "
   // ---------- adicionar à agenda ----------
   var EV={
     rosa:{t:'Outubro Rosa UVERGS | Encontro de Formação',s:'20261006',e:'20261010',l:'AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre/RS',d:'Encontro de formação da UVERGS. Programação e inscrições: https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao'},
-    aparte:{t:'Aparte Artístico UVERGS 2026',s:'20261103',e:'20261107',l:'Sindilojas, R. dos Andradas, 1234, 9º andar, Porto Alegre/RS',d:'Seminário Estadual de Vereadores com shows de Dartagnan Portella, Desidério Souza, Camila Regio e Quinto Manancial. https://uvergs.com.br/aparte-artistico-uvergs'}
+    aparte:{t:'Aparte Artístico UVERGS 2026',s:'20261103',e:'20261107',l:'Sindilojas, R. dos Andradas, 1234, 9º andar, Porto Alegre/RS',d:'Seminário Estadual de Vereadores com shows de Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial. https://uvergs.com.br/aparte-artistico-uvergs'}
   };
   function iso(d){return d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6)}
   [].forEach.call(document.querySelectorAll('.addcal'),function(el){
@@ -1157,6 +1234,65 @@ window.UVERGS_FILIADAS=["4300034", "4300406", "4300455", "4300505", "4300638", "
   if(!fechado)setTimeout(function(){if(!fechado&&!naInscricao)bub.hidden=false},5000);
   bub.querySelector('button').addEventListener('click',function(){fechado=true;atualizar();try{sessionStorage.setItem('uvergs-wa-bubble','x')}catch(e){}});
   if('IntersectionObserver' in window&&$('inscricao'))new IntersectionObserver(function(es){naInscricao=es[0].isIntersecting;if(naInscricao)atualizar()},{threshold:.15}).observe($('inscricao'));
+})();
+</script>
+<script>
+(function(){
+  var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){return document.getElementById(id)}
+
+  // 13. barra de leitura (sem suporte nativo ou com movimento reduzido)
+  var bar=document.querySelector('.progress');
+  if(bar&&(calm||!(window.CSS&&CSS.supports&&CSS.supports('animation-timeline','scroll()')))){
+    var ler=function(){var h=document.documentElement;bar.style.setProperty('--p',Math.min(1,h.scrollTop/((h.scrollHeight-h.clientHeight)||1)))};
+    addEventListener('scroll',ler,{passive:true});addEventListener('resize',ler);ler()}
+
+  // 9. mapa acende em onda a partir de Porto Alegre
+  var svg=$('rs-svg'),M=window.RS_MAP;
+  if(svg&&M&&!calm&&'IntersectionObserver' in window){
+    var NS='http://www.w3.org/2000/svg',pa=[812.8,442.5],byId={};
+    M.mun.forEach(function(r){byId[r[0]]=r;if(r[1]==='Porto Alegre')pa=[r[3],r[4]]});
+    var on=[].slice.call(svg.querySelectorAll('.mun.on')),pins=[].slice.call(svg.querySelectorAll('.pin'));
+    var dist=on.map(function(el){var r=byId[el.dataset.id];return Math.sqrt(Math.pow(r[3]-pa[0],2)+Math.pow(r[4]-pa[1],2))});
+    var max=Math.max.apply(null,dist)||1,DUR=3200,del=dist.map(function(d){return Math.round(d/max*DUR)}),ord=del.slice().sort(function(a,b){return a-b});
+    var ring=document.createElementNS(NS,'circle');ring.setAttribute('cx',pa[0]);ring.setAttribute('cy',pa[1]);ring.setAttribute('r',7);ring.setAttribute('class','wave-ring');svg.appendChild(ring);
+    var kf=$('k-fil'),kp=$('k-pct'),kb=$('k-bar'),raf=0,fim=0;
+    function kpi(n){kf.textContent=n;var q=Math.round(n/497*100);kp.textContent=q+'%';kb.style.width=q+'%'}
+    function limpar(){svg.classList.remove('wave','lit','playing');on.forEach(function(el,i){el.style.transitionDelay='';if(pins[i])pins[i].style.transitionDelay=''})}
+    function acender(){
+      cancelAnimationFrame(raf);clearTimeout(fim);
+      svg.classList.add('wave','reset');svg.classList.remove('lit','playing');kpi(0);
+      on.forEach(function(el,i){el.style.transitionDelay=del[i]+'ms';if(pins[i])pins[i].style.transitionDelay=(del[i]+150)+'ms'});
+      svg.getBoundingClientRect();svg.classList.remove('reset');
+      requestAnimationFrame(function(){svg.classList.add('playing','lit');var t0=performance.now(),k=0;
+        (function passo(n){var t=n-t0;while(k<ord.length&&ord[k]<=t)k++;kpi(k);if(k<ord.length)raf=requestAnimationFrame(passo)})(t0);
+        fim=setTimeout(limpar,DUR+1400)})}
+    var tools=svg.parentNode.querySelector('.map-tools');
+    if(tools){var bt=document.createElement('button');bt.type='button';bt.setAttribute('aria-label','Acender o mapa de novo');bt.title='Acender de novo';bt.innerHTML='&#8635;';bt.addEventListener('click',acender);tools.appendChild(bt)}
+    svg.classList.add('wave');kpi(0);
+    new IntersectionObserver(function(es,o){if(es[0].isIntersecting){o.disconnect();acender()}},{threshold:.45}).observe(svg)}
+
+  // 11. carrossel dos eventos realizados
+  var st=$('done-strip');
+  if(st){
+    var its=[].slice.call(st.children),cnt=$('car-count'),bp=$('car-prev'),bn=$('car-next');
+    function atual(){var c=st.scrollLeft+st.clientWidth/2,b=0,bd=1e9;its.forEach(function(it,i){var d=Math.abs(it.offsetLeft+it.offsetWidth/2-c);if(d<bd){bd=d;b=i}});return b}
+    function ir(i){i=Math.max(0,Math.min(its.length-1,i));var it=its[i];st.scrollTo({left:it.offsetLeft+it.offsetWidth/2-st.clientWidth/2,behavior:calm?'auto':'smooth'})}
+    function marca(){var i=atual();cnt.textContent=(i+1)+' / '+its.length;bp.disabled=i===0;bn.disabled=i===its.length-1}
+    var tk=0;st.addEventListener('scroll',function(){if(!tk)tk=requestAnimationFrame(function(){tk=0;marca()})},{passive:true});
+    bp.addEventListener('click',function(){ir(atual()-1)});bn.addEventListener('click',function(){ir(atual()+1)});
+    st.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();ir(atual()+1)}else if(e.key==='ArrowLeft'){e.preventDefault();ir(atual()-1)}});
+    // arrastar com o mouse (no toque o navegador já rola sozinho)
+    var dg=null,arrastou=false,volta=0;
+    st.addEventListener('dragstart',function(e){e.preventDefault()});
+    st.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;dg={x:e.clientX,s:st.scrollLeft,id:e.pointerId};arrastou=false});
+    st.addEventListener('pointermove',function(e){if(!dg)return;var dx=e.clientX-dg.x;
+      if(!arrastou&&Math.abs(dx)>6){arrastou=true;clearTimeout(volta);st.classList.add('grabbing','nosnap');try{st.setPointerCapture(dg.id)}catch(_){}}
+      if(arrastou)st.scrollLeft=dg.s-dx});
+    function soltar(){if(!dg)return;dg=null;if(arrastou){st.classList.remove('grabbing');ir(atual());volta=setTimeout(function(){st.classList.remove('nosnap')},650)}}
+    st.addEventListener('pointerup',soltar);st.addEventListener('pointercancel',soltar);
+    st.addEventListener('click',function(e){if(arrastou){e.preventDefault();e.stopPropagation();arrastou=false}},true);
+    marca()}
 })();
 </script>
 </body>
