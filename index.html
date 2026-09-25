@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UVERGS Vereadores do RS</title>
+<meta name="description" content="Eventos, cursos e seminários da União dos Vereadores do Rio Grande do Sul. Inscreva sua Câmara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --blue:#0B3FB8;--blue-deep:#06246E;--blue-ink:#041A4F;--blue-bright:#2F6BFF;
+  --gold:#F4B400;--green:#1FAF5A;
+  --bg:#FFFFFF;--surface:#F2F5FB;--line:#DCE3F0;--text:#0E1B36;--muted:#51607D;--card:#FFFFFF;
+  --shadow:0 12px 32px -18px rgba(6,36,110,.5);
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#07122B;--surface:#0C1B3D;--line:#1D2F5C;--text:#E8EEFB;--muted:#9FB0D3;--card:#0F2149;
+  --blue:#2F6BFF;--blue-bright:#6E97FF;--shadow:0 12px 32px -18px rgba(0,0,0,.8);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#07122B;--surface:#0C1B3D;--line:#1D2F5C;--text:#E8EEFB;--muted:#9FB0D3;--card:#0F2149;
+  --blue:#2F6BFF;--blue-bright:#6E97FF;--shadow:0 12px 32px -18px rgba(0,0,0,.8);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:.02em;padding:.85em 1.35em;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#1B1400}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-line{border-color:var(--blue);color:var(--blue);background:transparent}
+.btn-wa{background:var(--green);color:#fff}
+svg.i{width:1.1em;height:1.1em;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* barra superior */
+.topbar{background:var(--blue-ink);color:#C9D6F5;font-size:.84rem}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;justify-content:space-between;padding-block:8px}
+.topbar .info,.topbar .links{display:flex;flex-wrap:wrap;gap:6px 18px}
+.topbar span,.topbar a{display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.topbar a:hover{color:#fff}
+
+/* cabeçalho */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:20px;min-height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo svg{width:44px;height:50px}
+.logo .logo-img{display:none;height:54px;width:auto}
+.logo.has-img .logo-img{display:block}
+.logo.has-img svg,.logo.has-img>span{display:none}
+footer .logo-img{background:#fff;border-radius:8px;padding:6px}
+.logo b{font-family:var(--display);font-weight:900;font-stretch:112%;font-size:1.55rem;letter-spacing:.02em;color:var(--blue);display:block;line-height:1}
+.logo small{display:block;font-size:.68rem;color:var(--muted);letter-spacing:.03em;line-height:1.25;max-width:170px}
+nav.main{margin-left:auto}
+nav.main ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;align-items:center}
+nav.main a{display:block;padding:10px 11px;font-family:var(--display);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:6px}
+nav.main a:hover{background:var(--surface);color:var(--blue)}
+nav.main .nav-cta a{background:var(--gold);color:#1B1400;margin-left:8px;padding-inline:16px}
+nav.main .nav-cta a:hover{background:var(--gold);color:#1B1400}
+.menu-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:9px;color:var(--text);cursor:pointer}
+@media (max-width:1060px){
+  .menu-toggle{display:inline-flex}
+  nav.main{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none;margin:0}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;align-items:stretch;padding:10px 20px 18px}
+  nav.main .nav-cta a{margin:8px 0 0;text-align:center}
+}
+
+/* hero */
+.hero{position:relative;color:#fff;isolation:isolate;overflow:hidden;background:var(--blue-deep)}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:url("img/marcha-capa.jpg") center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(6,36,110,.97) 0%,rgba(11,63,184,.9) 48%,rgba(11,63,184,.55) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .85fr;gap:48px;align-items:center;padding-block:72px 96px}
+.hero h1{font-size:clamp(2.2rem,5.4vw,4.3rem);font-weight:900;font-stretch:86%;text-transform:uppercase;letter-spacing:-.005em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:1.12rem;color:#DCE6FF;max-width:52ch;margin:18px 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2)}
+.proof b{display:block;font-family:var(--display);font-weight:900;font-stretch:82%;font-size:2.3rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.proof small{color:#BFD0FA;font-size:.84rem}
+.next{background:var(--card);color:var(--text);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(0,0,0,.6)}
+.next img{width:100%;aspect-ratio:750/415;object-fit:cover}
+.next .bd{padding:20px 22px 22px;display:grid;gap:12px}
+.next .k{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pill{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:var(--gold);color:#1B1400;white-space:nowrap}
+.pill.done{background:var(--surface);color:var(--muted);border:1px solid var(--line)}
+.next h3{font-size:1.4rem}
+.meta{display:grid;gap:4px;font-size:.9rem;color:var(--muted)}
+.meta span{display:flex;gap:8px;align-items:flex-start}
+.meta svg{margin-top:.25em;color:var(--blue)}
+.count{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.count div{background:var(--surface);border-radius:8px;padding:8px 4px}
+.count b{display:block;font-family:var(--display);font-weight:900;font-size:1.6rem;line-height:1.1;color:var(--blue);font-variant-numeric:tabular-nums}
+.count small{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-block:52px 72px}.next{max-width:460px}}
+
+/* seções */
+section.block{padding-block:84px}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:34px}
+.head h2,.h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;font-stretch:92%;margin-top:6px}
+.head p{margin:8px 0 0;color:var(--muted);max-width:60ch}
+.more{font-family:var(--display);font-weight:700;color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.more:hover{text-decoration:underline}
+
+/* próximos eventos */
+.events{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.event{display:grid;grid-template-rows:auto 1fr;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.event:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.event .ph{position:relative}
+.event .ph img{width:100%;aspect-ratio:750/415;object-fit:cover}
+.event .date{position:absolute;left:16px;bottom:-26px;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;text-align:center;font-family:var(--display);line-height:1;box-shadow:var(--shadow)}
+.event .date b{display:block;font-weight:900;font-stretch:82%;font-size:1.7rem;font-variant-numeric:tabular-nums}
+.event .date small{font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.event .bd{padding:40px 24px 24px;display:flex;flex-direction:column;gap:12px}
+.event .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.event .type{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.event h3{font-size:1.45rem}
+.event p{margin:0;color:var(--muted);font-size:.95rem}
+.event .cta{margin-top:auto;display:flex;flex-wrap:wrap;gap:10px;padding-top:8px}
+.event.past{opacity:.7}
+@media (max-width:820px){.events{grid-template-columns:1fr}}
+
+/* por que participar */
+.why{background:var(--blue);color:#fff}
+.why .eyebrow{color:var(--gold)}
+.why .head p{color:#D8E3FF}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:24px;display:grid;gap:10px;align-content:start}
+.why-item .ic{width:48px;height:48px;border-radius:10px;background:var(--gold);color:#1B1400;display:grid;place-items:center}
+.why-item .ic svg{width:24px;height:24px}
+.why-item h3{font-size:1.18rem}
+.why-item p{margin:0;color:#D8E3FF;font-size:.93rem}
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.topics span{font-size:.85rem;font-weight:600;padding:7px 13px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
+@media (max-width:980px){.why-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.why-grid{grid-template-columns:1fr}}
+
+/* galeria */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:10px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;border-radius:8px;background:var(--surface)}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mosaic figure:hover img{transform:scale(1.04)}
+.mosaic figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.8rem;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(4,26,79,.85))}
+.mosaic .big{grid-column:span 2;grid-row:span 2}
+.mosaic .tall{grid-row:span 2}
+.quote{margin-top:30px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:var(--surface);border-radius:12px;padding:24px 26px}
+.quote b{font-family:var(--display);font-size:3.4rem;line-height:.8;color:var(--blue)}
+.quote p{margin:0;font-family:var(--display);font-weight:600;font-size:1.2rem;line-height:1.35}
+.quote small{display:block;margin-top:8px;font-family:var(--body);font-weight:500;font-size:.85rem;color:var(--muted)}
+@media (max-width:820px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
+
+/* associe-se */
+.join{background:var(--surface)}
+.join-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.join p{color:var(--muted);max-width:56ch}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.price div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.price div.hl{border:2px solid var(--blue)}
+.price small{display:block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.price b{display:block;font-family:var(--display);font-weight:900;font-stretch:88%;font-size:2.2rem;color:var(--text);font-variant-numeric:tabular-nums;line-height:1.2}
+.price .hl b{color:var(--blue)}
+.price span{font-size:.84rem;color:var(--muted)}
+.note{font-size:.84rem;color:var(--muted);margin-top:10px}
+.checks{list-style:none;padding:0;margin:18px 0 26px;display:grid;gap:10px}
+.checks li{display:flex;gap:10px;align-items:flex-start}
+.checks svg{color:var(--blue);margin-top:.3em}
+@media (max-width:860px){.join-grid{grid-template-columns:1fr}}
+
+/* realizados */
+.done-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.done{text-decoration:none;display:grid;gap:10px}
+.done img{width:100%;aspect-ratio:750/415;object-fit:cover;border-radius:10px}
+.done time{font-size:.82rem;font-weight:600;color:var(--muted)}
+.done h3{font-size:1.12rem}
+.done:hover h3{color:var(--blue)}
+@media (max-width:860px){.done-list{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.done-list{grid-template-columns:1fr}}
+
+/* inscrição */
+.signup{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+.signup-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:start}
+.signup .eyebrow{color:var(--gold)}
+.signup p{color:#C9D6F5}
+.steps{list-style:none;padding:0;margin:24px 0;display:grid;gap:16px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:36px 1fr;gap:14px;counter-increment:s}
+.steps li::before{content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--gold);color:#1B1400;font-family:var(--display);font-weight:900;display:grid;place-items:center}
+.steps b{font-family:var(--display);display:block}
+.steps span{color:#C9D6F5;font-size:.93rem}
+form.lead{background:var(--card);color:var(--text);border-radius:14px;padding:28px;display:grid;gap:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+form.lead h3{font-size:1.4rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:.86rem;font-weight:600;display:grid;gap:6px}
+input,textarea,select{font:inherit;padding:.75em .9em;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);width:100%}
+fieldset{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0}
+legend{font-size:.86rem;font-weight:600;padding:0 6px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}
+.opt{display:flex;gap:8px;align-items:center;font-weight:500;font-size:.9rem}
+.opt input{width:auto}
+.form-msg{margin:0;font-size:.9rem;font-weight:600;color:var(--blue)}
+@media (max-width:900px){.signup-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.row2,.opts{grid-template-columns:1fr}}
+
+/* notícias */
+.news{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.post{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.post:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.post img{width:100%;aspect-ratio:750/415;object-fit:cover}
+.post .bd{padding:16px 18px 20px;display:grid;gap:6px}
+.post time{font-size:.8rem;color:var(--muted);font-weight:600}
+.post h3{font-size:1.04rem}
+@media (max-width:980px){.news{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.news{grid-template-columns:1fr}}
+
+/* presidente */
+.pres{border-top:1px solid var(--line)}
+.pres-grid{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center}
+.pres img{border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.pres blockquote{margin:12px 0 18px;font-family:var(--display);font-weight:600;font-stretch:95%;font-size:clamp(1.35rem,2.5vw,1.9rem);line-height:1.25;text-wrap:balance}
+.pres p{color:var(--muted);max-width:62ch;margin:0 0 18px}
+.pres cite{font-style:normal;display:block;margin-bottom:22px}
+.pres cite b{font-family:var(--display);font-size:1.1rem}
+.pres cite small{display:block;color:var(--muted)}
+@media (max-width:800px){.pres-grid{grid-template-columns:1fr}.pres img{max-width:280px}}
+
+/* contato e rodapé */
+.contact{background:var(--surface)}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.contact-grid div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:6px;align-content:start}
+.contact-grid .ic{width:40px;height:40px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center}
+.contact-grid b{font-family:var(--display)}
+.contact-grid span{color:var(--muted);font-size:.93rem}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.contact-grid{grid-template-columns:1fr}}
+footer{background:var(--blue-ink);color:#B8C7EC;font-size:.92rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-block:56px 36px}
+footer h4{font-family:var(--display);color:#fff;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .logo b{color:#fff}
+footer .logo small{color:#9FB3E6}
+footer p{margin:14px 0 0;max-width:36ch}
+.legal{border-top:1px solid rgba(255,255,255,.12)}
+.legal .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding-block:18px;font-size:.84rem}
+@media (max-width:900px){.foot{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot{grid-template-columns:1fr}}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+.wa svg{width:30px;height:30px}
+
+/* bandeira do RS */
+:root{--rs-green:#009A3D;--rs-red:#E1251B;--rs-yellow:#FFD500;--rs-flag:linear-gradient(90deg,var(--rs-green) 0 33.33%,var(--rs-red) 33.33% 66.66%,var(--rs-yellow) 66.66% 100%)}
+.flag{height:5px;background:var(--rs-flag)}
+header.site{border-bottom:0}
+header.site::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:5px;background:var(--rs-flag)}
+.hero{border-bottom:0}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:var(--rs-flag)}
+.eyebrow.f{display:inline-flex;align-items:center;gap:10px}
+.eyebrow.f::before{content:"";width:30px;height:5px;border-radius:3px;background:var(--rs-flag);flex:none}
+.logo .logo-img{background:#fff;border-radius:6px;padding:2px;height:58px}
+footer{position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--rs-flag)}
+.event .date{box-shadow:inset 0 -5px 0 var(--rs-yellow),var(--shadow)}
+.why-item .ic.g{background:var(--rs-green);color:#fff}.why-item .ic.r{background:var(--rs-red);color:#fff}.why-item .ic.y{background:var(--rs-yellow);color:#1B1400}
+
+/* serviços */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 24px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--c)}
+.svc .ic{width:52px;height:52px;border-radius:12px;background:var(--blue);color:#fff;display:grid;place-items:center}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{font-size:1.2rem}
+.svc p{margin:0;color:var(--muted);font-size:.93rem}
+.svc ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem;display:grid;gap:4px}
+.svc ul a{color:var(--blue);font-weight:600}
+.svc .more{margin-top:auto;padding-top:6px}
+@media (max-width:1000px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* UVERGS 2027 */
+.future{position:relative;overflow:hidden;background:var(--blue-ink);color:#fff;isolation:isolate}
+.future .swoosh{position:absolute;right:-220px;top:-60px;width:900px;height:520px;transform:rotate(-12deg);z-index:-1;opacity:.9}
+.future .swoosh i{position:absolute;inset:0;border-radius:50%;border:26px solid transparent}
+.future .swoosh i:nth-child(1){border-bottom-color:var(--rs-green);border-left-color:var(--rs-green)}
+.future .swoosh i:nth-child(2){inset:34px;border-bottom-color:var(--rs-red);border-left-color:var(--rs-red)}
+.future .swoosh i:nth-child(3){inset:68px;border-bottom-color:var(--rs-yellow);border-left-color:var(--rs-yellow)}
+.future::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--blue-ink) 35%,rgba(4,26,79,.6) 100%)}
+.future .eyebrow{color:var(--rs-yellow)}
+.future h2{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;font-stretch:86%;text-transform:uppercase;margin:10px 0 16px}
+.future h2 em{font-style:normal;color:var(--rs-yellow)}
+.future .lead{color:#C9D6F5;max-width:58ch;font-size:1.08rem;margin:0 0 36px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pillar{background:rgba(9,36,98,.94);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px;display:grid;gap:10px;align-content:start;backdrop-filter:blur(4px)}
+.pillar .n{font-family:var(--display);font-weight:900;font-stretch:80%;font-size:2.6rem;line-height:1}
+.pillar:nth-child(1) .n{color:var(--rs-green)}.pillar:nth-child(2) .n{color:#FF5A4E}.pillar:nth-child(3) .n{color:var(--rs-yellow)}
+.pillar h3{font-size:1.3rem}
+.pillar p{margin:0;color:#C9D6F5;font-size:.94rem}
+.pillar ul{margin:0;padding-left:18px;color:#DCE6FF;font-size:.9rem;display:grid;gap:4px}
+.future .foot-note{margin:26px 0 0;color:#9FB3E6;font-size:.86rem}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}.future .swoosh{opacity:.35}}
+
+/* agenda */
+.event{overflow:visible}.event .ph{overflow:hidden;border-radius:12px 12px 0 0}
+.next{overflow:visible}.next img{border-radius:14px 14px 0 0}
+.addcal{position:relative}
+.addcal summary{list-style:none;cursor:pointer}
+.addcal summary::-webkit-details-marker{display:none}
+.addcal .menu{position:absolute;z-index:5;left:0;top:calc(100% + 6px);background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:6px;display:grid;min-width:210px}
+.addcal .menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:6px;text-decoration:none;font-weight:600;font-size:.92rem;color:var(--text)}
+.addcal .menu a:hover{background:var(--surface);color:var(--blue)}
+.addcal .menu b{width:22px;height:22px;border-radius:5px;display:grid;place-items:center;color:#fff;font-size:.72rem}
+.next .addcal .btn{width:100%}
+
+/* mapa das associadas */
+.map-sec{background:var(--surface)}
+.map-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:24px;align-items:start}
+.map-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.map-card svg{display:block;width:100%;height:auto;touch-action:none;cursor:grab;background:linear-gradient(180deg,rgba(11,63,184,.04),transparent)}
+.map-card svg.drag{cursor:grabbing}
+.mun{fill:#DCE4F2;stroke:#fff;stroke-width:.6;transition:fill .15s}
+.mun.on{fill:var(--blue)}
+.mun:hover,.mun.sel{fill:var(--rs-yellow)}
+.mun.on:hover,.mun.on.sel{fill:#FFB800}
+.mun.dim{fill:#EEF2F8}
+.rs-outline{fill:none;stroke:var(--blue-deep);stroke-width:1.4;pointer-events:none}
+.pin{fill:var(--rs-yellow);stroke:var(--blue-ink);stroke-width:1;pointer-events:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mun{fill:#1C2E5A;stroke:#0F2149}:root:not([data-theme="light"]) .mun.dim{fill:#14244A}:root:not([data-theme="light"]) .rs-outline{stroke:#6E97FF}}
+:root[data-theme="dark"] .mun{fill:#1C2E5A;stroke:#0F2149}:root[data-theme="dark"] .mun.dim{fill:#14244A}:root[data-theme="dark"] .rs-outline{stroke:#6E97FF}
+.map-tools{position:absolute;right:12px;top:12px;display:grid;gap:6px}
+.map-tools button{width:38px;height:38px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--text);font:700 1.2rem/1 var(--display);cursor:pointer;box-shadow:var(--shadow)}
+.map-legend{position:absolute;left:12px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:.8rem;font-weight:600}
+.map-legend span{display:inline-flex;align-items:center;gap:6px}
+.map-legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+.tip{position:absolute;pointer-events:none;background:var(--blue-ink);color:#fff;font-size:.82rem;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-130%);display:none;z-index:4}
+.tip small{display:block;font-weight:500;color:var(--rs-yellow)}
+.map-side{display:grid;gap:14px}
+.map-kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.map-kpis>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.map-kpis b{display:block;font-family:var(--display);font-weight:900;font-stretch:84%;font-size:2.4rem;line-height:1;color:var(--blue);font-variant-numeric:tabular-nums}
+.map-kpis small{color:var(--muted);font-size:.84rem}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:10px}
+.bar i{display:block;height:100%;background:var(--rs-flag)}
+.finder{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px}
+.finder h3{font-size:1.15rem}
+.result{border-radius:10px;padding:14px;display:grid;gap:8px;font-size:.93rem}
+.result.yes{background:rgba(0,154,61,.1);border:1px solid rgba(0,154,61,.35)}
+.result.no{background:rgba(244,180,0,.12);border:1px solid rgba(244,180,0,.5)}
+.result b{font-family:var(--display);font-size:1.1rem}
+.toggle{display:flex;gap:8px;align-items:center;font-weight:600;font-size:.9rem}
+.toggle input{width:auto}
+.chips-wrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.chips-wrap summary{cursor:pointer;font-family:var(--display);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;max-height:220px;overflow:auto}
+.chips button{font:600 .8rem var(--body);padding:5px 10px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
+.chips button:hover{border-color:var(--blue);color:var(--blue)}
+@media (max-width:960px){.map-grid{grid-template-columns:1fr}}
+
+/* em breve */
+.soon-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
+.soon{border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--card)}
+.soon .badge{display:inline-block;align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:4px;background:var(--rs-red);color:#fff}
+.tv{background:#050B1C;color:#fff;border-color:#0F1C3E}
+.tv .screen{position:relative;aspect-ratio:16/9;max-width:100%;background:url("img/summit-7.jpg") center/cover}
+.tv .screen::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,11,28,.2),rgba(5,11,28,.85))}
+.tv .screen .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.7);display:grid;place-items:center;backdrop-filter:blur(4px)}
+.tv .screen .play svg{width:30px;height:30px;margin-left:4px}
+.tv .screen .live{position:absolute;left:16px;top:16px;display:flex;gap:8px;align-items:center}
+.tv .screen .brand{position:absolute;left:18px;bottom:14px;font-family:var(--display);font-weight:900;font-stretch:84%;font-size:2.2rem;letter-spacing:.02em}
+.tv .screen .brand em{font-style:normal;color:var(--rs-yellow)}
+.tv .bd,.bank .bd{padding:22px 24px 24px;display:grid;gap:12px;align-content:start;flex:1}
+.tv p{margin:0;color:#B8C7EC}
+.tv h3,.bank h3{font-size:1.5rem}
+.vlist{list-style:none;margin:0;padding:0;display:grid;gap:2px;border-top:1px solid rgba(255,255,255,.12);padding-top:10px}
+.vlist a{display:flex;gap:10px;align-items:baseline;justify-content:space-between;padding:7px 0;text-decoration:none;font-size:.9rem;color:#DCE6FF}
+.vlist a:hover{color:var(--rs-yellow)}
+.vlist small{color:#7F93C4;white-space:nowrap;font-size:.78rem}
+.bank .top{padding:22px 24px 0}
+.bank p{margin:0;color:var(--muted)}
+.search-mock{display:flex;gap:8px;align-items:center;border:2px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);background:var(--surface)}
+.search-mock span{flex:1;font-size:.93rem}
+.cats{display:flex;flex-wrap:wrap;gap:6px}
+.cats span{font-size:.8rem;font-weight:600;padding:6px 11px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.doc-list{display:grid;gap:8px}
+.doc{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem;position:relative;overflow:hidden}
+.doc .t{font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:4px 7px;border-radius:4px;color:#fff}
+.doc svg{color:var(--muted)}
+.doc em{font-style:normal;color:var(--muted);font-size:.8rem;display:block}
+.lockline{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--blue);font-size:.92rem}
+@media (max-width:900px){.soon-grid{grid-template-columns:1fr}}
+
+/* institucional */
+.inst-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px}
+.inst-stats div{border-left:4px solid var(--c);padding:4px 0 4px 16px}
+.inst-stats b{display:block;font-family:var(--display);font-weight:900;font-stretch:84%;font-size:2.4rem;line-height:1.05;font-variant-numeric:tabular-nums}
+.inst-stats small{color:var(--muted);font-size:.86rem}
+.inst-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.inst-grid h3.sub{font-size:1.3rem;margin-bottom:16px}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.member{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.member .av{width:52px;height:52px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;overflow:hidden}
+.member .av img{width:100%;height:100%;object-fit:cover;object-position:80% 20%;transform:scale(1.9);transform-origin:78% 22%}
+.member b{display:block;font-family:var(--display);line-height:1.2}
+.member small{color:var(--muted);font-size:.8rem;display:block}
+.member.tbd{border-style:dashed}
+.member.tbd .av{background:var(--surface);color:var(--muted);border:1px dashed var(--line)}
+.member.lead{grid-column:1/-1}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:3px solid var(--line);margin-left:8px}
+.timeline li{position:relative;padding:0 0 18px 22px}
+.timeline li::before{content:"";position:absolute;left:-9px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--c,var(--blue));border:3px solid var(--bg)}
+.timeline b{font-family:var(--display);color:var(--blue);font-size:1.05rem}
+.timeline p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+.expres{margin-top:8px;display:grid;gap:8px}
+.partners{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:12px}
+.partner{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color .15s,transform .15s,box-shadow .15s}
+.partner:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 12px 26px -16px rgba(6,36,110,.5)}
+.partner .lg{height:92px;background:#fff;display:grid;place-items:center;padding:14px 20px;border-bottom:3px solid var(--c)}
+.partner .lg img{max-width:82%;max-height:52px;width:auto;height:auto;object-fit:contain;display:block}
+.partner .lg img+.ab{display:none}
+.partner .ab{font-family:var(--display);font-weight:900;font-size:1.35rem;letter-spacing:.01em;color:#0B3FB8}
+.partner .nm{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px 12px;font-size:.84rem;font-weight:600;line-height:1.3}
+.partner .nm svg{width:14px;height:14px;flex:none;color:var(--muted);transition:transform .15s,color .15s}
+.partner:hover .nm svg{color:var(--blue);transform:translateX(2px)}
+@media (max-width:980px){.inst-grid{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr}.inst-stats{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.board{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr;gap:10px}.partner .lg{height:72px;padding:10px 12px}.partner .ab{font-size:1.1rem}.partner .nm{font-size:.76rem;padding:9px 10px 10px}.partner .lg img{max-height:40px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></g></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></g></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></g></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></g></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></g></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7zM19 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></g></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18h8"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/><path d="M16 17l2 2 3-4"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4v16l13-8z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></g></symbol>
+  <symbol id="i-calplus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 13v6M9 16h6"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 12l5 5L20 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="logo-mark" viewBox="0 0 46 52"><path d="M23 1 44 8v17c0 13-9 22-21 26C11 47 2 38 2 25V8z" fill="#0B3FB8"/><path d="M23 6 39 11.5V25c0 10-7 17.5-16 21-9-3.5-16-11-16-21V11.5z" fill="none" stroke="#F4B400" stroke-width="2"/><path d="M14 16v10a9 9 0 0 0 18 0V16" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><path d="M19 35l4 6 4-6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="info">
+      <span><svg class="i"><use href="#i-phone"/></svg>(51) 3225-8286</span>
+      <span><svg class="i"><use href="#i-clock"/></svg>Seg a sex, 8h30–12h e 13h30–18h</span>
+    </div>
+    <div class="links">
+      <a href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>WhatsApp</a>
+      <a href="https://www.instagram.com/uvergs" target="_blank" rel="noopener"><svg class="i"><use href="#i-ig"/></svg>Instagram</a>
+      <a href="https://webmail.uvergs.com.br/" target="_blank" rel="noopener"><svg class="i"><use href="#i-mail"/></svg>Webmail</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="UVERGS, página inicial">
+      <img class="logo-img" src="img/logo.png" alt="UVERGS" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"><svg aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span><b>UVERGS</b><small>União dos Vereadores do Rio Grande do Sul</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="i"><use href="#i-menu"/></svg></button>
+    <nav class="main" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#associadas">Associadas</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#institucional">Institucional</a></li>
+        <li><a href="#uvergs-2027">UVERGS 2027</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li class="nav-cta"><a href="#inscricao">Quero participar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Auditório lotado na 3ª Marcha Gaúcha de Vereadores"></div>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Eventos UVERGS 2026</span>
+        <h1 style="margin-top:12px">Onde os vereadores do RS <em>se encontram</em></h1>
+        <p class="lead">Seminários, cursos e congressos para quem faz o Legislativo municipal gaúcho. Capacitação com especialistas, troca de experiências com colegas de todo o estado e voz junto ao Governo do Estado.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#inscricao">Quero participar <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#eventos">Ver agenda</a>
+        </div>
+        <div class="proof">
+          <div><b>51</b><small>anos de UVERGS</small></div>
+          <div><b>497</b><small>municípios gaúchos</small></div>
+          <div><b>107</b><small>Câmaras filiadas</small></div>
+        </div>
+      </div>
+      <article class="next" id="next-card">
+        <img src="img/ev-rosa-capa.jpg" alt="Arte do Outubro Rosa UVERGS, encontro de formação de 6 a 9 de outubro">
+        <div class="bd">
+          <div class="k"><span class="eyebrow f">Próximo evento</span><span class="pill">Vagas abertas</span></div>
+          <h3>Outubro Rosa UVERGS</h3>
+          <div class="meta">
+            <span><svg class="i"><use href="#i-cal"/></svg>6 a 9 de outubro de 2026</span>
+            <span><svg class="i"><use href="#i-pin"/></svg>AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre</span>
+          </div>
+          <div class="count" id="countdown" aria-live="polite">
+            <div><b data-u="d">11</b><small>dias</small></div>
+            <div><b data-u="h">00</b><small>horas</small></div>
+            <div><b data-u="m">00</b><small>min</small></div>
+          </div>
+          <a class="btn btn-blue" href="#inscricao" data-event="Outubro Rosa UVERGS">Garantir minha vaga <svg class="i"><use href="#i-arrow"/></svg></a>
+          <details class="addcal" data-cal="rosa"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="eventos">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Agenda 2026</span><h2>Próximos eventos</h2><p>Escolha o encontro, faça a pré-inscrição e a equipe da UVERGS confirma sua vaga pelo WhatsApp.</p></div>
+        <a class="more" href="#realizados">Eventos realizados <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="events">
+        <article class="event" data-end="2026-10-09">
+          <div class="ph"><img src="img/ev-rosa-capa.jpg" alt="Arte do Outubro Rosa UVERGS" loading="lazy"><div class="date"><b>06–09</b><small>Out</small></div></div>
+          <div class="bd">
+            <div class="top"><span class="type">Encontro de formação</span><span class="pill">Vagas abertas</span></div>
+            <h3>Outubro Rosa UVERGS</h3>
+            <p>Um encontro de formação que une conhecimento, capacitação e a importância de cuidar da saúde, com programação preparada para fortalecer e valorizar quem faz parte do Legislativo gaúcho.</p>
+            <div class="meta"><span><svg class="i"><use href="#i-pin"/></svg>AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre</span></div>
+            <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Outubro Rosa UVERGS">Quero participar</a><details class="addcal" data-cal="rosa"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao" target="_blank" rel="noopener" style="align-self:center">Programação</a></div>
+          </div>
+        </article>
+        <article class="event" data-end="2026-11-06">
+          <div class="ph"><img src="img/aparte-capa.jpg" alt="Atrações do Aparte Artístico 2026: Dartagnan Portella, Desidério Souza, Camila Regio e Quinto Manancial" loading="lazy"><div class="date"><b>03–06</b><small>Nov</small></div></div>
+          <div class="bd">
+            <div class="top"><span class="type">Seminário Estadual + cultura</span><span class="pill">Shows confirmados</span></div>
+            <h3>Aparte Artístico UVERGS</h3>
+            <p>O Seminário Estadual de Vereadores com noites de música e tradição gaúcha no CTG Estância da Azenha: Dartagnan Portella, Desidério Souza, Camila Regio e Quinto Manancial.</p>
+            <div class="meta"><span><svg class="i"><use href="#i-pin"/></svg>Sindilojas, R. dos Andradas, 1234, 9º andar, e CTG Estância da Azenha, Porto Alegre</span></div>
+            <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Aparte Artístico UVERGS">Quero participar</a><details class="addcal" data-cal="aparte"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="https://uvergs.com.br/aparte-artistico-uvergs" target="_blank" rel="noopener" style="align-self:center">Programação</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block why" id="por-que">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Por que participar</span><h2>Mais preparo para o mandato, mais força para o seu município</h2><p>Os eventos da UVERGS são feitos para vereadores, vereadoras, assessores e servidores das Câmaras Municipais.</p></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><span class="ic g"><svg><use href="#i-cap"/></svg></span><h3>Capacitação prática</h3><p>Palestras e painéis com especialistas sobre os temas que chegam todos os dias à sua Câmara.</p></div>
+        <div class="why-item"><span class="ic r"><svg><use href="#i-users"/></svg></span><h3>Rede estadual</h3><p>Troca de experiências com vereadores, lideranças e autoridades de todas as regiões do Rio Grande do Sul.</p></div>
+        <div class="why-item"><span class="ic y"><svg><use href="#i-flag"/></svg></span><h3>Voz municipalista</h3><p>Na Marcha Gaúcha, os vereadores levam o Manifesto Municipalista até o Palácio Piratini.</p></div>
+        <div class="why-item"><span class="ic"><svg><use href="#i-music"/></svg></span><h3>Cultura gaúcha</h3><p>O Aparte Artístico une informação que conecta e cultura que aproxima.</p></div>
+      </div>
+      <div class="topics" aria-label="Temas dos eventos de 2026">
+        <span>Processo legislativo</span><span>Reforma tributária</span><span>Controladoria e ética</span><span>Licitações</span><span>Controle eficaz</span><span>Eficiência administrativa</span><span>Regularização</span><span>Gestão pública</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="galeria">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Galeria</span><h2>Como são os nossos eventos</h2></div>
+        <a class="more" href="https://uvergs.com.br/galeria" target="_blank" rel="noopener">Ver todos os álbuns <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="mosaic">
+        <figure class="big"><img src="img/summit-6.jpg" alt="Plateia do UVERGS Summit" loading="lazy"><figcaption>UVERGS Summit</figcaption></figure>
+        <figure><img src="img/summit-7.jpg" alt="Painel no UVERGS Summit" loading="lazy"><figcaption>Painel no Summit</figcaption></figure>
+        <figure class="tall"><img src="img/galeria-marcha-5.jpg" alt="Palestrante na 3ª Marcha Gaúcha de Vereadores" loading="lazy"><figcaption>3ª Marcha Gaúcha</figcaption></figure>
+        <figure><img src="img/summit-4.jpg" alt="Vereadores reunidos no UVERGS Summit" loading="lazy"><figcaption>Vereadoras e vereadores</figcaption></figure>
+        <figure><img src="img/sede-capa.jpg" alt="Inauguração da nova sede da UVERGS" loading="lazy"><figcaption>Nova sede</figcaption></figure>
+        <figure><img src="img/summit-5.jpg" alt="Participantes conversando no UVERGS Summit" loading="lazy"><figcaption>Networking</figcaption></figure>
+        <figure><img src="img/galeria-marcha-4.jpg" alt="Participantes na 3ª Marcha Gaúcha de Vereadores" loading="lazy"><figcaption>Marcha Gaúcha</figcaption></figure>
+      </div>
+      <div class="quote"><b>“</b><p>O UVERGS Summit entra para a história como o maior e mais marcante evento da UVERGS nas últimas décadas, o maior evento de vereadores já realizado em Porto Alegre.<small>UVERGS, março de 2026</small></p></div>
+    </div>
+  </section>
+
+  <section class="block join" id="associe">
+    <div class="wrap join-grid">
+      <div>
+        <span class="eyebrow f">Associe sua Câmara</span>
+        <h2 class="h2">Câmara associada paga menos em todos os cursos</h2>
+        <p>A UVERGS é a entidade oficial dos vereadores do RS, reconhecida pela Lei Estadual n.º 12.023/03. Além de congressos e cursos técnicos, as associadas contam com assessoria jurídica permanente.</p>
+        <ul class="checks">
+          <li><svg class="i"><use href="#i-check"/></svg>Valor reduzido nas inscrições de cursos e seminários</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Assessoria jurídica, legislativa e contábil</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Representação política junto ao Estado</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Carteira oficial de vereador e convênios com a rede hoteleira de Porto Alegre</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Acesso ao Banco de projetos e pareceres (em breve)</li>
+        </ul>
+        <a class="btn btn-blue" href="#inscricao" data-event="Associar minha Câmara">Quero associar minha Câmara <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div>
+        <p style="margin:0 0 6px;font-weight:600;color:var(--text)">Exemplo: Curso de Gestão, Eficiência e Governança</p>
+        <div class="price">
+          <div class="hl"><small>Câmara sócia</small><b>R$ 1.200</b><span>por inscrição</span></div>
+          <div><small>Câmara não sócia</small><b>R$ 1.700</b><span>por inscrição</span></div>
+        </div>
+        <p class="note">Valores do curso realizado de 1º a 4 de setembro de 2026 na sede da UVERGS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block map-sec" id="associadas">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Câmaras associadas</span><h2>A UVERGS em todo o Rio Grande do Sul</h2><p>Passe o mouse ou toque em um município para ver se a Câmara é filiada. Use + e − para aproximar e arraste para mover o mapa.</p></div>
+      </div>
+      <div class="map-grid">
+        <div class="map-card" id="map-card">
+          <svg id="rs-svg" role="img" aria-label="Mapa do Rio Grande do Sul com as Câmaras filiadas à UVERGS em destaque"></svg>
+          <div class="map-tools"><button type="button" id="zin" aria-label="Aproximar">+</button><button type="button" id="zout" aria-label="Afastar">−</button><button type="button" id="zreset" aria-label="Ver o estado inteiro" style="font-size:.8rem">RS</button></div>
+          <div class="map-legend"><span><i style="background:var(--blue)"></i>Câmara filiada</span><span><i style="background:#DCE4F2;border:1px solid var(--line)"></i>Ainda não filiada</span></div>
+          <div class="tip" id="tip"></div>
+        </div>
+        <div class="map-side">
+          <div class="map-kpis">
+            <div><b id="k-fil">107</b><small>Câmaras filiadas</small></div>
+            <div><b id="k-pct">22%</b><small>dos 497 municípios</small><div class="bar"><i id="k-bar" style="width:22%"></i></div></div>
+          </div>
+          <div class="finder">
+            <h3>A Câmara da sua cidade é associada?</h3>
+            <label for="m-busca" class="sr">Município</label>
+            <input id="m-busca" list="m-lista" placeholder="Digite o nome do município" autocomplete="off">
+            <datalist id="m-lista"></datalist>
+            <div id="m-res" class="result" hidden></div>
+            <label class="toggle" for="m-only"><input type="checkbox" id="m-only"> Mostrar só as filiadas</label>
+          </div>
+          <details class="chips-wrap">
+            <summary>Ver as 107 Câmaras filiadas</summary>
+            <div class="chips" id="m-chips"></div>
+          </details>
+          <p class="note" style="margin:0">Lista de Câmaras filiadas atualizada em setembro de 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="servicos">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Serviços</span><h2>Apoio técnico para o dia a dia da Câmara</h2><p>Além dos eventos, a UVERGS acompanha vereadores e Câmaras durante todo o mandato.</p></div>
+        <a class="more" href="#inscricao" data-event="Serviços de assessoria">Falar com a equipe <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="svc-grid">
+        <article class="svc" style="--c:var(--rs-green)"><span class="ic"><svg><use href="#i-scale"/></svg></span><h3>Assessoria jurídica</h3><p>Assessoria jurídica permanente para vereadores e Câmaras: pareceres, consultas e orientação em administração pública, licitações e contratos.</p><a class="more" href="#inscricao" data-event="Serviços de assessoria">Solicitar <svg class="i"><use href="#i-arrow"/></svg></a></article>
+        <article class="svc" style="--c:var(--rs-red)"><span class="ic"><svg><use href="#i-doc"/></svg></span><h3>Assessoria legislativa</h3><p>Apoio no processo legislativo e no regimento interno, e na construção de projetos de lei, indicações e requerimentos, do texto à justificativa.</p><a class="more" href="#inscricao" data-event="Construção de projetos">Solicitar <svg class="i"><use href="#i-arrow"/></svg></a></article>
+        <article class="svc" style="--c:var(--rs-yellow)"><span class="ic"><svg><use href="#i-calc"/></svg></span><h3>Assessoria contábil</h3><p>Apoio em orçamento, prestação de contas e controle, com base na Lei nº 4.320 e nas orientações do TCE-RS.</p><a class="more" href="#inscricao" data-event="Serviços de assessoria">Solicitar <svg class="i"><use href="#i-arrow"/></svg></a></article>
+        <article class="svc" style="--c:var(--blue)"><span class="ic"><svg><use href="#i-book"/></svg></span><h3>Legislação</h3><p>Acervo com as leis de referência para o Legislativo municipal.</p><ul><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l4320.htm" target="_blank" rel="noopener">Lei nº 4.320/1964</a>, orçamentos públicos</li><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8429.htm" target="_blank" rel="noopener">Lei nº 8.429/1992</a>, improbidade</li><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8666cons.htm" target="_blank" rel="noopener">Lei nº 8.666/1993</a>, licitações</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block future" id="uvergs-2027">
+    <div class="swoosh" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <span class="eyebrow f">A nova UVERGS · 2027</span>
+      <h2>Digital. 360. <em>Referência no Brasil.</em></h2>
+      <p class="lead">Depois de 51 anos, a UVERGS se prepara para um novo ciclo: mais perto de cada vereador, presente em todos os canais e com um modelo de atuação que sirva de referência para as entidades de vereadores de todo o país.</p>
+      <div class="pillars">
+        <div class="pillar"><span class="n">Digital</span><h3>UVERGS Digital</h3><p>A UVERGS no celular do vereador, a qualquer hora.</p><ul><li>Inscrições e pagamentos online</li><li>Cursos ao vivo e gravados</li><li>Área do vereador com certificados e materiais</li></ul></div>
+        <div class="pillar"><span class="n">360</span><h3>UVERGS 360</h3><p>Todo o apoio de que o mandato precisa, em um só lugar.</p><ul><li>Assessoria jurídica, legislativa e contábil integradas</li><li>Capacitação contínua o ano todo</li><li>Representação política junto ao Estado</li></ul></div>
+        <div class="pillar"><span class="n">Brasil</span><h3>Referência nacional</h3><p>O jeito gaúcho de fortalecer o Legislativo municipal como modelo para o país.</p><ul><li>Eventos que atraem lideranças de todo o Brasil</li><li>Troca de boas práticas entre estados</li><li>Voz dos vereadores do RS em Brasília</li></ul></div>
+      </div>
+      <div class="actions" style="margin-top:32px"><a class="btn btn-gold" href="#inscricao" data-event="Novidades da UVERGS 2027">Quero acompanhar a UVERGS 2027 <svg class="i"><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="block" id="em-breve">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Em breve</span><h2>Novos canais da UVERGS</h2><p>Os primeiros passos da UVERGS Digital.</p></div>
+      </div>
+      <div class="soon-grid">
+        <article class="soon tv" id="tv-uvergs">
+          <div class="screen">
+            <div class="live"><span class="badge">Em breve</span></div>
+            <div class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></div>
+            <div class="brand">TV <em>UVERGS</em></div>
+          </div>
+          <div class="bd">
+            <h3>TV UVERGS</h3>
+            <p>Transmissões ao vivo dos eventos, entrevistas, cursos e os destaques do Legislativo gaúcho, em um canal próprio da UVERGS.</p>
+            <ul class="vlist" aria-label="Vídeos já publicados">
+              <li><a href="https://uvergs.com.br/convite-do-presidente-da-uvergs-ao-ministro-augusto-nardes" target="_blank" rel="noopener">Convite do Presidente da UVERGS ao Ministro Augusto Nardes <small>abr 2025</small></a></li>
+              <li><a href="https://uvergs.com.br/programacao-do-19-aparte-artistico-de-vereadores" target="_blank" rel="noopener">Programação do 19º Aparte Artístico de Vereadores <small>nov 2024</small></a></li>
+              <li><a href="https://uvergs.com.br/vereador-silomar-garcia-presidente-da-uvergs-em-entrevista-a-giovani-grizotti" target="_blank" rel="noopener">Silomar Garcia em entrevista a Giovani Grizotti <small>dez 2019</small></a></li>
+            </ul>
+            <a class="btn btn-gold" href="#inscricao" data-event="Estreia da TV UVERGS" style="justify-self:start">Avise-me na estreia</a>
+          </div>
+        </article>
+        <article class="soon bank" id="banco">
+          <div class="top"><span class="badge">Em breve</span></div>
+          <div class="bd">
+            <h3>Banco de projetos e pareceres</h3>
+            <p>Modelos de projetos de lei, pareceres jurídicos e documentos legislativos prontos para adaptar à realidade do seu município.</p>
+            <div class="search-mock" aria-hidden="true"><svg class="i"><use href="#i-search"/></svg><span>Buscar por tema, ex.: diárias, reforma tributária</span></div>
+            <div class="cats"><span>Projetos de lei</span><span>Pareceres jurídicos</span><span>Requerimentos</span><span>Indicações</span><span>Regimento interno</span></div>
+            <div class="doc-list" aria-hidden="true">
+              <div class="doc"><span class="t" style="background:var(--rs-green)">PL</span><div>Modelo de projeto de lei<em>Exemplo de documento</em></div><svg class="i"><use href="#i-lock"/></svg></div>
+              <div class="doc"><span class="t" style="background:var(--rs-red)">PAR</span><div>Parecer jurídico<em>Exemplo de documento</em></div><svg class="i"><use href="#i-lock"/></svg></div>
+            </div>
+            <div class="lockline"><svg class="i"><use href="#i-lock"/></svg>Exclusivo para Câmaras associadas</div>
+            <a class="btn btn-blue" href="#inscricao" data-event="Associar minha Câmara" style="justify-self:start">Quero acesso para minha Câmara</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="realizados">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Já aconteceu</span><h2>Eventos realizados em 2026</h2></div>
+      </div>
+      <div class="done-list">
+        <a class="done" href="https://uvergs.com.br/seminario-de-empoderamento-legislativo-controladoria-e-etica-na-gestao" target="_blank" rel="noopener"><img src="img/ev-empod.jpg" alt="Brinde do Seminário de Empoderamento Legislativo" loading="lazy" style="object-position:top"><time>15 a 18 de setembro</time><h3>Seminário de Empoderamento Legislativo: Controladoria e Ética na Gestão</h3></a>
+        <a class="done" href="https://uvergs.com.br/curso-de-gestao-eficiencia-e-governanca" target="_blank" rel="noopener"><img src="img/ev-curso-capa.jpg" alt="Programação do Curso de Gestão" loading="lazy"><time>1º a 4 de setembro</time><h3>Curso de Gestão: Eficiência e Governança</h3></a>
+        <a class="done" href="https://uvergs.com.br/auditorio-lotado-marca-a-3a-marcha-gaucha-de-vereadores" target="_blank" rel="noopener"><img src="img/marcha.jpg" alt="Auditório lotado na 3ª Marcha Gaúcha de Vereadores" loading="lazy"><time>18 a 21 de agosto</time><h3>3ª Marcha Gaúcha de Vereadores</h3></a>
+        <a class="done" href="https://uvergs.com.br/uvergs-51-anos-19-a-22-de-maio-de-2026" target="_blank" rel="noopener"><img src="img/51anos-capa.jpg" alt="Arte dos 51 anos da UVERGS" loading="lazy"><time>19 a 22 de maio</time><h3>UVERGS 51 anos</h3></a>
+        <a class="done" href="https://uvergs.com.br/o-uvergs-summit-entra-para-a-historia-como-o-maior-e-mais-marcante-evento-da-uvergs" target="_blank" rel="noopener"><img src="img/summit-3.jpg" alt="Participantes do UVERGS Summit" loading="lazy"><time>Março</time><h3>UVERGS Summit</h3></a>
+        <a class="done" href="https://uvergs.com.br/um-marco-historico-da-uvergs-na-presidencia-do-dr-silomar-garcia-a-conquista-do-novo-espaco" target="_blank" rel="noopener"><img src="img/sede.jpg" alt="Corte da fita na nova sede da UVERGS" loading="lazy"><time>19 de maio</time><h3>Inauguração da nova sede</h3></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block signup" id="inscricao">
+    <div class="wrap signup-grid">
+      <div>
+        <span class="eyebrow f">Pré-inscrição</span>
+        <h2 class="h2" style="margin-top:8px">Garanta sua vaga no próximo evento</h2>
+        <p>Preencha seus dados. A mensagem vai direto para o WhatsApp da UVERGS, e nossa equipe responde com a confirmação e os detalhes do evento.</p>
+        <ol class="steps">
+          <li><div><b>Escolha os eventos</b><span>Marque um ou mais encontros de interesse.</span></div></li>
+          <li><div><b>Envie pelo WhatsApp</b><span>Seus dados já seguem prontos na mensagem.</span></div></li>
+          <li><div><b>Receba a confirmação</b><span>A equipe confirma vaga, valores e forma de pagamento.</span></div></li>
+        </ol>
+        <p>Prefere ligar? <b style="color:#fff">(51) 3225-8286</b></p>
+      </div>
+      <form class="lead" id="lead-form">
+        <h3>Quero participar</h3>
+        <div class="row2">
+          <label for="f-nome">Nome completo<input id="f-nome" required autocomplete="name" placeholder="Seu nome"></label>
+          <label for="f-cargo">Cargo<select id="f-cargo"><option>Vereador(a)</option><option>Presidente de Câmara</option><option>Assessor(a)</option><option>Servidor(a) da Câmara</option><option>Outro</option></select></label>
+        </div>
+        <div class="row2">
+          <label for="f-cidade">Câmara Municipal de<input id="f-cidade" required placeholder="Município"></label>
+          <label for="f-fone">WhatsApp<input id="f-fone" type="tel" required autocomplete="tel" placeholder="(51) 90000-0000"></label>
+        </div>
+        <label for="f-email">E-mail<input id="f-email" type="email" autocomplete="email" placeholder="seu@email.com.br"></label>
+        <fieldset>
+          <legend>Tenho interesse em</legend>
+          <div class="opts">
+            <label class="opt" for="e1"><input type="checkbox" id="e1" value="Outubro Rosa UVERGS" checked> Outubro Rosa (6–9 out)</label>
+            <label class="opt" for="e2"><input type="checkbox" id="e2" value="Aparte Artístico UVERGS"> Aparte Artístico (3–6 nov)</label>
+            <label class="opt" for="e3"><input type="checkbox" id="e3" value="Associar minha Câmara"> Associar minha Câmara</label>
+            <label class="opt" for="e4"><input type="checkbox" id="e4" value="Novidades da UVERGS 2027"> Novidades da UVERGS 2027</label>
+            <label class="opt" for="e5"><input type="checkbox" id="e5" value="Serviços de assessoria"> Assessoria jurídica, legislativa ou contábil</label>
+            <label class="opt" for="e6"><input type="checkbox" id="e6" value="Construção de projetos"> Construção de projetos</label>
+            <label class="opt" for="e7"><input type="checkbox" id="e7" value="Estreia da TV UVERGS"> Estreia da TV UVERGS</label>
+          </div>
+        </fieldset>
+        <button class="btn btn-wa" type="submit"><svg class="i"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+        <p class="form-msg" id="lead-msg" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="block" id="noticias">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Notícias</span><h2>Acontece na UVERGS</h2></div>
+        <a class="more" href="https://uvergs.com.br/noticias" target="_blank" rel="noopener">Todas as notícias <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="news">
+        <a class="post" href="https://uvergs.com.br/shows-confirmados-aparte-artistico-2026" target="_blank" rel="noopener"><img src="img/aparte-capa.jpg" alt="" loading="lazy"><div class="bd"><time datetime="2026-09-09">9 de setembro de 2026</time><h3>Shows confirmados! Aparte Artístico 2026</h3></div></a>
+        <a class="post" href="https://uvergs.com.br/auditorio-lotado-marca-a-3a-marcha-gaucha-de-vereadores" target="_blank" rel="noopener"><img src="img/marcha-capa.jpg" alt="" loading="lazy"><div class="bd"><time datetime="2026-08-24">24 de agosto de 2026</time><h3>Auditório lotado marca a 3ª Marcha Gaúcha de Vereadores</h3></div></a>
+        <a class="post" href="https://uvergs.com.br/presidente-da-uvergs-dr-silomar-garcia-prestigia-homenagem-a-jeronimo-goergen-na-assembleia-legislativa" target="_blank" rel="noopener"><img src="img/goergen-capa.jpg" alt="" loading="lazy"><div class="bd"><time datetime="2026-07-01">1º de julho de 2026</time><h3>Presidente da UVERGS prestigia homenagem a Jerônimo Goergen</h3></div></a>
+        <a class="post" href="https://uvergs.com.br/um-marco-historico-da-uvergs-na-presidencia-do-dr-silomar-garcia-a-conquista-do-novo-espaco" target="_blank" rel="noopener"><img src="img/sede-capa.jpg" alt="" loading="lazy"><div class="bd"><time datetime="2026-05-19">19 de maio de 2026</time><h3>Um marco histórico: a conquista do novo espaço</h3></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block pres" id="presidente">
+    <div class="wrap pres-grid">
+      <img src="img/goergen.jpg" alt="Dr. Silomar Garcia, presidente da UVERGS, à direita, com Jerônimo Goergen" loading="lazy" style="object-position:70% center">
+      <div>
+        <span class="eyebrow f">Mensagem do Presidente</span>
+        <blockquote>“Somos os primeiros representantes da sociedade. A Câmara de Vereadores é a caixa de ressonância de toda a sociedade.”</blockquote>
+        <p>O vereador surge da própria comunidade: é o empresário, o professor, o vizinho, o sindicalista que assume o compromisso de representar sua cidade. Fortalecer esse vereador é a missão da UVERGS.</p>
+        <cite><b>Dr. Silomar Garcia Silveira</b><small>Presidente da UVERGS</small></cite>
+        <a class="more" href="https://uvergs.com.br/mensagem-do-presidente" target="_blank" rel="noopener">Ler a mensagem completa <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="institucional">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow f">Institucional</span><h2>Entidade oficial dos vereadores do RS desde 1975</h2><p>Reconhecida pela Lei Estadual n.º 12.023/03, a UVERGS representa os vereadores, as Câmaras Municipais e as associações regionais de Câmaras do Rio Grande do Sul.</p></div>
+      </div>
+      <div class="inst-stats">
+        <div style="--c:var(--rs-green)"><b>1975</b><small>ano de fundação</small></div>
+        <div style="--c:var(--rs-red)"><b>+4.000</b><small>mandatos representados</small></div>
+        <div style="--c:var(--rs-yellow)"><b>+7 mi</b><small>de votos na última eleição</small></div>
+        <div style="--c:var(--blue)"><b>107</b><small>Câmaras filiadas</small></div>
+      </div>
+      <div class="inst-grid">
+        <div>
+          <h3 class="sub">Diretoria</h3>
+          <div class="board">
+            <div class="member lead"><span class="av"><img src="img/goergen.jpg" alt=""></span><div><b>Dr. Silomar Garcia Silveira</b><small>Presidente · Vereador de Novo Cabrais</small></div></div>
+            <div class="member tbd"><span class="av">VP</span><div><b>Nome a confirmar</b><small>Vice-presidente</small></div></div>
+            <div class="member tbd"><span class="av">SG</span><div><b>Nome a confirmar</b><small>Secretário(a)-geral</small></div></div>
+            <div class="member tbd"><span class="av">TG</span><div><b>Nome a confirmar</b><small>Tesoureiro(a)-geral</small></div></div>
+            <div class="member tbd"><span class="av">CF</span><div><b>Nomes a confirmar</b><small>Conselho fiscal</small></div></div>
+          </div>
+          <h3 class="sub" style="margin-top:32px">Ex-presidentes</h3>
+          <div class="expres">
+            <div class="member"><span class="av">RP</span><div><b>Reginaldo Pujol</b><small>Dez mandatos como vereador de Porto Alegre · nome da Medalha de Honra da UVERGS</small></div></div>
+            <div class="member tbd"><span class="av">+</span><div><b>Galeria completa a confirmar</b><small>Nomes e mandatos dos demais ex-presidentes</small></div></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="sub">Nossa história</h3>
+          <ol class="timeline">
+            <li style="--c:var(--rs-green)"><b>1975</b><p>Fundação da União dos Vereadores do Rio Grande do Sul, em 23 de maio.</p></li>
+            <li style="--c:var(--rs-red)"><b>2003</b><p>A Lei Estadual n.º 12.023/03, de autoria de Jerônimo Goergen, reconhece a UVERGS como entidade oficial dos vereadores do RS.</p></li>
+            <li style="--c:var(--rs-yellow)"><b>2019</b><p>Posse do Dr. Silomar Garcia Silveira na presidência.</p></li>
+            <li style="--c:var(--blue)"><b>2024</b><p>A enchente atinge a sede da entidade no Centro Administrativo do Estado.</p></li>
+            <li style="--c:var(--rs-green)"><b>2025</b><p>UVERGS 50 anos e reconstrução da sede, com novo auditório.</p></li>
+            <li style="--c:var(--rs-red)"><b>2026</b><p>Inauguração do novo espaço, UVERGS Summit e 3ª Marcha Gaúcha de Vereadores.</p></li>
+            <li style="--c:var(--rs-yellow)"><b>2027</b><p>A nova UVERGS: digital, 360 e referência no Brasil.</p></li>
+          </ol>
+        </div>
+      </div>
+      <h3 class="sub" style="margin-top:44px;font-size:1.3rem">Parceiros e links institucionais</h3>
+      <div class="partners"><a class="partner" href="https://www.al.rs.gov.br/" target="_blank" rel="noopener" style="--c:var(--rs-green)" title="Assembleia Legislativa do RS"><span class="lg"><img src="img/parceiros/alrs.png" alt="Assembleia Legislativa do RS" loading="lazy" onerror="this.remove()"><b class="ab">AL-RS</b></span><span class="nm">Assembleia Legislativa do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.tce.rs.gov.br/" target="_blank" rel="noopener" style="--c:var(--rs-red)" title="Tribunal de Contas do Estado do RS"><span class="lg"><img src="img/parceiros/tcers.png" alt="Tribunal de Contas do Estado do RS" loading="lazy" onerror="this.remove()"><b class="ab">TCE-RS</b></span><span class="nm">Tribunal de Contas do Estado do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.mprs.mp.br/" target="_blank" rel="noopener" style="--c:var(--rs-yellow)" title="Ministério Público do RS"><span class="lg"><img src="img/parceiros/mprs.png" alt="Ministério Público do RS" loading="lazy" onerror="this.remove()"><b class="ab">MPRS</b></span><span class="nm">Ministério Público do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.tjrs.jus.br/" target="_blank" rel="noopener" style="--c:var(--blue)" title="Tribunal de Justiça do RS"><span class="lg"><img src="img/parceiros/tjrs.png" alt="Tribunal de Justiça do RS" loading="lazy" onerror="this.remove()"><b class="ab">TJRS</b></span><span class="nm">Tribunal de Justiça do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://estado.rs.gov.br/" target="_blank" rel="noopener" style="--c:var(--rs-green)" title="Governo do Estado do RS"><span class="lg"><img src="img/parceiros/govrs.png" alt="Governo do Estado do RS" loading="lazy" onerror="this.remove()"><b class="ab">RS</b></span><span class="nm">Governo do Estado do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://estado.rs.gov.br/" target="_blank" rel="noopener" style="--c:var(--rs-red)" title="Gabinete do Vice-Governador do RS"><span class="lg"><img src="img/parceiros/gvg.png" alt="Gabinete do Vice-Governador do RS" loading="lazy" onerror="this.remove()"><b class="ab">GVG</b></span><span class="nm">Gabinete do Vice-Governador do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.tre-rs.jus.br/" target="_blank" rel="noopener" style="--c:var(--rs-yellow)" title="Tribunal Regional Eleitoral do RS"><span class="lg"><img src="img/parceiros/trers.png" alt="Tribunal Regional Eleitoral do RS" loading="lazy" onerror="this.remove()"><b class="ab">TRE-RS</b></span><span class="nm">Tribunal Regional Eleitoral do RS<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.tse.jus.br/" target="_blank" rel="noopener" style="--c:var(--blue)" title="Tribunal Superior Eleitoral"><span class="lg"><img src="img/parceiros/tse.png" alt="Tribunal Superior Eleitoral" loading="lazy" onerror="this.remove()"><b class="ab">TSE</b></span><span class="nm">Tribunal Superior Eleitoral<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://portal.stf.jus.br/" target="_blank" rel="noopener" style="--c:var(--rs-green)" title="Supremo Tribunal Federal"><span class="lg"><img src="img/parceiros/stf.png" alt="Supremo Tribunal Federal" loading="lazy" onerror="this.remove()"><b class="ab">STF</b></span><span class="nm">Supremo Tribunal Federal<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www12.senado.leg.br/" target="_blank" rel="noopener" style="--c:var(--rs-red)" title="Senado Federal"><span class="lg"><img src="img/parceiros/senado.png" alt="Senado Federal" loading="lazy" onerror="this.remove()"><b class="ab">Senado</b></span><span class="nm">Senado Federal<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.camara.leg.br/" target="_blank" rel="noopener" style="--c:var(--rs-yellow)" title="Câmara dos Deputados"><span class="lg"><img src="img/parceiros/camara.png" alt="Câmara dos Deputados" loading="lazy" onerror="this.remove()"><b class="ab">Câmara</b></span><span class="nm">Câmara dos Deputados<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="partner" href="https://www.gov.br/" target="_blank" rel="noopener" style="--c:var(--blue)" title="Governo do Brasil"><span class="lg"><img src="img/parceiros/govbr.png" alt="Governo do Brasil" loading="lazy" onerror="this.remove()"><b class="ab">Gov.br</b></span><span class="nm">Governo do Brasil<svg aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contato">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow f">Contato</span><h2>Fale com a UVERGS</h2></div></div>
+      <div class="contact-grid">
+        <div><span class="ic"><svg class="i"><use href="#i-pin"/></svg></span><b>Sede</b><span>Centro Administrativo do Estado (CAFF), Av. Borges de Medeiros, 1501, térreo, Centro, Porto Alegre/RS, CEP 90119-900</span><a class="more" href="https://www.google.com/maps?q=-30.039673,-51.231081" target="_blank" rel="noopener">Abrir no mapa</a></div>
+        <div><span class="ic"><svg class="i"><use href="#i-phone"/></svg></span><b>Telefone e e-mail</b><span>(51) 3225-8286<br>uvergs@uvergs.com.br</span></div>
+        <div><span class="ic"><svg class="i"><use href="#i-wa"/></svg></span><b>WhatsApp</b><span>(51) 9166-5195</span><a class="more" href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener">Iniciar conversa</a></div>
+        <div><span class="ic"><svg class="i"><use href="#i-clock"/></svg></span><b>Atendimento</b><span>Segunda a sexta, 8h30 às 12h e 13h30 às 18h</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="logo" href="#inicio"><img class="logo-img" src="img/logo.png" alt="UVERGS" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"><svg aria-hidden="true"><use href="#logo-mark"/></svg><span><b>UVERGS</b><small>União dos Vereadores do Rio Grande do Sul</small></span></a>
+      <p>Entidade Oficial dos Vereadores do RS, reconhecida pela Lei Estadual n.º 12.023/03.</p>
+    </div>
+    <div><h4>Eventos</h4><ul><li><a href="#eventos">Próximos eventos</a></li><li><a href="#realizados">Realizados</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#inscricao">Pré-inscrição</a></li></ul></div>
+    <div><h4>UVERGS</h4><ul><li><a href="#associe">Associe sua Câmara</a></li><li><a href="#associadas">Câmaras associadas</a></li><li><a href="#institucional">Institucional</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#uvergs-2027">UVERGS 2027</a></li><li><a href="#presidente">Mensagem do Presidente</a></li><li><a href="#noticias">Notícias</a></li><li><a href="https://webmail.uvergs.com.br/" target="_blank" rel="noopener">Webmail</a></li></ul></div>
+    <div><h4>Redes</h4><ul><li><a href="https://www.instagram.com/uvergs" target="_blank" rel="noopener">Instagram @uvergs</a></li><li><a href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener">WhatsApp (51) 9166-5195</a></li><li><a href="https://uvergs.com.br/rss-feeds" target="_blank" rel="noopener">RSS</a></li></ul></div>
+  </div>
+  <div class="legal"><div class="wrap"><span>© 2026 UVERGS · União dos Vereadores do Rio Grande do Sul</span><a href="https://uvergs.com.br" target="_blank" rel="noopener">Termos &amp; Condições</a></div></div>
+</footer>
+
+<a class="wa" href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener" aria-label="Falar com a UVERGS no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+  var WA='555191665195';
+  var t=document.getElementById('menu-toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))m.classList.remove('open')});
+
+  // botões "Quero participar" marcam o evento no formulário
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-event]');if(!a)return;
+    [].forEach.call(document.querySelectorAll('.opts input'),function(c){if(c.value===a.dataset.event)c.checked=true});
+  });
+
+  // eventos que já terminaram viram "Realizado"
+  var now=new Date();
+  [].forEach.call(document.querySelectorAll('.event[data-end]'),function(ev){
+    if(new Date(ev.dataset.end+'T23:59:59-03:00')<now){ev.classList.add('past');var p=ev.querySelector('.pill');p.textContent='Realizado';p.classList.add('done')}
+  });
+
+  // contagem regressiva do próximo evento
+  var start=new Date('2026-10-06T08:30:00-03:00'),box=document.getElementById('countdown');
+  function tick(){var ms=start-new Date();if(ms<=0){box.hidden=true;return}
+    var d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),mi=Math.floor(ms%36e5/6e4);
+    box.querySelector('[data-u=d]').textContent=d;box.querySelector('[data-u=h]').textContent=String(h).padStart(2,'0');box.querySelector('[data-u=m]').textContent=String(mi).padStart(2,'0')}
+  tick();setInterval(tick,30000);
+
+  // pré-inscrição: monta a mensagem e abre o WhatsApp da UVERGS
+  var f=document.getElementById('lead-form'),msg=document.getElementById('lead-msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var evs=[].filter.call(document.querySelectorAll('.opts input'),function(c){return c.checked}).map(function(c){return c.value});
+    var text='Olá, UVERGS! Quero fazer minha pré-inscrição.\n\nNome: '+v('f-nome')+'\nCargo: '+v('f-cargo')+'\nCâmara Municipal de '+v('f-cidade')+'\nWhatsApp: '+v('f-fone')+(v('f-email')?'\nE-mail: '+v('f-email'):'')+'\nInteresse: '+(evs.join(', ')||'agenda de eventos');
+    var url='https://api.whatsapp.com/send?phone='+WA+'&text='+encodeURIComponent(text);
+    msg.hidden=false;
+    msg.innerHTML='Mensagem pronta. <a href="'+url+'" target="_blank" rel="noopener">Abrir o WhatsApp</a> se ele não abriu sozinho.';
+    var w=window.open(url,'_blank','noopener');
+  });
+})();
+</script>
+
+<script>
+window.RS_MAP={"w":1000,"h":977.6,"outline":"M460.6 714.8L472.8 721.4L474.9 729.3L488.6 735.6L490.5 750.5L494.8 756.1L499.2 764.8L498.9 777.7L506.7 787.6L513.9 792.9L520.9 791.8L525.9 804.4L538 807.1L545.3 812.3L557.2 816L567.1 815.6L580.8 809L584.7 794.5L587.6 791.8L607.7 786.5L613.3 781.6L603.8 769.8L614.4 746.5L628.9 742.3L621.4 760.1L620.1 769.1L628.1 782.6L633.6 798.5L629.2 814.9L612.7 847.9L605.8 854.3L598.3 854.7L582.8 841.2L580.7 835.2L571.7 843.5L564.8 837.8L561.1 844.6L560.6 863.6L547.6 884.2L535.8 883.8L526.1 891L521 906.4L526.6 933.7L525.6 941.3L515.4 949.5L514.4 969.4L524.8 970.1L527.1 977.5L533.5 977.6L561.6 954.7L575.4 941.2L606.9 912.5L623.9 891.7L631.6 878.5L643 853.8L648.6 838.5L654 815.5L660.9 793.1L669.1 774.3L678.6 758.9L688.2 749.2L695.6 745L694.8 737L689.1 732.2L695.9 725.5L693.8 717.9L684.3 715.8L689.4 708.8L683.1 706L679.8 690.2L679.5 684.7L689.1 676.9L704.3 676L706.4 662L706.9 647.9L709 635L718.4 620L728 621.7L732.1 616.3L745.5 613.3L753.6 607.5L755.4 596.7L766.6 590.9L776.7 588.4L771.8 570.2L772.2 561.9L778.4 555.7L785.8 556.6L783.9 542.4L786.1 523.6L796.9 520.6L797.4 509.5L801.9 497.2L806.2 489.6L816.2 488.4L809 477.5L798 472L797.4 462.6L793.6 460.6L795.9 453.3L796.9 435.3L800.8 433.1L801.5 442.5L806.6 448.7L811.5 462.1L826.7 464.2L831.5 467.7L829.3 483.4L838.7 487.2L847.2 474.9L861.2 477.1L863.1 469.2L877 470.9L878.8 456.7L883.6 456.5L893.6 464.5L893.2 479.7L889.5 498.1L873.5 489.8L875.3 501L876.1 516.8L873.3 537L866.7 547.7L858.3 550.8L846.6 560.5L839.6 559L841.2 574.7L836 581.3L821.3 589L812.8 586.4L812.4 594L815.1 615.7L812.5 627.7L805 641.5L795 649.6L788.2 652.1L779 647.1L759.9 678L747.1 689.2L733.8 690L732.5 697.4L719.8 701.9L707.6 694.6L700.2 694.2L696.4 700.8L704.7 708.8L703.1 726.6L710.8 727.6L731.4 708.1L775.5 681L803.5 657.6L810.9 647.1L844.1 614.7L854.7 603.1L868.3 584.8L920.2 501L930.7 471.9L934 462.1L941.2 441.7L947.6 423.8L953 410.4L954.4 407.1L960.3 393.9L970.9 372.2L972.4 369.6L987.7 345.6L996.8 333.1L994.4 324.2L985.8 322.5L980.4 314.5L975.1 312.1L964.9 312.8L948 318.6L958.3 331.8L957.8 332.1L943.4 321.9L945.1 309.8L957.2 307.5L966.6 297.6L967.7 265.2L968.6 248.7L976.8 243.2L990.5 226.2L1000 225.8L997.3 209.9L980 201.6L969.7 204.4L966.2 198L953.9 203.9L944.1 199.1L928.1 200.7L915.7 195.6L907.8 197.1L889.2 191.4L878 183.2L874.2 173.3L867.3 170.1L865.1 161.2L850.4 146.9L851.3 139.6L845.2 135.3L844.4 129L835.2 128.2L828.3 116.9L822.1 108.3L811.4 100.9L800.6 96.8L796.1 92.3L790.6 86.5L781.9 82.9L774.6 70.4L761.8 71.4L758 66.2L745.4 57.9L734.9 62.4L728.9 63.4L705.3 38.8L701.9 37.5L694.5 37.1L693 31.1L679.6 35.2L669.7 24.8L657.6 29.6L654.8 28.2L639.9 24.8L622.1 22.8L620.2 28.4L617.8 22.6L606.3 16.4L598.9 11.3L584.6 18.7L578.6 0L570.7 3.6L571.8 9.8L556.9 14.8L551.6 11.8L540.1 17.4L543.6 7.4L532.4 0.4L528.6 7.3L516.6 10L518.8 15.1L509.1 12.1L504.6 14.5L496.1 10.4L489.6 13.4L482.1 8.4L476.7 12.4L471.4 5.5L458.8 15.2L453.6 15.4L446.8 25.4L439.5 31.1L429.4 31.7L426.1 43.3L420.5 45L417.6 52.4L409.6 55.3L401.5 46.3L394.1 50.9L393.3 57.4L379.2 53.4L373.3 66.8L367.2 64.4L361.6 69.5L353.7 71.4L338.4 80.8L338.9 89.3L334.5 100.1L326.7 102.9L320.1 99.8L316.2 103.9L319.8 111.9L301.5 112.5L291.2 124.1L283.5 128.5L277.5 131.2L278.9 138.8L270.8 146.2L262.6 146.5L258.1 151.2L237.6 166.2L230.9 168.1L232.9 175.3L241.5 183.6L238.6 194.7L230.5 187.9L214.9 186.7L211.8 194.8L213.7 204.1L197.8 208L199.2 219.6L183.3 234.5L175.1 247L165.7 247.8L161 253.1L161.3 264.4L158 269.3L147.1 276.9L148.6 283.6L146 291.5L135.6 293.3L124.1 298.2L116.1 313.7L115.9 321.3L109.5 333.6L101.5 336L100.2 342.1L95.5 351.3L84.3 359L76 368.7L66.2 383.6L56.6 392.9L43.1 395L34.5 402.6L30.3 409.7L30.2 423.2L19 433.3L13.3 443L2.3 451.4L0 465.4L5.5 469.4L17.4 467.8L22.6 471.9L33.2 466.4L36.4 470.7L46.2 469.4L52.2 461.7L50.6 456.6L57.4 444.3L73 440.1L86.6 440.4L96.6 442.9L99.5 450.1L115.5 457L122.1 468.9L131 476.5L137 486.1L148.8 493.5L150.4 500.7L162.4 505.6L174.9 516.2L180.1 531.1L187.1 538.2L196.2 543L200.4 554.7L198.2 558.9L196.8 581.4L202 585.1L215.7 584.8L227.7 576.6L244.8 561.3L245.4 551.9L254.5 552L261.6 559.9L270.9 575L278.9 577.1L284.7 590.6L292 600.3L296.6 612.3L305 613.9L317 623.1L321.9 616.1L326.2 613.9L334.8 626.8L347.3 639.3L357.1 636.8L364.4 638.3L379.1 641.4L388.3 649.8L396.1 662.6L395.9 670.3L434 703.1L442.5 711.8L448.7 706.1L457.5 709.3L460.6 714.8Z","mun":[["4300034","Aceguá","M459.1 646.8L451.8 653.2L444.7 641.3L439.2 637.4L435.5 645.2L423 650.3L418.7 649.2L410.9 660.9L395.9 670.3L434 703.1L442.5 711.8L448.7 706.1L457.5 709.3L460.6 714.8L459.7 709.4L464.6 700L465.6 693L456.7 687.4L459.1 664.5L454.8 653.4L459.1 646.8Z",435.5,672.8],["4300109","Agudo","M563.5 353.2L547.1 346.5L543.5 351.8L541.9 371L534.9 374.2L536.1 379.2L544.8 381.8L548.6 390.2L543.8 395.7L552.2 402L558.7 393.6L552.9 388.3L557.1 373.3L563.5 369.8L563.5 362.6L573.5 364.2L577.2 361.7L563.5 353.2Z",552.4,362.1],["4300208","Ajuricaba","M502 154.9L489.5 155.5L478.9 148.7L474.5 158.1L473.9 169.5L477.7 175.6L490.2 177.5L499.4 171.5L502 154.9Z",487.2,165.9],["4300307","Alecrim","M361.6 69.5L353.7 71.4L338.4 80.8L338.9 89.3L347.3 88.4L349 95.3L368.6 87.5L368.8 81.5L362.9 77.4L361.6 69.5Z",355.4,82.8],["4300406","Alegrete","M218.3 340.9L207.4 332.1L204.6 333.6L194.8 324.1L184 333.4L162.2 341.7L153 338.9L145.4 343.2L137.5 337.8L126.8 337.9L115.2 342.7L138.8 349.3L139.8 358.6L145.5 359.8L151.1 367L153.2 378.9L148.6 382L152 389.8L151.9 399.4L159 406.7L168.6 424.6L175.8 427.6L180.2 435.4L183.8 439.1L195.4 437.9L200.8 441.4L211.5 440.2L216.3 447.1L228.8 452.1L231.7 461.3L240.5 460.6L243.5 448.9L258 451.4L267.4 439.6L286.6 439.3L292.2 432.8L297.3 416.8L307.6 408.1L312.3 398L311.1 393.3L308.3 382.6L295.5 371.6L285 374.8L278.4 370.8L273.9 377.5L266.7 375.6L257.8 377.6L256.4 368.6L242.8 362.7L239.1 353.5L228.9 351.4L227.9 342.3L218.3 340.9Z",205.3,391.5],["4300455","Alegria","M456.4 101.3L445.2 95.9L437.7 99.6L433.2 103.8L439.1 116.4L458 107.8L456.4 101.3Z",446.6,107.2],["4300471","Almirante Tamandaré do Sul","M588 140.1L578.8 139L579.8 148.6L585.6 159.6L592.8 159.6L597.3 171.2L603.1 162.6L605.3 153.4L598 143.8L588 140.1Z",591.5,151.5],["4300505","Alpestre","M584.6 18.7L578.6 0L570.7 3.6L571.8 9.8L556.9 14.8L560.8 28.1L571.1 26.1L579.8 34.2L587.2 32L589.5 32.7L585.2 27L584.6 18.7Z",572.6,18.0],["4300554","Alto Alegre","M585.5 261.4L590.2 253.1L587 242.5L576.5 245.8L573.2 255.5L585.5 261.4Z",580.7,252.4],["4300570","Alto Feliz","M801.1 326.4L790.3 329.4L790.3 332.2L793.1 340.7L793.4 343.2L799.7 339.9L801.1 326.4Z",795.3,333.8],["4300604","Alvorada","M841.8 422.4L826 422.4L824.4 423.1L824.4 434.1L841.8 422.4Z",827.4,426.8],["4300638","Amaral Ferrador","M665.4 529L658.4 524.8L653.4 529.9L650 544.4L655 553.6L653.8 561.9L676.4 557.3L695.5 560.8L692.9 557.3L685.4 550.4L684 539.6L675.3 544.6L665.4 529Z",663.6,547.7],["4300646","Ametista do Sul","M562.7 46.2L555.2 32.3L548.2 36.5L547.6 41.5L557.5 46.6L562.7 46.2Z",554.1,38.7],["4300661","André da Rocha","M785 212.9L778.6 205.1L773 211L759.1 212.5L759.5 232L763.9 235.3L776 229L778.8 232.7L784.6 227.4L785 212.9Z",773.0,220.5],["4300703","Anta Gorda","M719.1 272.8L706.9 262.4L698 262.5L696.4 277.4L701.9 283.6L711.5 286.5L717.6 291.5L718.5 283.8L719.1 272.8Z",707.6,276.5],["4300802","Antônio Prado","M779.5 252L776.5 259.4L777.4 263.9L776.4 269.6L790.2 268.5L792.1 275.2L801.8 275.2L811.8 272L815 261.9L813.2 259.3L805.6 253.8L795 256.9L779.5 252Z",794.8,265.1],["4300851","Arambaré","M778.4 555.7L774.4 557L767.2 545.1L755.2 536.9L754.6 537.6L747.1 546.9L740.8 550.8L743.1 557L751.8 558.5L758.7 566.8L758.5 581L766.6 590.9L776.7 588.4L771.8 570.2L772.2 561.9L778.4 555.7Z",763.7,558.8],["4300877","Araricá","M847.3 373.2L842.1 368.2L842.6 381.9L844.5 379.7L847.3 373.2Z",844.1,373.9],["4300901","Aratiba","M679.6 35.2L669.7 24.8L657.6 29.6L662 48L662 60.2L664.4 61.5L674.7 60.7L677.7 57.5L679 46.6L679.6 35.2Z",669.8,43.6],["4301305","Arroio Grande","M654.8 723.6L642.7 714.5L630.5 711.8L624 706.6L608.7 730.6L599 727.9L579.8 725.7L575.1 721.5L565.1 721.5L550.4 738.8L548.5 746.4L542 753.3L548.7 770.5L559.1 776L563 774.9L579.8 783.4L584.7 794.5L587.6 791.8L607.7 786.5L613.3 781.6L603.8 769.8L614.4 746.5L628.9 742.3L645.4 729.5L652.1 730.6L654.8 723.6Z",585.5,753.9],["4301008","Arroio do Meio","M719.6 332.2L720.9 323.9L718.4 323.3L703.9 328.8L700.1 332.5L703.8 339.7L713.7 342.4L714.3 341.9L724 338L719.6 332.2Z",712.7,335.0],["4301073","Arroio do Padre","M664.8 631.1L654.4 631.7L651.3 635.7L653.1 644.6L663.5 648.7L664.8 631.1Z",657.6,638.6],["4301057","Arroio do Sal","M983.5 342.7L979.1 346.2L964.2 369L972.4 369.6L987.7 345.6L983.5 342.7Z",976.3,357.0],["4301206","Arroio do Tigre","M581 300.9L578.8 303.3L572.8 307.3L562.5 319.7L559.6 330.8L569.3 334.8L577.8 330L579.6 318.4L591.4 307.8L581 300.9Z",571.6,322.6],["4301107","Arroio dos Ratos","M756.4 436.4L748.7 429L741.8 436.3L732.1 442.1L733.3 449.1L727.2 457.3L727.8 469.2L730.7 475L738.7 477.7L749.2 469.9L748.7 454.4L747.5 439.4L756.4 436.4Z",738.3,460.7],["4301404","Arvorezinha","M700.1 252.5L686.4 254.5L673.7 252.2L666.5 253L670 262.2L674.1 272.4L679.1 276.2L679.1 275.3L687.3 263.7L698 262.5L706.9 262.4L706 257.2L700.1 252.5Z",679.0,262.5],["4301503","Augusto Pestana","M455.9 198.4L449.4 193.6L447.8 202.7L437.5 205.7L437.5 215.1L449.1 220.7L457.7 228.4L467.1 219.3L468.8 210.4L459 205.3L455.9 198.4Z",453.1,212.2],["4301602","Bagé","M524.6 569L517.7 568.6L509.4 562.8L504.3 555.4L496.1 551.1L479.8 561L465 564.9L461.1 571.5L463.2 576.4L432.1 595.3L413.9 597.9L402.1 608.4L399.7 618.6L388.9 620L382 628.4L372.9 627L364.4 638.3L379.1 641.4L388.3 649.8L396.1 662.6L395.9 670.3L410.9 660.9L418.7 649.2L423 650.3L435.5 645.2L439.2 637.4L444.7 641.3L451.8 653.2L459.1 646.8L463.6 641L455.3 629.8L459.5 625.2L452.1 620.4L455.9 612.6L471.2 606.7L476.1 610L486.8 608.7L483.6 620.1L498.2 623.9L512.7 609.4L518.7 596.9L519.4 579.9L524.6 569Z",423.4,623.5],["4301636","Balneário Pinhal","M934 462.1L930 452.8L923 449L912.4 450.6L917.1 456.4L928.9 460.7L925.8 465.3L930.7 471.9L934 462.1Z",925.4,454.8],["4301958","Barra Funda","M583.9 126.7L585.2 121L574.7 116.3L573.9 125.1L576.8 127.9L583.9 126.7Z",579.5,122.2],["4301859","Barra do Guarita","M489.6 13.4L482.1 8.4L476.7 12.4L483 25.1L483.8 27.6L491 15.8L489.6 13.4Z",485.0,18.0],["4301875","Barra do Quaraí","M57.4 444.3L54.7 436.8L42.7 430.1L36.1 420.3L30.2 423.2L19 433.3L13.3 443L2.3 451.4L0 465.4L5.5 469.4L17.4 467.8L22.6 471.9L33.2 466.4L36.4 470.7L46.2 469.4L52.2 461.7L50.6 456.6L57.4 444.3Z",32.8,446.7],["4301909","Barra do Ribeiro","M793.6 460.6L783.7 461.1L769.7 467.5L774.3 478.6L772.5 488.1L767.1 488L768.6 502.4L772.8 501.2L801.9 497.2L806.2 489.6L816.2 488.4L809 477.5L798 472L797.4 462.6L793.6 460.6Z",792.6,484.1],["4301925","Barra do Rio Azul","M662 60.2L662 48L657.6 29.6L654.8 28.2L650.4 50.9L652.5 59.3L662 60.2Z",656.9,48.3],["4301800","Barracão","M796.1 92.3L790.6 86.5L781.9 82.9L774.6 70.4L761.8 71.4L763.9 79.6L773 105.7L778.4 111L776.4 117.9L777.1 123.1L782.5 121.1L787.3 111.4L796.1 92.3Z",782.3,95.1],["4302006","Barros Cassal","M645.2 285.4L636.6 276.3L625.8 273.5L622.5 276.3L620.2 288.1L612.7 301.6L622.4 307.4L622.3 314.8L640 313.4L644.4 316.8L652.6 311.9L653.8 303.5L645.7 291.8L645.2 285.4Z",632.9,296.9],["4301651","Barão","M784.9 332.1L767.9 332.1L756.9 336.1L757.6 339.4L758 340.9L761.1 340.3L775.1 339.3L780 343.9L784 344.1L784.4 342L784.9 332.1Z",770.6,336.3],["4301701","Barão de Cotegipe","M662 60.2L652.5 59.3L643 58.1L647 66.7L647.5 75.3L651.3 84L664.4 83.9L664.4 61.5L662 60.2Z",655.3,69.8],["4301750","Barão do Triunfo","M749.2 469.9L738.7 477.7L730.7 475L727.8 469.2L727.4 480L717.2 489.7L720.3 512L721.1 511.3L736.6 497.1L738.8 501.6L748.9 491.7L748.7 483.7L752.4 472L749.2 469.9Z",734.1,486.9],["4302055","Benjamin Constant do Sul","M629.5 50.2L615.7 50L615.7 50.7L623.7 65.1L634.4 65.3L632.7 55.3L629.5 50.2Z",627.5,59.1],["4302105","Bento Gonçalves","M755.2 283.7L748.7 293.5L757.1 298.9L755.8 307.9L750.7 308.1L752.2 309.8L772.8 309.6L785.7 309.4L781.7 289.3L774.7 283.2L769.2 292.1L755.2 283.7Z",769.8,300.9],["4302154","Boa Vista das Missões","M548 91.2L541.7 87.6L540.4 75L532.4 76.3L530 77.9L531.1 88.1L531.4 99.9L539.7 104L543.7 97.5L548.2 93.4L548 91.2Z",536.5,90.1],["4302204","Boa Vista do Buricá","M435.6 78.6L432.2 88.3L444.8 95.2L450.3 84.7L449 82.9L447.9 82.6L435.6 78.6Z",442.5,85.3],["4302220","Boa Vista do Cadeado","M482 197.7L481.5 205.2L468.8 210.4L467.1 219.3L457.7 228.4L456.5 249.3L465.6 252.8L479.6 251.6L486.3 245L489.8 228.1L485.8 211.5L491.2 204.2L484.4 197.9L482 197.7Z",473.1,234.0],["4302238","Boa Vista do Incra","M538.9 249L521.9 242L515.5 247.2L510.6 242L506.4 250L511.4 261.8L508.7 273.9L508.9 275.1L516 286L530.3 276.6L528.9 261.9L541.3 261.4L538.9 249Z",520.4,256.5],["4302253","Boa Vista do Sul","M756.9 336.1L753.1 335.1L754.9 323.6L752.7 323.7L746.2 325.2L742.7 333.6L747.5 341.4L747.5 342.7L757.6 339.4L756.9 336.1Z",749.3,331.4],["4302303","Bom Jesus","M953.9 203.9L944.1 199.1L928.1 200.7L915.7 195.6L907.8 197.1L889.2 191.4L878 183.2L874.2 173.3L867.3 170.1L865.3 175.8L872.5 187.7L872.1 197.1L868.7 208.5L870.2 221.7L875.7 225.7L876.8 242.1L872.8 250.4L885.7 252.5L893.4 251.9L922.8 257.1L935.6 254.4L939.1 243.5L950.1 231.7L959.8 226.9L953.4 208.2L953.9 203.9Z",905.5,222.7],["4302352","Bom Princípio","M793.1 340.7L784.4 342L784 344.1L784.9 357.6L787.5 361.6L792.6 356.3L793.4 343.2L793.1 340.7Z",789.0,345.9],["4302378","Bom Progresso","M477.7 59.9L475.6 58.5L465.6 64.5L466.7 74.1L477.7 71.3L477.7 59.9Z",472.3,66.5],["4302402","Bom Retiro do Sul","M724.2 374.8L723.1 362.7L714.2 370L712 373.6L714 385.2L724.2 374.8Z",718.7,374.6],["4302451","Boqueirão do Leão","M671.3 322.8L657.3 317.6L652.6 311.9L644.4 316.8L640.1 328.8L649.4 335.4L657.1 334.2L667.9 338.2L669.9 332.5L671.3 322.8Z",652.9,323.1],["4302501","Bossoroca","M360.9 219.7L348.5 224L335.8 215.7L338.2 206.6L321.6 204.9L309.4 200.5L305.6 196.3L301.9 209.6L293.9 227.3L286.3 230.1L296.4 234.5L303.2 243.6L312 242.6L331.5 252.3L346.6 256.1L349.9 261.2L355.5 261.6L363.7 256.4L362.8 250.3L368.3 238.7L360.9 219.7Z",320.4,225.1],["4302584","Bozano","M490.2 177.5L477.7 175.6L475.4 191.4L482 197.7L484.4 197.9L494 191.3L497 180.6L490.2 177.5Z",484.4,186.8],["4302600","Braga","M494.3 67.3L488.7 67.4L477.7 59.9L477.7 71.3L484.2 76.7L487 83.7L487.4 83.8L494.8 76.5L494.3 67.3Z",487.3,72.6],["4302659","Brochier","M758.8 350.3L750.4 349.6L747.5 354L751.1 367.1L762.2 370.6L760.6 350.5L758.8 350.3Z",755.6,359.1],["4302709","Butiá","M735.9 421.4L724.9 421.5L711.8 418.3L707.3 419.9L706.2 433.5L710.7 437.2L705.9 447.9L709 456.8L698 459.2L688 455.5L687.4 474.7L685.2 484.9L688 492.4L695.9 486.9L703.4 485.8L709.9 464.2L717.5 460.7L726.3 450.9L729.3 444.1L719.3 435.4L726.2 433L727.5 422.9L735.9 421.4Z",696.9,469.8],["4302907","Cacequi","M414.7 388.8L391 389.6L377.8 401.1L366.4 399.2L364.1 402.3L353.2 402.5L347.5 406.3L341.9 399.7L332 394.8L321.5 395.7L311.1 393.3L312.3 398L307.6 408.1L297.3 416.8L292.2 432.8L286.6 439.3L302.5 439L309.1 433.5L315.3 437.8L317.8 448.1L325.6 446.2L335.1 436.6L339.8 440.9L349.8 443.1L358.9 430.8L364.4 431.7L370.7 431L379.1 422L388.7 419.1L394.1 421.4L412 416.8L420 400.2L414.7 388.8Z",330.4,417.6],["4303004","Cachoeira do Sul","M570.9 397L567 405.7L565.1 422.9L550.3 440.6L542.3 447.8L536.1 463.9L538.1 474.2L545.1 478L552.5 475.3L559 482.5L553.8 493.8L569.5 520.6L582.4 527L584.2 516.1L589.6 516.5L595.7 499L597.5 488.8L595.7 480.4L601.5 476.5L620.4 477.6L620.5 467.4L624.5 458.1L622.2 439L626.3 426.5L617.8 421L613.8 413.3L599.8 414.2L593.7 404.7L581 399.2L570.9 397Z",578.7,453.1],["4303103","Cachoeirinha","M819.7 407.7L821.9 413L819.1 420.7L824.4 423.1L826 422.4L827 411.4L822.5 408.1L822.5 408L819.7 407.7Z",822.8,418.0],["4303202","Cacique Doble","M747 89.5L746.2 88.4L747.3 95.4L739.6 101.6L738.1 110.8L742.2 117.5L749.9 114.6L758 116.2L759 102.2L755 95.5L747 89.5Z",750.4,106.0],["4303301","Caibaté","M379.3 177.1L357.1 169.9L358.5 178.6L353.6 186.8L361.3 186.9L377.6 198L383.5 187L380.8 177.5L379.3 177.1Z",373.2,183.3],["4303400","Caiçara","M518.8 15.1L509.1 12.1L504.6 14.5L510.6 21.6L519 29.3L529.7 33.7L536.5 21.8L530.7 21.7L518.8 15.1Z",521.4,22.8],["4303509","Camaquã","M746.7 528.8L733.5 519.7L727.6 520.9L721.1 511.3L720.3 512L711.6 521.1L710.8 524.4L716.2 532L718.3 540.5L716.7 551L707.3 553.4L695.7 550.8L692.9 557.3L695.5 560.8L715.6 566L723.2 561.4L726.6 574.9L731.4 581.2L734.9 592.4L736.1 608.6L732.1 616.3L745.5 613.3L753.6 607.5L755.4 596.7L766.6 590.9L758.5 581L758.7 566.8L751.8 558.5L743.1 557L740.8 550.8L747.1 546.9L754.6 537.6L746.6 536.9L746.7 528.8Z",744.8,574.0],["4303558","Camargo","M678.2 214.1L669.4 222.8L671.4 227.9L676.4 230.9L688.3 229.3L691.6 223.8L686.6 217.2L678.2 214.1Z",680.2,225.1],["4303608","Cambará do Sul","M967.7 265.2L955 256.7L946.3 254.1L938 256.9L938.5 270.2L931.4 270.8L928.2 282.7L938.6 289.3L938 293.8L924.4 297.9L917 297.6L917 308.2L925.5 323.6L936.8 324.2L943.4 321.9L945.1 309.8L957.2 307.5L966.6 297.6L967.7 265.2Z",950.4,280.0],["4303673","Campestre da Serra","M840.7 249.7L832.8 233.9L832.1 225.3L825.7 225.2L820.4 215.1L816 216.5L812.5 220.6L802.8 220.1L817.1 232.5L809.3 237.5L813.2 259.3L815 261.9L819.2 262.5L833 257.2L840.2 250.4L840.7 249.7Z",824.1,243.6],["4303707","Campina das Missões","M348.5 114.1L334.1 123.3L343.4 135L350.9 140.5L359.8 142.2L362.4 135.2L348.4 119.1L348.5 114.1Z",346.4,126.9],["4303806","Campinas do Sul","M635.2 86.6L622.9 87.3L614.2 79.4L611.5 88.1L613.7 94.9L622.1 103.7L626 111.9L635.2 104.6L636.5 87.9L635.2 86.6Z",625.3,96.0],["4303905","Campo Bom","M835.9 384.2L834.5 376.1L828.1 370.9L823.3 374.8L825.1 385.6L835.9 384.2Z",829.6,380.1],["4304002","Campo Novo","M487 83.7L484.2 76.7L477.7 71.3L466.7 74.1L468.8 80.2L464.2 88.4L472.8 93.4L476.4 98.9L481.7 97.5L487 83.7Z",476.1,84.2],["4304101","Campos Borges","M585.5 261.4L573.2 255.5L565.3 258.5L560.8 266.8L564.5 278.5L578.1 277.4L578.8 272.7L585.5 261.4Z",571.9,269.1],["4304200","Candelária","M631.9 388.9L617.2 382.1L610.9 369L614.4 360.9L612.7 354.6L606.6 353.2L594 356.4L585.6 356.3L583.5 362.3L589.3 376.3L590.1 386.3L593.7 404.7L599.8 414.2L613.8 413.3L612.1 404.2L618.6 396.9L634.2 397L631.9 388.9Z",604.3,386.7],["4304358","Candiota","M498.2 623.9L483.6 620.1L479 629.2L481.6 638.7L475 643.3L476.3 649.9L472.9 666.1L468.8 671.6L463 686.7L465.6 693L464.6 700L478 692.6L483.9 679.2L482.6 670.4L489.6 669.1L494.7 661.3L501.7 663.1L506.2 659.8L504 643.4L509.5 634.1L502.6 630.9L498.2 623.9Z",491.9,646.9],["4304408","Canela","M879 342.5L880.5 336.1L877 330.4L867.9 328.6L865.7 321.2L853.2 317L849.4 322.8L853.5 325.3L853.8 336.6L859.7 344.4L874.6 339.6L879 342.5Z",862.4,333.2],["4304507","Canguçu","M677 572.1L676.4 557.3L653.8 561.9L627.5 566.8L622.5 560.7L615.2 558.9L598 562.9L589.8 584.5L592.4 595.6L591 610.4L592.8 620.3L586.1 639.9L582.1 656.5L589.9 663.8L593.2 673L596.2 663.6L617.9 664.1L624.3 659.1L630.3 648.3L644.4 622.5L654.4 623.7L647.6 610.3L656.1 596.6L663 590.3L671.4 587.3L677 572.1Z",619.7,606.1],["4304606","Canoas","M819.7 407.7L805.9 407.2L805.7 418.2L809.8 423.2L819.1 420.7L821.9 413L819.7 407.7Z",812.3,415.2],["4304614","Canudos do Vale","M687.2 328.7L684.3 322.5L676.8 326.6L671.3 322.8L669.9 332.5L683.7 333.4L687.2 328.7Z",680.2,329.1],["4304689","Capela de Santana","M800.2 376.8L789.2 373.8L785.6 376.5L780.9 376.5L777.7 384.2L788.9 396.2L796.2 394.4L800.2 376.8Z",790.0,384.0],["4304697","Capitão","M703.9 328.8L718.4 323.3L712.7 315.4L703.5 319.7L703.9 328.8Z",710.2,320.4],["4304671","Capivari do Sul","M904.5 434.9L879.3 433.7L883.5 445L883.6 456.5L893.6 464.5L901.9 457L917.1 456.4L912.4 450.6L915.9 438.5L909.8 442.5L904.5 434.9Z",897.8,446.8],["4304622","Capão Bonito do Sul","M791 133.2L781.6 143.5L770 142.6L770.4 158.7L778.2 168.3L776 182.1L785.9 177.2L786 169.2L793.8 165.8L804.3 156.2L800.1 143L791.9 139.3L791 133.2Z",786.1,156.0],["4304630","Capão da Canoa","M960.3 393.9L970.9 372.2L963.6 369.3L956.3 376.4L959.8 382L955.6 392.3L960.3 393.9Z",963.1,377.8],["4304655","Capão do Cipó","M405.3 281.3L398.3 265.4L386.5 261L368.3 238.7L362.8 250.3L363.7 256.4L355.5 261.6L349.9 261.2L354.8 268.8L363.3 273.8L366.6 284.6L371.6 287.6L372.8 300.2L378.8 298.4L386.8 306.7L395.9 299.3L398.7 293.7L395.2 290.4L405.3 281.3Z",380.0,274.6],["4304663","Capão do Leão","M634.5 674.5L629.8 681.3L614.4 683.1L613.2 688.3L623.5 706.5L624 706.6L630.5 711.8L642.7 714.5L654.8 723.6L655 716.7L659.7 707.3L656.2 701.6L660.8 691.9L653.5 680.6L634.5 674.5Z",641.3,696.0],["4304705","Carazinho","M627.7 158.7L624.9 158.4L611.4 168.9L603.1 162.6L597.3 171.2L592.8 159.6L585.6 159.6L572.8 169.1L565.3 171.1L565.7 177.3L567.9 174.6L578.2 180.2L580.7 187.7L588.5 189.4L601.6 190.3L609.7 188L615.6 185.1L618 175.8L622.5 173.2L631.4 165.9L627.7 158.7Z",598.2,180.7],["4304713","Caraá","M934.2 387L922.1 380.6L917 385.5L911.2 384.2L904.3 398.1L915.2 406.6L926.8 406.6L930 391.7L934.2 387Z",919.3,394.2],["4304804","Carlos Barbosa","M790.3 329.4L790.3 323.3L779.3 323.2L773 318.7L765.9 323.5L754.9 323.6L753.1 335.1L756.9 336.1L767.9 332.1L784.9 332.1L790.3 332.2L790.3 329.4Z",771.2,326.5],["4304853","Carlos Gomes","M723.3 92.4L721.8 86.4L721.3 82.4L711.5 85.5L710.3 93.3L717.7 97.1L723.3 92.4Z",716.2,90.0],["4304903","Casca","M726.8 220.3L718.8 216L718.8 208.5L696.7 212.2L696.3 224L700 223.8L708.6 223.2L708.8 232.3L727.5 231L728.5 229.4L726.8 220.3Z",715.6,223.1],["4304952","Caseiros","M754.5 170.6L747.1 155.6L741.4 165.1L734.7 162.2L727.7 169.8L719.1 169L726.3 170.6L730.9 177.3L739.8 176.1L745.7 179.4L750.7 181.1L754.5 170.6Z",745.9,171.8],["4305009","Catuípe","M465.1 150.5L462.8 142.6L457 143.3L449.4 131.4L444 134.6L435.8 136.3L442.6 140.2L444.9 149.4L430.8 153.8L440.1 167.5L435.4 183L436.8 185.9L445.2 183.9L449.6 173.8L457.6 175.8L463.2 168.7L465.1 150.5Z",450.8,159.7],["4305108","Caxias do Sul","M840.2 250.4L833 257.2L819.2 262.5L840.8 274.7L845 282.8L821 285.3L816.9 293.2L798.4 293.4L798.1 297.1L798.7 316.5L801.5 323.8L808.3 333.1L812.6 328.2L831.3 323.6L837.2 327.6L849.4 322.8L853.2 317L855.9 299.7L846.9 292.7L858.3 286.3L862.8 277.4L854.6 255.9L840.2 250.4Z",831.7,305.9],["4302808","Caçapava do Sul","M553.8 493.8L559 482.5L552.5 475.3L545.1 478L538.1 474.2L536.1 463.9L542.3 447.8L528.6 458.2L520.7 467L521.5 475.9L513.8 486.6L510.9 481.1L502.8 482.9L497.5 490.9L490.8 489.1L490.4 498.3L486.1 502.8L487 511.1L481.3 519.6L478.5 543.1L487.2 541.9L496.1 551.1L504.3 555.4L509.4 562.8L517.7 568.6L524.6 569L527.8 569.3L525.8 557.4L528.3 545.7L535.2 541.4L550.6 542.3L557.6 531.8L557.1 523.2L549.3 511.6L553.4 503.8L553.8 493.8Z",520.7,515.2],["4305116","Centenário","M715.8 102.8L717.7 97.1L710.3 93.3L708 88.7L697.3 104.2L701.6 108.1L714.6 108.2L715.8 102.8Z",707.9,100.2],["4305124","Cerrito","M617.9 664.1L596.2 663.6L593.2 673L597.9 692.9L603.1 700.3L618.1 702.1L623.5 706.5L613.2 688.3L614.4 683.1L617.6 678.7L617.9 664.1Z",605.3,676.4],["4305132","Cerro Branco","M583.5 362.3L577.2 361.7L573.5 364.2L575.6 379.8L590.1 386.3L589.3 376.3L583.5 362.3Z",580.2,370.3],["4305157","Cerro Grande","M565.8 73.1L554.6 74.8L552.9 82.6L561.2 83.9L566.5 82.1L568.1 81.6L565.8 73.1Z",558.7,79.0],["4305173","Cerro Grande do Sul","M751.7 503.6L741 504.9L738.8 501.6L736.6 497.1L721.1 511.3L727.6 520.9L733.5 519.7L746.7 528.8L752.9 517.5L751.7 503.6Z",741.0,514.5],["4305207","Cerro Largo","M359.8 142.2L350.9 140.5L352.5 159.5L358.8 163.9L367.7 166.9L372.3 163.2L365.2 157L365.1 143.5L359.8 142.2Z",359.5,151.8],["4305306","Chapada","M573.9 125.1L560.9 125.4L556.4 132.7L550.6 134L552 145.2L542.6 145.4L548.4 157.7L552.5 155.1L565.3 171.1L572.8 169.1L585.6 159.6L579.8 148.6L578.8 139L576.8 127.9L573.9 125.1Z",566.6,148.7],["4305355","Charqueadas","M756.4 436.4L760.4 428.9L766.3 434.5L772.3 433.2L780.2 425L770.9 416.8L756.6 419.4L748.7 429L756.4 436.4Z",768.1,425.2],["4305371","Charrua","M716.2 116.6L700.4 116.7L697.6 119.9L696.6 124.2L696.8 130.2L708.1 135.4L716.5 133.5L717.2 132.2L719.7 126.6L716.2 116.6Z",707.1,125.8],["4305405","Chiapetta","M466.7 118.3L459.5 111.8L450.3 123.6L449.4 131.4L457 143.3L462.8 142.6L465.1 150.5L477.4 141.8L485.6 132.5L473.3 127L466.7 118.3Z",462.2,130.5],["4305447","Chuvisca","M695.7 550.8L707.3 553.4L716.7 551L718.3 540.5L716.2 532L710.8 524.4L710.3 530L700.1 536.4L695.7 550.8Z",707.4,542.7],["4305439","Chuí","M527.1 977.5L542.6 965.3L528.1 950.6L520 958.8L514.4 969.4L524.8 970.1L527.1 977.5Z",528.4,962.1],["4305454","Cidreira","M941.2 441.7L929.9 437L918.3 435.1L915.9 438.5L912.4 450.6L923 449L930 452.8L934 462.1L941.2 441.7Z",930.5,444.3],["4305504","Ciríaco","M719.1 169L712.2 174.4L705.8 178.1L712.2 187.4L709.3 198.1L718.3 206.1L719.3 204.7L720.1 202.2L721.6 190.9L729.3 186L731.4 183.3L726.3 170.6L719.1 169Z",720.6,180.9],["4305587","Colinas","M728.2 342.8L731.6 337.4L728.6 331L719.6 332.2L724 338L714.3 341.9L728.2 342.8Z",726.6,339.2],["4305603","Colorado","M588.5 189.4L580.7 187.7L573.6 191.9L574.6 198.4L570.9 205.9L578.7 220.1L590.2 219.4L591 212.9L587.8 206.8L590 196.3L588.5 189.4Z",580.8,203.5],["4305702","Condor","M541.3 162.2L529.6 153.5L525.5 144.9L520.4 146.5L506.4 139.4L501.8 147.1L502 154.9L499.4 171.5L514.8 165.9L530 169.3L538.8 167.8L541.3 162.2Z",523.7,159.1],["4305801","Constantina","M591.2 76.1L587.7 73.1L575.8 80.1L568.1 81.6L566.5 82.1L571.4 85.8L575.8 90.2L578.8 101.5L582.9 102.8L592.1 95.1L586.6 87.9L593.6 83.8L591.2 76.1Z",579.7,85.6],["4305835","Coqueiro Baixo","M706 305.1L692.6 302.3L688.9 293.4L683.3 297.7L687.8 312L693.7 314.5L706 305.1Z",692.9,307.2],["4305850","Coqueiros do Sul","M624.9 158.4L612.2 138.9L601.8 140.7L598 143.8L605.3 153.4L603.1 162.6L611.4 168.9L624.9 158.4Z",613.0,153.6],["4305871","Coronel Barros","M455.9 198.4L455.7 184.6L445.2 183.9L436.8 185.9L441.9 196.2L436.1 202L437.5 205.7L447.8 202.7L449.4 193.6L455.9 198.4Z",445.0,190.9],["4305900","Coronel Bicaco","M487 83.7L481.7 97.5L485.8 99.7L488.2 109.7L493.1 115.6L493.5 123.5L501.5 125.6L510.9 118.8L515.8 106.7L509.6 96L507.3 86.7L500.6 90.9L487.4 83.8L487 83.7Z",499.9,105.8],["4305934","Coronel Pilar","M752.7 323.7L748.4 311.7L739.9 311L736.1 324.4L746.2 325.2L752.7 323.7Z",744.5,318.4],["4305959","Cotiporã","M755.2 283.7L755.5 269.8L747.1 270.5L736 271.3L738.7 279.9L744.5 293.7L746.9 294.8L748.7 293.5L755.2 283.7Z",747.5,278.1],["4305975","Coxilha","M687.2 144.3L671.4 144.9L667.4 138.4L661.2 137.6L659.5 145.5L647.8 143.8L643.7 138.8L645.9 151.2L649.4 158.4L665.4 163L673 167.2L682.3 159.6L687.2 144.3Z",665.6,152.9],["4306007","Crissiumal","M449 53.2L441.7 52.4L434.2 45.5L426.1 43.3L420.5 45L417.6 52.4L421.2 59.9L428.4 68.8L444.5 71.3L449.2 71.3L456.1 63.7L449 53.2Z",433.1,58.5],["4306056","Cristal","M695.5 560.8L676.4 557.3L677 572.1L690.8 575.1L696.8 595.8L700.5 597.7L713.4 589.9L716.8 582.1L723.4 579.7L731.3 592L734.9 592.4L731.4 581.2L726.6 574.9L723.2 561.4L715.6 566L695.5 560.8Z",707.4,576.2],["4306072","Cristal do Sul","M557.5 46.6L547.6 41.5L544.3 44.7L541.5 49.7L546.1 57.3L549.6 59.5L557.5 46.6Z",549.4,50.7],["4306106","Cruz Alta","M522.2 214.9L504.1 211L491.2 204.2L485.8 211.5L489.8 228.1L486.3 245L479.6 251.6L484.2 260.6L488.1 260.3L495.8 271.1L508.7 273.9L511.4 261.8L506.4 250L510.6 242L515.5 247.2L521.9 242L538.9 249L539.6 243.9L547.7 240.8L550.3 233.7L537.8 222.3L527.4 220.2L522.2 214.9Z",502.9,228.1],["4306130","Cruzaltense","M637.3 75.2L627.9 70.7L622.9 71.8L614.2 73.9L614.2 79.4L622.9 87.3L635.2 86.6L637.3 75.2Z",626.5,79.0],["4306205","Cruzeiro do Sul","M711.9 353.5L701.9 350.1L690.1 351.6L695.3 361.3L712 373.6L714.2 370L708.3 366.2L711.9 353.5Z",704.1,358.2],["4304309","Cândido Godói","M366.5 117.3L363.1 113.8L348 110.2L348.5 114.1L348.4 119.1L362.4 135.2L375.2 135.3L375.2 124.2L366.5 117.3Z",360.8,122.6],["4306304","David Canabarro","M729.3 186L721.6 190.9L720.1 202.2L735.8 203L738.7 199.6L746 191.5L744.2 187.8L735.4 189.7L729.3 186Z",731.7,195.1],["4306320","Derrubadas","M476.7 12.4L471.4 5.5L458.8 15.2L453.6 15.4L446.8 25.4L464.1 34.2L465.6 35.6L481 31L483 25.1L476.7 12.4Z",469.1,22.9],["4306353","Dezesseis de Novembro","M323.3 159.2L320.2 150.8L312.2 144.8L308.2 148L307.9 161L311.9 172L319.3 180.8L327.7 171.7L321.9 165.3L323.3 159.2Z",315.7,162.6],["4306379","Dilermando de Aguiar","M436.8 381.4L421.6 382.4L414.7 388.8L420 400.2L412 416.8L417.3 417.4L422.1 411.7L429.1 416.6L448.6 415.3L445 410.5L458.3 400.8L436.8 381.4Z",432.5,400.8],["4306403","Dois Irmãos","M828.1 370.9L829.1 362.9L820.4 361.4L818.8 374.2L823.3 374.8L828.1 370.9Z",823.9,368.4],["4306429","Dois Irmãos das Missões","M530 77.9L520.3 79L517.7 75.6L508.3 77.3L507.3 86.7L509.6 96L522.4 97.7L531.1 88.1L530 77.9Z",518.1,86.7],["4306452","Dois Lajeados","M735.9 271.1L719.1 272.8L718.5 283.8L731.8 282.6L738.7 279.9L736 271.3L735.9 271.1Z",729.1,277.4],["4306502","Dom Feliciano","M688 492.4L681 493.2L676.1 488.8L671.2 478.3L664.5 480.1L662 493.4L656.7 498.5L652.9 511.8L661.3 515.9L665.4 529L675.3 544.6L684 539.6L685.4 550.4L692.9 557.3L695.7 550.8L700.1 536.4L710.3 530L710.8 524.4L711.6 521.1L710.4 512L700.4 501.8L688 492.4Z",683.0,516.5],["4306601","Dom Pedrito","M366 519.7L361.5 515.4L354.6 529.7L347.3 534.9L336.9 533L325 533.8L321.4 543.9L322.8 553L312.8 561.4L307.8 571.4L311.8 576.1L314.4 591.8L317.9 597.7L316.2 604.5L321.9 616.1L326.2 613.9L334.8 626.8L347.3 639.3L357.1 636.8L364.4 638.3L372.9 627L382 628.4L388.9 620L399.7 618.6L402.1 608.4L413.9 597.9L432.1 595.3L463.2 576.4L461.1 571.5L454.8 572.1L443.3 568L432.8 568.2L411.3 561.6L409.2 558L398.3 558.3L385.6 555.5L377.2 542.4L368.1 540.5L363.3 534.5L367.9 522L366 519.7Z",362.7,587.3],["4306551","Dom Pedro de Alcântara","M983.5 342.7L987.7 338L984.2 328L976.8 326.4L976.5 335.2L983.5 342.7Z",980.9,336.0],["4306700","Dona Francisca","M543.5 351.8L531.7 352.3L532.2 367.1L529.5 370.1L532.1 373.4L534.9 374.2L541.9 371L543.5 351.8Z",536.3,357.1],["4306734","Doutor Maurício Cardoso","M421.2 59.9L417.6 52.4L409.6 55.3L401.5 46.3L394.1 50.9L393.3 57.4L399.8 67.1L403 70.3L410 69.1L421.2 59.9Z",403.4,59.8],["4306759","Doutor Ricardo","M717.6 291.5L711.5 286.5L701.9 283.6L702.3 289L709.1 301.6L721 301.7L719.9 296.2L717.6 291.5Z",710.5,293.5],["4306767","Eldorado do Sul","M800.8 433.1L802 429.1L796.4 420.1L780.2 425L772.3 433.2L766.3 434.5L760.4 428.9L756.4 436.4L747.5 439.4L748.7 454.4L754.9 452.8L761.3 458.6L768.7 449.2L780.3 440.7L785.2 442.3L796.9 435.3L800.8 433.1Z",762.2,442.6],["4306809","Encantado","M721 301.7L709.1 301.6L708 304.8L713.5 310.1L712.7 315.4L718.4 323.3L720.9 323.9L725.2 321.1L722.6 305.6L721 301.7Z",718.3,312.0],["4306908","Encruzilhada do Sul","M624.5 458.1L620.5 467.4L620.4 477.6L601.5 476.5L595.7 480.4L597.5 488.8L595.7 499L589.6 516.5L584.2 516.1L582.4 527L585.8 535.2L586.8 551.6L578.4 562.7L591.2 565.5L598 562.9L615.2 558.9L622.5 560.7L627.5 566.8L653.8 561.9L655 553.6L650 544.4L653.4 529.9L658.4 524.8L665.4 529L661.3 515.9L652.9 511.8L656.7 498.5L662 493.4L664.5 480.1L644.3 480.6L640.6 467.4L637.6 475.6L630.7 477.2L628.8 464L624.5 458.1Z",621.8,519.4],["4306924","Engenho Velho","M597.6 85.3L591.2 76.1L593.6 83.8L586.6 87.9L592.1 95.1L594.3 97L597.6 85.3Z",590.8,90.1],["4306957","Entre Rios do Sul","M615.7 50.7L606.4 59.5L613.1 65.7L610.4 72.6L614.2 73.9L622.9 71.8L623.7 65.1L615.7 50.7Z",616.3,62.8],["4306932","Entre-Ijuís","M435.4 183L418.2 186.1L410 180.9L406.8 184.9L406.6 196.4L394.8 205.5L400.2 210.1L400.4 223.2L405.5 230.5L412.7 223.7L409.8 214.9L421.1 205.7L421.1 199.2L436.1 202L441.9 196.2L436.8 185.9L435.4 183Z",409.1,204.2],["4306973","Erebango","M678 101.9L666.4 96.7L666.8 99.5L656.2 112.7L663.5 118.6L672.8 115.3L678 101.9Z",667.9,109.5],["4307005","Erechim","M677.7 57.5L674.7 60.7L664.4 61.5L664.4 83.9L665.8 96.9L666.4 96.7L678 101.9L689.1 94.5L688.3 85.1L685.1 84.2L684.5 70.1L678 70.3L677.7 57.5Z",675.6,80.9],["4307054","Ernestina","M651.7 192.9L643.5 188.3L637.2 180.7L631.7 182.4L626.3 188.3L628.5 193.8L633.3 196.6L629.6 209.6L637.9 211.6L643.1 203.5L651.7 192.9Z",638.9,197.7],["4307203","Erval Grande","M639.9 24.8L622.1 22.8L620.2 28.4L621 30.1L631.6 46.7L629.5 50.2L632.7 55.3L641.8 56.5L644.6 45L639.6 31.8L639.9 24.8Z",635.4,38.3],["4307302","Erval Seco","M510.9 44.6L499.3 36.9L498.5 48.3L503.6 56.8L509.5 53.5L506.3 73.2L508.3 77.3L517.7 75.6L520.3 79L530 77.9L532.4 76.3L526.1 63.1L518.3 52.7L510.9 44.6Z",516.6,64.3],["4307401","Esmeralda","M828.3 116.9L821.4 123.8L805.2 130.3L800.7 115.5L789.7 113.4L788.2 119.6L793.1 123.5L791 133.2L791.9 139.3L800.1 143L804.3 156.2L808.2 160.3L816.8 159.9L825 167.8L835.2 128.2L828.3 116.9Z",816.2,144.0],["4307450","Esperança do Sul","M464.1 34.2L446.8 25.4L439.5 31.1L450.5 45.4L456.4 43.9L464.1 34.2Z",453.4,35.6],["4307500","Espumoso","M615.5 234.2L610.3 228.7L602 240L590.5 240.8L587 242.5L590.2 253.1L585.5 261.4L578.8 272.7L586.9 273.9L599.4 286.7L605.8 286.8L616.8 281.9L617.9 249.6L616 241.5L615.5 234.2Z",603.3,260.3],["4307559","Estação","M679.3 129.1L680.3 120.8L672.8 115.3L663.5 118.6L661.3 123.5L665.5 130.1L674 126.9L679.3 129.1Z",672.4,122.7],["4307708","Esteio","M822.5 408L812.3 402.3L805.9 407.2L819.7 407.7L822.5 408Z",813.0,405.0],["4307807","Estrela","M728.2 342.8L714.3 341.9L713.7 342.4L717.7 344.8L711.9 353.5L708.3 366.2L714.2 370L723.1 362.7L724.4 360.4L728.2 342.8Z",718.2,355.3],["4307815","Estrela Velha","M572.8 307.3L569 301L557.3 299.6L547.6 301.7L547 308.4L551.7 331.9L559.6 330.8L562.5 319.7L572.8 307.3Z",557.1,311.2],["4307609","Estância Velha","M818.3 374.2L810.4 371L805.9 370.9L810.7 380.4L812.8 379.2L818.3 374.2Z",811.4,375.6],["4307831","Eugênio de Castro","M436.1 202L421.1 199.2L421.1 205.7L409.8 214.9L412.7 223.7L405.5 230.5L405.5 235.5L412 240.3L413.6 231.1L428.6 230.6L437.5 215.1L437.5 205.7L436.1 202Z",424.0,217.2],["4307864","Fagundes Varela","M756.4 263.8L750.5 256.2L744.8 256.3L734.7 263.4L735.9 271.1L736 271.3L747.1 270.5L756.4 263.8Z",744.3,263.5],["4307906","Farroupilha","M798.1 297.1L791.7 297.3L788.2 290.6L781.7 289.3L785.7 309.4L772.8 309.6L773 318.7L779.3 323.2L790.3 323.3L790.3 329.4L801.1 326.4L801.5 323.8L798.7 316.5L798.1 297.1Z",791.3,314.5],["4308003","Faxinal do Soturno","M531.7 352.3L516.4 356.4L508.6 359.6L511 364.8L520.2 370.4L529.5 370.1L532.2 367.1L531.7 352.3Z",526.0,362.0],["4308052","Faxinalzinho","M629.5 50.2L631.6 46.7L621 30.1L615.5 36L615.7 50L629.5 50.2Z",623.2,42.5],["4308078","Fazenda Vilanova","M733.8 370.7L731.5 358.2L724.4 360.4L723.1 362.7L724.2 374.8L733.8 370.7Z",728.8,366.1],["4308102","Feliz","M810.4 340.6L806.6 337.7L799.7 339.9L793.4 343.2L792.6 356.3L796.8 357.3L801.7 354.6L805.4 342.5L810.4 340.6Z",797.7,347.1],["4308201","Flores da Cunha","M811.8 272L801.8 275.2L800.4 284.7L789.9 289.2L788.2 290.6L791.7 297.3L798.1 297.1L798.4 293.4L816.9 293.2L821 285.3L819.8 277.9L811.8 272Z",811.6,284.3],["4308250","Floriano Peixoto","M697.3 104.2L696.5 103.4L689.5 110.9L689.2 118L697.6 119.9L700.4 116.7L716.2 116.6L714.6 108.2L701.6 108.1L697.3 104.2Z",696.4,113.3],["4308300","Fontoura Xavier","M670 262.2L661.7 262.3L648.5 266.8L644 273.1L645.2 285.4L645.7 291.8L653.8 303.5L660.7 301.5L670.9 304.5L671.2 299.5L665.4 288.9L667.1 282.7L679.4 286L679.1 276.2L674.1 272.4L670 262.2Z",656.4,278.3],["4308409","Formigueiro","M548.9 421.6L536.9 416.7L529.6 417.5L521.4 409.9L511.1 408L498 411.6L499.5 427.5L494.7 433.7L500.2 441L505.4 442L520.2 434.1L535.6 429.7L548.9 421.6Z",514.2,422.7],["4308433","Forquetinha","M703 339.4L696.8 333.4L687.2 328.7L683.7 333.4L682.5 343L692.1 342.8L703 339.4Z",691.4,337.6],["4308458","Fortaleza dos Valos","M547.7 240.8L539.6 243.9L538.9 249L541.3 261.4L528.9 261.9L530.3 276.6L516 286L524.2 293.2L529.2 280.7L534.5 277.7L542.2 282.1L548 274.4L553.4 273.8L561.6 284L564.5 278.5L560.8 266.8L565.3 258.5L561.6 244L547.7 240.8Z",550.1,264.4],["4308508","Frederico Westphalen","M539.3 19L536.5 21.8L529.7 33.7L519 29.3L522.3 38.3L526.6 49L544.3 44.7L547.6 41.5L548.2 36.5L539.3 19Z",536.2,38.6],["4308607","Garibaldi","M752.2 309.8L748.4 311.7L752.7 323.7L754.9 323.6L765.9 323.5L773 318.7L772.8 309.6L752.2 309.8Z",761.3,316.5],["4308656","Garruchos","M270.8 146.2L262.6 146.5L258.1 151.2L237.6 166.2L230.9 168.1L232.9 175.3L241.5 183.6L238.6 194.7L252.3 183.4L262 192.7L264.6 173.6L270 170.1L278 175.8L286 164.2L279.9 157.8L281.2 151.6L270.8 146.2Z",253.3,170.2],["4308706","Gaurama","M702.8 81.5L701.1 66.3L696.8 61.2L684.4 66.5L684.5 70.1L685.1 84.2L688.3 85.1L698.2 85.3L702.8 81.5Z",692.7,75.8],["4308805","General Câmara","M715.4 391.9L703.4 383.9L706.3 388.6L700.7 400.1L705.9 418.2L707.3 419.9L711.8 418.3L724.9 421.5L735.9 421.4L742.9 419.5L739.9 411L744.2 406.9L731.6 407.1L728.4 401.5L718.2 396.3L715.4 391.9Z",720.9,409.4],["4308854","Gentil","M709.3 198.1L712.2 187.4L705.8 178.1L699 178.5L697.6 184.2L694.3 192.5L700.2 203.2L709.3 198.1Z",703.3,190.7],["4308904","Getúlio Vargas","M689.1 94.5L678 101.9L672.8 115.3L680.3 120.8L679.3 129.1L686.6 125.2L696.6 124.2L697.6 119.9L689.2 118L689.5 110.9L696.5 103.4L689.1 94.5Z",682.8,111.7],["4309001","Giruá","M411.3 107.3L406.7 109.3L405.3 121.3L399.7 122.3L393.4 131.3L395.7 134.5L388 147.2L399.4 147.3L402.4 154.1L403.2 156.8L420.2 157.8L430.8 153.8L444.9 149.4L442.6 140.2L435.8 136.3L423.4 120.8L414.4 118.1L411.3 107.3Z",415.2,139.0],["4309050","Glorinha","M874 396.5L870.5 393.4L859.3 394.2L853.8 408.6L858.2 427.3L870.2 424.5L876 411.1L874 396.5Z",865.5,409.9],["4309100","Gramado","M849.4 322.8L837.2 327.6L837.7 337.8L846.8 346.6L846.8 354.1L856.6 350.2L859.7 344.4L853.8 336.6L853.5 325.3L849.4 322.8Z",847.4,337.0],["4309159","Gramado Xavier","M644.4 316.8L640 313.4L622.3 314.8L617.8 325.5L639.1 335.8L640.1 328.8L644.4 316.8Z",633.2,323.1],["4309126","Gramado dos Loureiros","M604 60.5L604.7 52.8L595.5 48L584.3 47.1L578.8 54.4L580.9 57.1L598 55.9L604 60.5Z",590.5,50.9],["4309209","Gravataí","M858.2 427.3L853.8 408.6L859.3 394.2L851.4 397.6L840.8 396.5L825.1 402.4L822.5 408.1L827 411.4L826 422.4L841.8 422.4L852.8 429.7L858.2 427.3Z",841.7,409.1],["4309258","Guabiju","M756 209.3L743 210.7L741.2 214.2L745.4 223.1L750.1 225.9L759.5 232L759.1 212.5L756 209.3Z",751.5,218.3],["4309407","Guaporé","M726.5 244.5L713.4 245.4L713.7 254.3L706 257.2L706.9 262.4L719.1 272.8L735.9 271.1L734.7 263.4L729.8 261.2L729.3 247.8L726.5 244.5Z",719.2,259.7],["4309506","Guarani das Missões","M379.3 147.3L365.1 143.5L365.2 157L372.3 163.2L382.9 169.2L379.3 177.1L380.8 177.5L385.9 174.4L391.7 169.8L391.2 151.9L384.4 150.6L379.3 147.3Z",379.3,157.3],["4309308","Guaíba","M796.9 435.3L785.2 442.3L780.3 440.7L768.7 449.2L761.3 458.6L761.3 465.2L769.7 467.5L783.7 461.1L793.6 460.6L795.9 453.3L796.9 435.3Z",780.2,452.8],["4309555","Harmonia","M778 354.3L776.7 363.8L786.2 366.2L787.5 361.6L784.9 357.6L778 354.3Z",780.7,360.1],["4307104","Herval","M524.6 697.7L520.7 702.1L489.9 721.5L488.6 735.6L490.5 750.5L494.8 756.1L498.3 748.1L511 744.5L515.9 749L536.4 748.4L542 753.3L548.5 746.4L550.4 738.8L565.1 721.5L575.9 708.5L591.4 704.7L589.2 701.3L574.9 704.2L567.9 702.1L560.7 705.2L546.9 701.3L538.4 697.8L524.6 697.7Z",530.7,723.1],["4309571","Herveiras","M621.7 353.9L634.3 348.8L625.2 337.8L611.7 340L609.9 345.7L615.1 344.1L622.4 349.3L621.7 353.9Z",624.3,344.6],["4309605","Horizontina","M428.4 68.8L421.2 59.9L410 69.1L403 70.3L406.4 81.9L417.5 85.9L420.1 79.5L428.4 73.5L428.4 68.8Z",415.5,73.7],["4309654","Hulha Negra","M483.6 620.1L486.8 608.7L476.1 610L471.2 606.7L455.9 612.6L452.1 620.4L459.5 625.2L455.3 629.8L463.6 641L459.1 646.8L454.8 653.4L459.1 664.5L456.7 687.4L465.6 693L463 686.7L468.8 671.6L472.9 666.1L476.3 649.9L475 643.3L481.6 638.7L479 629.2L483.6 620.1Z",469.0,630.2],["4309704","Humaitá","M465.6 64.5L456.1 63.7L449.2 71.3L444.5 71.3L447.9 82.6L449 82.9L449.7 78.7L466.7 74.1L465.6 64.5Z",456.4,68.8],["4309753","Ibarama","M569.3 334.8L559.6 330.8L551.7 331.9L550.8 341L547.1 346.5L563.5 353.2L569.7 347.9L569.3 334.8Z",560.7,341.8],["4309803","Ibiaçá","M754.8 140.6L747.4 147.1L737.7 142.4L736.6 137.6L717.2 132.2L716.5 133.5L719.8 137.3L718.6 150.1L734 157.9L734.7 162.2L741.4 165.1L747.1 155.6L754.6 153.4L754.8 140.6Z",733.1,148.2],["4309902","Ibiraiaras","M756.6 204.1L762.5 195.2L769.3 194.1L766.2 180L759.8 177.8L754.5 170.6L750.7 181.1L745.7 179.4L744.2 187.8L746 191.5L738.7 199.6L746.1 204L756.6 204.1Z",755.3,188.9],["4309951","Ibirapuitã","M658.5 217.3L641.2 216.2L638.7 213.8L638.9 227L636.3 229.6L653.8 236.6L665.8 235.9L668.2 228.8L663.5 219.8L658.5 217.3Z",653.6,225.4],["4310009","Ibirubá","M563.4 204L556.3 201.7L550.1 203.9L548 216.4L537 216L527.4 220.2L537.8 222.3L550.3 233.7L556.7 237.4L577.1 235L578.7 220.1L570.9 205.9L563.4 204Z",560.8,221.2],["4310108","Igrejinha","M871.5 356.4L864.1 359.9L846.8 356.3L848.3 361.5L853.8 366.2L860.1 371.1L874.1 367.5L871.5 356.4Z",862.5,364.7],["4310207","Ijuí","M477.7 175.6L473.9 169.5L474.5 158.1L478.9 148.7L477.4 141.8L465.1 150.5L463.2 168.7L457.6 175.8L449.6 173.8L445.2 183.9L455.7 184.6L455.9 198.4L459 205.3L468.8 210.4L481.5 205.2L482 197.7L475.4 191.4L477.7 175.6Z",466.7,181.2],["4310306","Ilópolis","M698 262.5L687.3 263.7L679.1 275.3L696.4 277.4L698 262.5Z",692.7,269.8],["4310330","Imbé","M953 410.4L944.5 416.9L942.9 425.4L947.6 423.8L953 410.4Z",948.0,416.0],["4310363","Imigrante","M746.2 325.2L736.1 324.4L736.6 330.8L728.6 331L731.6 337.4L736 337.4L742.7 333.6L746.2 325.2Z",739.4,329.6],["4310405","Independência","M433.2 103.8L428 107.7L416 105.3L411.3 107.3L414.4 118.1L423.4 120.8L435.8 136.3L444 134.6L448 124.9L439.1 116.4L433.2 103.8Z",430.4,116.6],["4310413","Inhacorá","M459.5 111.8L458 107.8L439.1 116.4L448 124.9L444 134.6L449.4 131.4L450.3 123.6L459.5 111.8Z",451.8,116.7],["4310462","Ipiranga do Sul","M663.5 118.6L656.2 112.7L641.6 125.1L656.7 132.3L665.5 130.1L661.3 123.5L663.5 118.6Z",654.9,123.8],["4310439","Ipê","M802.8 220.1L792.9 219.3L784.6 227.4L778.8 232.7L781.3 242.2L779.5 252L795 256.9L805.6 253.8L813.2 259.3L809.3 237.5L817.1 232.5L802.8 220.1Z",795.7,240.1],["4310504","Iraí","M556.9 14.8L551.6 11.8L540.1 17.4L539.3 19L548.2 36.5L555.2 32.3L560.8 28.1L556.9 14.8Z",550.2,22.8],["4310538","Itaara","M491.7 361.2L489.2 356.6L493.4 348.9L473.8 363.7L472 367.5L482.8 377L488.8 374.8L491.7 361.2Z",483.3,366.2],["4310553","Itacurubi","M286.3 230.1L274 228.9L256.5 237.5L279 268.8L285.8 273.7L297.5 277.8L303.8 272.1L313.6 273.8L317.2 270.5L319.7 257.8L331.5 252.3L312 242.6L303.2 243.6L296.4 234.5L286.3 230.1Z",293.0,256.9],["4310579","Itapuca","M698.2 242.5L676.7 243.7L675.4 233.5L666.5 253L673.7 252.2L686.4 254.5L700.1 252.5L698.2 242.5Z",684.4,249.2],["4310603","Itaqui","M188.9 259.4L178.3 260.3L172.8 269.2L166.4 272.4L158 269.3L147.1 276.9L148.6 283.6L146 291.5L135.6 293.3L124.1 298.2L116.1 313.7L115.9 321.3L109.5 333.6L101.5 336L100.2 342.1L109.8 339.2L115.2 342.7L126.8 337.9L137.5 337.8L145.4 343.2L153 338.9L162.2 341.7L184 333.4L194.8 324.1L204.6 333.6L207.4 332.1L218.3 340.9L224.9 331.1L230.7 330.5L244.2 321.4L248.2 313.9L257.6 309.4L265.3 309.6L265.8 305.5L259.2 290.6L233.5 298.6L223.5 299.2L210.4 303.4L190.3 302.6L177.5 304.1L176.4 300.1L165.1 294.5L186.9 268.7L188.9 259.4Z",150.6,315.9],["4310652","Itati","M952.2 332.1L949.5 328.4L938.3 330.5L932.1 343.3L941.2 359.2L942.9 367.2L952.5 360.2L949.9 351.7L939.4 337.8L943.7 332.3L952.2 332.1Z",945.5,356.4],["4310702","Itatiba do Sul","M654.8 28.2L639.9 24.8L639.6 31.8L644.6 45L641.8 56.5L643 58.1L652.5 59.3L650.4 50.9L654.8 28.2Z",647.4,34.7],["4310751","Ivorá","M516.4 356.4L514.9 349.6L510.7 345.2L498 354.3L500.8 364L506.7 365.2L511 364.8L508.6 359.6L516.4 356.4Z",505.0,356.1],["4310801","Ivoti","M818.8 374.2L820.4 361.4L820.5 360.4L809.4 362.5L810.4 371L818.3 374.2L818.8 374.2Z",815.3,365.7],["4310850","Jaboticaba","M551.5 71.6L545.8 62.7L540.4 75L541.7 87.6L548 91.2L552.9 82.6L554.6 74.8L551.5 71.6Z",548.0,79.0],["4310876","Jacuizinho","M578.8 272.7L578.1 277.4L564.5 278.5L561.6 284L571.4 292.1L571.2 298.9L578.8 303.3L581 300.9L585.9 289.6L599.4 286.7L586.9 273.9L578.8 272.7Z",579.0,286.3],["4310900","Jacutinga","M646.8 92.3L636.5 87.9L635.2 104.6L626 111.9L632.1 116.9L637 115.2L648.9 95L646.8 92.3Z",639.7,101.3],["4311106","Jaguari","M389.8 328.6L384.7 326.1L378.4 330.9L374.1 326.5L366.3 328.1L366.4 338.3L358.1 338L358.2 348.2L347.5 354.7L344 360.5L354 369.2L351.8 372.2L366.9 363.5L381.2 358.5L381.4 351.8L390.2 346.3L400.9 348.2L392.2 340.7L389.8 328.6Z",370.7,349.8],["4311007","Jaguarão","M542 753.3L536.4 748.4L515.9 749L511 744.5L498.3 748.1L494.8 756.1L499.2 764.8L498.9 777.7L506.7 787.6L513.9 792.9L520.9 791.8L525.9 804.4L538 807.1L545.3 812.3L557.2 816L567.1 815.6L580.8 809L584.7 794.5L579.8 783.4L563 774.9L559.1 776L548.7 770.5L542 753.3Z",537.6,786.1],["4311122","Jaquirana","M935.6 254.4L922.8 257.1L893.4 251.9L885.7 252.5L903.7 274.6L904.6 286L908.3 299.9L917 297.6L924.4 297.9L938 293.8L938.6 289.3L928.2 282.7L931.4 270.8L938.5 270.2L938 256.9L935.6 254.4Z",916.2,272.8],["4311130","Jari","M444.8 309.7L432.1 308.7L417.6 297.6L409.2 303.1L407.1 308L398.7 317.8L399.6 323.4L389.8 328.6L392.2 340.7L400.9 348.2L406.6 340.8L414.5 343.9L419.8 340.6L427.2 343.1L434.4 326.1L433.7 322.3L442.5 315.6L444.8 309.7Z",415.3,323.9],["4311155","Jóia","M437.5 215.1L428.6 230.6L413.6 231.1L412 240.3L405.5 235.5L402.5 237.6L407.6 248.9L408.1 264.1L411.6 270.4L437 263.3L441.5 266.3L459.6 265.6L465.6 252.8L456.5 249.3L457.7 228.4L449.1 220.7L437.5 215.1Z",436.3,245.3],["4311205","Júlio de Castilhos","M516 286L508.9 275.1L492 299.7L484 304.6L470.4 301.8L463.9 312.8L454.6 327.1L450.3 339.9L467.9 338.6L472.5 334.9L484.9 335L492.3 340.8L493.4 348.9L489.2 356.6L491.7 361.2L501.1 369.3L506.7 365.2L500.8 364L498 354.3L510.7 345.2L514.9 349.6L514 339.1L517.9 333.1L524.9 330.2L521.6 313.8L525.6 307.3L539.1 305.3L547 308.4L547.6 301.7L531.9 298.7L524.2 293.2L516 286Z",501.3,321.0],["4311239","Lagoa Bonita do Sul","M579.1 348.7L569.7 347.9L563.5 353.2L577.2 361.7L583.5 362.3L585.6 356.3L579.1 348.7Z",574.6,354.0],["4311304","Lagoa Vermelha","M789.7 113.4L787.3 111.4L782.5 121.1L777.1 123.1L768.5 131.2L757 129.1L749.3 131L754.8 140.6L754.6 153.4L747.1 155.6L754.5 170.6L759.8 177.8L766.2 180L769.3 194.1L762.5 195.2L756.6 204.1L756 209.3L759.1 212.5L773 211L778.6 205.1L785 212.9L793.8 182.8L785.9 177.2L776 182.1L778.2 168.3L770.4 158.7L770 142.6L781.6 143.5L791 133.2L793.1 123.5L788.2 119.6L789.7 113.4Z",764.0,166.1],["4311270","Lagoa dos Três Cantos","M611.5 213.3L606.4 209.9L591 212.9L590.2 219.4L591.5 221.1L611.1 225.7L611.5 213.3Z",604.4,217.9],["4311254","Lagoão","M607.6 297.7L601.1 301.1L595.7 310.6L596.3 327.6L603.2 328.6L612.2 334L617.8 325.5L622.3 314.8L622.4 307.4L612.7 301.6L607.6 297.7Z",606.8,315.0],["4311403","Lajeado","M703.8 339.7L703 339.4L692.1 342.8L702.8 345.9L701.9 350.1L711.9 353.5L717.7 344.8L713.7 342.4L703.8 339.7Z",707.2,345.7],["4311429","Lajeado do Bugre","M561.2 83.9L552.9 82.6L548 91.2L548.2 93.4L555.8 94.3L561.6 89.3L561.2 83.9Z",554.8,89.8],["4311502","Lavras do Sul","M486.1 502.8L476.7 503.6L473.3 498.4L468.1 500.4L462 511.8L455.4 517.9L451.4 529.2L436.3 531.7L430.3 539.3L418.2 534.6L410.1 535.7L407.6 529.3L397.9 518.9L386.7 517.6L366 519.7L367.9 522L363.3 534.5L368.1 540.5L377.2 542.4L385.6 555.5L398.3 558.3L409.2 558L411.3 561.6L432.8 568.2L443.3 568L454.8 572.1L461.1 571.5L465 564.9L479.8 561L496.1 551.1L487.2 541.9L478.5 543.1L481.3 519.6L487 511.1L486.1 502.8Z",451.0,549.5],["4311601","Liberato Salzano","M576.4 53.3L564.1 51.9L562.6 63.4L565.8 73.1L568.1 81.6L575.8 80.1L587.7 73.1L585.7 72L580.9 71.7L576.4 53.3Z",574.1,73.5],["4311627","Lindolfo Collor","M806.9 360.9L804.2 366.2L805.9 370.9L810.4 371L809.4 362.5L806.9 360.9Z",807.9,365.9],["4311643","Linha Nova","M813.9 345L810.4 340.6L805.4 342.5L801.7 354.6L812.7 353L813.9 345Z",809.4,347.2],["4311700","Machadinho","M761.8 71.4L758 66.2L745.4 57.9L734.9 62.4L743 83.4L739.4 84.6L746.2 88.4L747 89.5L763.9 79.6L761.8 71.4Z",749.8,74.3],["4311734","Mampituba","M977.1 318.5L975.1 312.1L964.9 312.8L948 318.6L958.3 331.8L958.7 330.8L959.9 326.1L977.1 318.5Z",962.3,319.3],["4311759","Manoel Viana","M265.3 309.6L257.6 309.4L248.2 313.9L244.2 321.4L230.7 330.5L224.9 331.1L218.3 340.9L227.9 342.3L228.9 351.4L239.1 353.5L242.8 362.7L256.4 368.6L257.8 377.6L266.7 375.6L273.9 377.5L278.4 370.8L279.8 362.3L284.5 356.5L274.7 341.8L267.7 335.9L268.1 328.3L273 320.2L268.1 312L265.3 309.6Z",249.6,339.7],["4311775","Maquiné","M941.2 359.2L926 346L918.3 353.1L918.3 377.9L922.1 380.6L934.2 387L939.9 396.1L948.5 395.8L955.6 392.3L959.8 382L956.3 376.4L947.2 375.7L942.9 367.2L941.2 359.2Z",930.9,370.8],["4311791","Maratá","M769 355.7L760.6 350.5L762.2 370.6L771.3 365.3L769 355.7Z",766.0,360.5],["4311809","Marau","M697.6 184.2L696.4 180.2L681 186.1L667.6 191.9L660.7 188.9L651.7 192.9L643.1 203.5L658.3 202.2L663.7 211.4L658.5 217.3L663.5 219.8L668.2 228.8L671.4 227.9L669.4 222.8L678.2 214.1L677 207.9L687.2 203.7L696.9 206.3L700.2 203.2L694.3 192.5L697.6 184.2Z",669.2,201.6],["4311908","Marcelino Ramos","M728.9 63.4L705.3 38.8L701.9 37.5L700.3 43.6L704.4 50.7L713.5 61.8L711.3 71.4L721.9 71.7L728.9 63.4Z",718.0,66.2],["4311981","Mariana Pimentel","M761.3 458.6L754.9 452.8L748.7 454.4L749.2 469.9L752.4 472L748.7 483.7L767.1 488L772.5 488.1L774.3 478.6L769.7 467.5L761.3 465.2L761.3 458.6Z",760.8,475.0],["4312005","Mariano Moro","M694.5 37.1L693 31.1L679.6 35.2L679 46.6L683.5 46.6L694.5 37.1Z",687.2,37.1],["4312054","Marques de Souza","M687.2 313.8L676.5 309.7L681.9 313L684.3 322.5L687.2 328.7L696.8 333.4L703 339.4L703.8 339.7L700.1 332.5L687.2 313.8Z",690.6,326.0],["4312104","Mata","M400.9 348.2L390.2 346.3L381.4 351.8L381.2 358.5L380.9 366.5L392.9 375.6L400.3 365L410.2 361.1L400.9 348.2Z",393.8,358.9],["4312138","Mato Castelhano","M689.9 169.3L683.6 166.4L682.3 159.6L673 167.2L669.4 177.9L681 186.1L696.4 180.2L697.6 184.2L699 178.5L689.9 169.3Z",681.4,174.8],["4312153","Mato Leitão","M695.3 361.3L690.1 351.6L688.3 350.5L686.9 360.7L695.3 361.3Z",690.8,357.5],["4312179","Mato Queimado","M379.3 177.1L382.9 169.2L372.3 163.2L367.7 166.9L358.8 163.9L357.1 169.9L379.3 177.1Z",371.6,169.2],["4312203","Maximiliano de Almeida","M734.9 62.4L728.9 63.4L721.9 71.7L721.3 82.4L721.8 86.4L739.4 84.6L743 83.4L734.9 62.4Z",731.6,75.6],["4311718","Maçambará","M289.2 279.2L279 276.3L274 287.4L267.3 292.5L262.7 281L239.7 282.9L234.1 277.9L222.4 279.4L218.2 275.3L199.9 272.3L188.9 259.4L186.9 268.7L165.1 294.5L176.4 300.1L177.5 304.1L190.3 302.6L210.4 303.4L223.5 299.2L233.5 298.6L259.2 290.6L265.8 305.5L265.3 309.6L268.1 312L278.8 315.3L286.7 310.6L292.3 301.4L292 288.6L289.2 279.2Z",207.1,287.8],["4312252","Minas do Leão","M705.9 418.2L694.8 419.4L689.3 420.2L689.5 430.4L686.6 445.8L688 455.5L698 459.2L709 456.8L705.9 447.9L710.7 437.2L706.2 433.5L707.3 419.9L705.9 418.2Z",698.0,439.7],["4312302","Miraguaí","M475.8 51.1L475.6 58.5L477.7 59.9L488.7 67.4L494.3 67.3L491.7 52.4L475.8 51.1Z",486.2,58.8],["4312351","Montauri","M709.8 237.4L707.7 230.6L700 223.8L696.3 224L695.5 232L697.8 238.2L709.8 237.4Z",701.9,233.1],["4312377","Monte Alegre dos Campos","M870.2 221.7L857.2 214.9L846.5 230.8L849 236.3L840.7 249.7L840.2 250.4L854.6 255.9L865.5 249.2L872.8 250.4L876.8 242.1L875.7 225.7L870.2 221.7Z",860.5,235.9],["4312385","Monte Belo do Sul","M750.7 308.1L755.8 307.9L757.1 298.9L748.7 293.5L746.9 294.8L746.9 303.7L750.7 308.1Z",752.2,300.5],["4312401","Montenegro","M762.2 370.6L751.1 367.1L754.2 372.9L763.4 388.6L772.5 400.8L779.6 404.5L788.7 403.5L788.9 396.2L777.7 384.2L780.9 376.5L776 371.8L771.3 365.3L762.2 370.6Z",768.5,379.8],["4312427","Mormaço","M630 227.2L624.1 223.4L615.5 234.2L616 241.5L628.8 245.1L631.6 233.4L630 227.2Z",624.1,236.3],["4312443","Morrinhos do Sul","M976.8 326.4L977.1 318.5L959.9 326.1L958.7 330.8L958.5 342.5L970.5 339.2L976.5 335.2L976.8 326.4Z",968.6,330.6],["4312450","Morro Redondo","M634.5 674.5L634 661.1L638.3 656.7L630.3 648.3L624.3 659.1L617.9 664.1L617.6 678.7L614.4 683.1L629.8 681.3L634.5 674.5Z",626.8,668.1],["4312476","Morro Reuter","M839.4 360.7L827.4 349.3L821.1 355.4L820.5 360.4L820.4 361.4L829.1 362.9L839.4 360.7Z",826.1,357.2],["4312500","Mostardas","M854.7 603.1L868.3 584.8L920.2 501L875.3 501L876.1 516.8L873.3 537L866.7 547.7L858.3 550.8L846.6 560.5L839.6 559L841.2 574.7L836 581.3L821.3 589L812.8 586.4L812.4 594L828.8 598.4L837.2 604.6L840.1 601.1L854.7 603.1Z",860.1,570.6],["4312617","Muitos Capões","M825 167.8L816.8 159.9L808.2 160.3L804.3 156.2L793.8 165.8L786 169.2L785.9 177.2L793.8 182.8L785 212.9L784.6 227.4L792.9 219.3L802.8 220.1L812.5 220.6L816 216.5L815.1 203.8L826.1 201.8L823.5 194.4L829.3 189.4L824.7 178.6L825 167.8Z",808.1,188.5],["4312625","Muliterno","M745.7 179.4L739.8 176.1L730.9 177.3L726.3 170.6L731.4 183.3L729.3 186L735.4 189.7L744.2 187.8L745.7 179.4Z",736.5,182.8],["4312609","Muçum","M741.3 300.6L736.2 294.3L725.6 297.5L719.9 296.2L721 301.7L722.6 305.6L738.9 307.6L741.3 300.6Z",733.7,302.0],["4312674","Nicolau Vergueiro","M658.5 217.3L663.7 211.4L658.3 202.2L643.1 203.5L637.9 211.6L638.7 213.8L641.2 216.2L658.5 217.3Z",649.5,209.9],["4312708","Nonoai","M620.2 28.4L617.8 22.6L606.3 16.4L607.1 29.5L601.9 36L589.5 32.7L587.2 32L586.5 41.2L571.2 41.5L565.1 50.5L564.1 51.9L576.4 53.3L578.8 54.4L584.3 47.1L595.5 48L604.7 52.8L604 60.5L606.4 59.5L615.7 50.7L615.7 50L615.5 36L621 30.1L620.2 28.4Z",605.8,43.5],["4312757","Nova Alvorada","M688.3 229.3L676.4 230.9L675.4 233.5L676.7 243.7L698.2 242.5L697.8 238.2L695.5 232L688.3 229.3Z",687.5,237.3],["4312807","Nova Araçá","M750.1 225.9L745.4 223.1L733.7 229.5L728.5 229.4L727.5 231L728.9 233.4L735.8 231.4L743.6 233.8L750.3 230.1L750.1 225.9Z",742.6,229.6],["4312906","Nova Bassano","M750.3 230.1L743.6 233.8L735.8 231.4L728.9 233.4L726.5 244.5L729.3 247.8L744.5 248.7L751.1 247.2L750.3 230.1Z",738.2,240.0],["4312955","Nova Boa Vista","M583.9 126.7L576.8 127.9L578.8 139L588 140.1L592.5 135.7L589.2 127.9L583.9 126.7Z",583.4,133.6],["4313003","Nova Bréscia","M708 304.8L706 305.1L693.7 314.5L693.9 320.2L703.5 319.7L712.7 315.4L713.5 310.1L708 304.8Z",704.6,312.6],["4313011","Nova Candelária","M444.5 71.3L428.4 68.8L428.4 73.5L435.6 78.6L447.9 82.6L444.5 71.3Z",438.0,74.2],["4313037","Nova Esperança do Sul","M358.1 338L355.1 331.6L344 328.3L335.7 328.5L339.8 331.8L347.5 354.7L358.2 348.2L358.1 338Z",350.4,339.9],["4313060","Nova Hartz","M847.3 373.2L853.8 366.2L848.3 361.5L842.1 361.6L842.1 368.2L847.3 373.2Z",849.6,365.9],["4313102","Nova Palma","M524.9 330.2L517.9 333.1L514 339.1L514.9 349.6L516.4 356.4L531.7 352.3L543.5 351.8L547.1 346.5L550.8 341L541.2 344.7L534.1 333L524.9 330.2Z",526.4,343.0],["4313201","Nova Petrópolis","M837.2 327.6L831.3 323.6L812.6 328.2L808.3 333.1L806.6 337.7L810.4 340.6L813.9 345L825.9 347.1L833.5 346L837.7 337.8L837.2 327.6Z",828.4,334.7],["4313300","Nova Prata","M759.5 232L750.1 225.9L750.3 230.1L751.1 247.2L744.5 248.7L744.8 256.3L750.5 256.2L772.5 254.6L763.9 235.3L759.5 232Z",758.1,245.3],["4313086","Nova Pádua","M801.8 275.2L792.1 275.2L786.5 281.3L789.9 289.2L800.4 284.7L801.8 275.2Z",795.4,280.8],["4313334","Nova Ramada","M506.4 139.4L497.1 138.7L492.3 131.7L485.6 132.5L477.4 141.8L478.9 148.7L489.5 155.5L502 154.9L501.8 147.1L506.4 139.4Z",491.2,145.7],["4313359","Nova Roma do Sul","M792.1 275.2L790.2 268.5L776.4 269.6L774.7 283.2L781.7 289.3L788.2 290.6L789.9 289.2L786.5 281.3L792.1 275.2Z",782.7,277.4],["4313375","Nova Santa Rita","M796.2 394.4L788.9 396.2L788.7 403.5L788.8 411.4L795.9 417.3L801.6 417.7L805.7 418.2L805.9 407.2L812.3 402.3L810.8 398.6L796.2 394.4Z",798.4,403.8],["4313490","Novo Barreiro","M574.7 116.3L572.1 106.2L566.4 109.5L562.5 117.8L557.3 120.2L554 128.5L556.4 132.7L560.9 125.4L573.9 125.1L574.7 116.3Z",564.5,120.7],["4313391","Novo Cabrais","M590.1 386.3L575.6 379.8L570.9 397L581 399.2L593.7 404.7L590.1 386.3Z",581.3,391.4],["4313409","Novo Hamburgo","M835.9 384.2L825.1 385.6L823.3 374.8L818.8 374.2L818.3 374.2L812.8 379.2L818.1 389.2L824.4 389.2L826.7 399.7L825.1 402.4L840.8 396.5L843.7 393.5L842.2 382.3L835.9 384.2Z",832.0,392.4],["4313425","Novo Machado","M393.3 57.4L379.2 53.4L373.3 66.8L378.2 74.6L381.7 79.3L397.3 71.8L399.8 67.1L393.3 57.4Z",385.4,68.5],["4313441","Novo Tiradentes","M562.6 63.4L556.1 63L551.5 71.6L554.6 74.8L565.8 73.1L562.6 63.4Z",560.4,69.6],["4313466","Novo Xingu","M582.9 102.8L578.8 101.5L575.8 90.2L571.4 85.8L566.6 98.1L573.8 103.8L578.6 104.9L582.9 102.8Z",574.2,97.2],["4312658","Não-Me-Toque","M609.7 188L601.6 190.3L588.5 189.4L590 196.3L587.8 206.8L591 212.9L606.4 209.9L611.5 213.3L620 202.4L609.7 188Z",603.5,200.7],["4313508","Osório","M948.5 395.8L939.9 396.1L934.2 387L930 391.7L926.8 406.6L915.2 406.6L911.8 423.2L904.1 429.9L904.5 434.9L909.8 442.5L915.9 438.5L918.3 435.1L933.3 423.2L942.9 425.4L944.5 416.9L953 410.4L954.4 407.1L950.4 405.7L948.5 395.8Z",923.9,417.8],["4313607","Paim Filho","M746.2 88.4L739.4 84.6L721.8 86.4L723.3 92.4L726.5 97L739.6 101.6L747.3 95.4L746.2 88.4Z",736.3,91.6],["4313656","Palmares do Sul","M917.1 456.4L901.9 457L893.6 464.5L893.2 479.7L889.5 498.1L873.5 489.8L875.3 501L920.2 501L930.7 471.9L925.8 465.3L928.9 460.7L917.1 456.4Z",909.0,481.6],["4313706","Palmeira das Missões","M543.7 97.5L539.7 104L531.4 99.9L531.1 88.1L522.4 97.7L509.6 96L515.8 106.7L510.9 118.8L501.5 125.6L508.7 133.8L506.4 139.4L520.4 146.5L525.5 144.9L529.6 153.5L541.3 162.2L548.4 157.7L542.6 145.4L552 145.2L550.6 134L556.4 132.7L554 128.5L557.3 120.2L562.5 117.8L566.4 109.5L556.5 108.5L555.1 104.7L546.8 109.8L543.7 97.5Z",531.7,125.2],["4313805","Palmitinho","M513.2 43.7L509.5 22.6L499.7 25L496.6 33.1L499.3 36.9L510.9 44.6L513.2 43.7Z",506.0,34.9],["4313904","Panambi","M530 169.3L514.8 165.9L499.4 171.5L490.2 177.5L497 180.6L503.1 189.4L520.4 194.4L518 203.6L522.4 205.8L533.5 190.4L530 169.3Z",517.9,178.9],["4313953","Pantano Grande","M687.4 474.7L679.6 465L671.8 459.5L671.9 447.5L663.5 448.2L658.9 439.7L645.7 441.5L639 448.1L640.6 467.4L644.3 480.6L664.5 480.1L671.2 478.3L676.1 488.8L681 493.2L688 492.4L685.2 484.9L687.4 474.7Z",656.2,464.2],["4314001","Paraí","M741.2 214.2L733.9 211.8L733.1 212.7L726.8 220.3L728.5 229.4L733.7 229.5L745.4 223.1L741.2 214.2Z",735.0,220.8],["4314027","Paraíso do Sul","M573.5 364.2L563.5 362.6L563.5 369.8L557.1 373.3L552.9 388.3L558.7 393.6L560.4 399.9L567 405.7L570.9 397L575.6 379.8L573.5 364.2Z",564.6,383.3],["4314035","Pareci Novo","M786.2 366.2L776.7 363.8L776 371.8L780.9 376.5L785.6 376.5L786.2 366.2Z",781.7,370.5],["4314050","Parobé","M860.1 371.1L853.8 366.2L847.3 373.2L844.5 379.7L855.9 386.8L861 380.1L860.1 371.1Z",854.4,377.3],["4314068","Passa Sete","M612.2 334L603.2 328.6L600 337.4L588.7 338.6L579.1 348.7L585.6 356.3L594 356.4L606.6 353.2L609.9 345.7L611.7 340L612.2 334Z",597.6,346.6],["4314100","Passo Fundo","M673 167.2L665.4 163L649.4 158.4L645.9 151.2L635.4 151.8L627.7 158.7L631.4 165.9L622.5 173.2L631.7 182.4L637.2 180.7L643.5 188.3L651.7 192.9L660.7 188.9L667.6 191.9L681 186.1L669.4 177.9L673 167.2Z",651.1,173.4],["4314076","Passo do Sobrado","M692.8 386.8L685.2 379L675.1 383.7L670.1 379.5L665.6 386.9L669.4 399.2L668.2 403.2L669.1 408.6L685.5 401.9L678.6 394.4L690.7 390.6L692.8 386.8Z",673.3,390.3],["4314134","Paulo Bento","M664.4 83.9L651.3 84L646.8 92.3L648.9 95L658 100.9L665.8 96.9L664.4 83.9Z",657.6,90.7],["4314159","Paverama","M751.1 367.1L747.5 354L742.2 357.4L731.5 358.2L733.8 370.7L738.6 375.8L746.4 368.6L751.6 375.1L754.2 372.9L751.1 367.1Z",742.7,363.5],["4314175","Pedras Altas","M501.7 663.1L494.7 661.3L489.6 669.1L482.6 670.4L483.9 679.2L478 692.6L464.6 700L459.7 709.4L460.6 714.8L472.8 721.4L474.9 729.3L488.6 735.6L489.9 721.5L520.7 702.1L524.6 697.7L517.4 673.3L503.9 667.6L501.7 663.1Z",495.7,693.7],["4314209","Pedro Osório","M603.1 700.3L591.4 704.7L575.9 708.5L565.1 721.5L575.1 721.5L579.8 725.7L599 727.9L608.7 730.6L624 706.6L623.5 706.5L618.1 702.1L603.1 700.3Z",602.5,714.9],["4314308","Pejuçara","M522.4 205.8L518 203.6L520.4 194.4L503.1 189.4L497 180.6L494 191.3L484.4 197.9L491.2 204.2L504.1 211L522.2 214.9L522.4 205.8Z",505.1,200.2],["4314407","Pelotas","M654.4 623.7L644.4 622.5L630.3 648.3L638.3 656.7L634 661.1L634.5 674.5L653.5 680.6L660.8 691.9L669.5 688L679.8 690.2L679.5 684.7L689.1 676.9L704.3 676L706.4 662L702.3 656.5L688 652.9L684.9 645.4L677.2 639.9L672.8 631.6L670.9 628.3L654.4 623.7ZM664.8 631.1L663.5 648.7L653.1 644.6L651.3 635.7L654.4 631.7L664.8 631.1Z",670.1,667.1],["4314423","Picada Café","M833.5 346L825.9 347.1L813.9 345L812.7 353L821.1 355.4L827.4 349.3L833.5 346Z",818.7,348.6],["4314456","Pinhal","M546.1 57.3L545.8 62.7L551.5 71.6L556.1 63L549.6 59.5L546.1 57.3Z",551.1,64.7],["4314472","Pinhal Grande","M547 308.4L539.1 305.3L525.6 307.3L521.6 313.8L524.9 330.2L534.1 333L541.2 344.7L550.8 341L551.7 331.9L547 308.4Z",538.5,321.3],["4314464","Pinhal da Serra","M796.1 92.3L787.3 111.4L789.7 113.4L800.7 115.5L805.2 130.3L821.4 123.8L828.3 116.9L822.1 108.3L811.4 100.9L800.6 96.8L796.1 92.3Z",810.9,113.8],["4314498","Pinheirinho do Vale","M504.6 14.5L496.1 10.4L489.6 13.4L491 15.8L499.7 25L509.5 22.6L510.6 21.6L504.6 14.5Z",503.6,21.6],["4314506","Pinheiro Machado","M527.8 569.3L524.6 569L519.4 579.9L518.7 596.9L512.7 609.4L498.2 623.9L502.6 630.9L509.5 634.1L504 643.4L506.2 659.8L501.7 663.1L503.9 667.6L517.4 673.3L524.6 697.7L538.4 697.8L546.9 701.3L542.3 694.3L538.5 679L542.4 667L546.7 665.5L552 655.9L559.7 653.2L546.6 646.3L545.5 637.4L535.6 632.8L531.7 620.5L536.8 611.8L535.8 601.9L546.4 595.6L551 596.6L559.8 577.8L542.9 574.8L527.8 569.3Z",526.2,650.6],["4314555","Pirapó","M312.2 144.8L307.3 144.3L301.9 135.2L283.5 128.5L277.5 131.2L278.9 138.8L295.4 152.9L307.9 161L308.2 148L312.2 144.8Z",298.5,146.3],["4314605","Piratini","M598 562.9L591.2 565.5L578.4 562.7L578.1 572.2L569.9 569.7L559.8 577.8L551 596.6L546.4 595.6L535.8 601.9L536.8 611.8L531.7 620.5L535.6 632.8L545.5 637.4L546.6 646.3L559.7 653.2L552 655.9L546.7 665.5L542.4 667L538.5 679L542.3 694.3L546.9 701.3L560.7 705.2L567.9 702.1L574.9 704.2L589.2 701.3L591.4 704.7L603.1 700.3L597.9 692.9L593.2 673L589.9 663.8L582.1 656.5L586.1 639.9L592.8 620.3L591 610.4L592.4 595.6L589.8 584.5L598 562.9Z",567.1,618.2],["4314704","Planalto","M587.2 32L579.8 34.2L571.1 26.1L560.8 28.1L555.2 32.3L562.7 46.2L565.1 50.5L571.2 41.5L586.5 41.2L587.2 32Z",569.8,34.1],["4314787","Ponte Preta","M647.5 75.3L637.3 75.2L635.2 86.6L636.5 87.9L646.8 92.3L651.3 84L647.5 75.3Z",644.3,82.4],["4314779","Pontão","M630.7 124.3L619.7 122.5L613 125.2L604.4 133.5L601.8 140.7L612.2 138.9L624.9 158.4L627.7 158.7L635.4 151.8L645.9 151.2L643.7 138.8L634.4 125.6L630.7 124.3Z",628.4,139.2],["4314902","Porto Alegre","M805.7 418.2L801.6 417.7L796.4 420.1L802 429.1L800.8 433.1L801.5 442.5L806.6 448.7L811.5 462.1L826.7 464.2L833.7 456.5L825.4 453.6L819.8 435.7L824.4 434.1L824.4 423.1L819.1 420.7L809.8 423.2L805.7 418.2Z",812.8,442.5],["4315008","Porto Lucena","M326.7 102.9L320.1 99.8L316.2 103.9L319.8 111.9L320.3 122.2L327.9 119.6L334.1 123.3L348.5 114.1L348 110.2L345.2 101.7L336 106.8L326.7 102.9Z",331.9,114.1],["4315057","Porto Mauá","M378.2 74.6L373.3 66.8L367.2 64.4L361.6 69.5L362.9 77.4L368.8 81.5L378.2 74.6Z",370.0,73.7],["4315073","Porto Vera Cruz","M349 95.3L347.3 88.4L338.9 89.3L334.5 100.1L326.7 102.9L336 106.8L345.2 101.7L349 95.3Z",342.4,96.5],["4315107","Porto Xavier","M320.3 122.2L319.8 111.9L301.5 112.5L291.2 124.1L299.5 126.9L306.4 138.6L317.2 135L316.3 125L320.3 122.2Z",309.4,126.0],["4314803","Portão","M804.2 366.2L798.2 366.3L800.2 376.8L796.2 394.4L810.8 398.6L811.3 394.8L808.7 388.5L810.7 380.4L805.9 370.9L804.2 366.2Z",803.8,383.9],["4315131","Pouso Novo","M683.3 297.7L681.2 294.4L671.2 299.5L670.9 304.5L676.5 309.7L687.2 313.8L687.8 312L683.3 297.7Z",678.4,303.0],["4314753","Poço das Antas","M758.8 350.3L758 340.9L757.6 339.4L747.5 342.7L750.4 349.6L758.8 350.3Z",750.6,346.2],["4315149","Presidente Lucena","M821.1 355.4L812.7 353L806.9 360.9L809.4 362.5L820.5 360.4L821.1 355.4Z",812.6,356.7],["4315156","Progresso","M670.9 304.5L660.7 301.5L653.8 303.5L652.6 311.9L657.3 317.6L671.3 322.8L676.8 326.6L684.3 322.5L681.9 313L676.5 309.7L670.9 304.5Z",667.6,313.5],["4315172","Protásio Alves","M778.8 232.7L776 229L763.9 235.3L772.5 254.6L776.5 259.4L779.5 252L781.3 242.2L778.8 232.7Z",774.0,241.7],["4315206","Putinga","M696.4 277.4L679.1 275.3L679.1 276.2L679.4 286L681.2 294.4L683.3 297.7L688.9 293.4L702.3 289L701.9 283.6L696.4 277.4Z",689.1,284.8],["4315305","Quaraí","M240.5 460.6L231.7 461.3L228.8 452.1L216.3 447.1L211.5 440.2L200.8 441.4L195.4 437.9L183.8 439.1L180.2 435.4L176.1 440L163.8 444.1L147.6 444.5L135.2 449.1L123.7 448.8L115.5 457L122.1 468.9L131 476.5L137 486.1L148.8 493.5L150.4 500.7L162.4 505.6L168.1 501.2L191.9 491.4L206 489.6L216.2 491.1L228.8 485.8L238.4 485L240.8 468.4L240.5 460.6Z",178.6,466.4],["4315313","Quatro Irmãos","M665.8 96.9L658 100.9L648.9 95L637 115.2L632.1 116.9L630.7 124.3L634.4 125.6L641.6 125.1L656.2 112.7L666.8 99.5L666.4 96.7L665.8 96.9Z",648.3,111.0],["4315321","Quevedos","M463.9 312.8L456.4 299.5L452.3 298L444.8 309.7L442.5 315.6L433.7 322.3L434.4 326.1L427.2 343.1L429.4 351.3L441 348.2L450.3 339.9L454.6 327.1L463.9 312.8Z",445.4,325.8],["4315354","Quinze de Novembro","M577.1 235L556.7 237.4L550.3 233.7L547.7 240.8L561.6 244L565.3 258.5L573.2 255.5L576.5 245.8L577.1 235Z",570.4,242.7],["4315404","Redentora","M508.3 77.3L506.3 73.2L509.5 53.5L503.6 56.8L498.5 48.3L491.7 52.4L494.3 67.3L494.8 76.5L487.4 83.8L500.6 90.9L507.3 86.7L508.3 77.3Z",500.2,71.7],["4315453","Relvado","M709.1 301.6L702.3 289L688.9 293.4L692.6 302.3L706 305.1L708 304.8L709.1 301.6Z",700.4,297.5],["4315503","Restinga Seca","M532.1 373.4L512 384.2L510 396.7L511.1 408L521.4 409.9L529.6 417.5L536.9 416.7L548.9 421.6L565.1 422.9L567 405.7L560.4 399.9L558.7 393.6L552.2 402L543.8 395.7L548.6 390.2L544.8 381.8L536.1 379.2L534.9 374.2L532.1 373.4Z",529.6,395.0],["4315602","Rio Grande","M654 815.5L660.9 793.1L669.1 774.3L678.6 758.9L688.2 749.2L695.6 745L694.8 737L689.1 732.2L695.9 725.5L693.8 717.9L684.3 715.8L689.4 708.8L683.1 706L679.8 690.2L669.5 688L660.8 691.9L656.2 701.6L659.7 707.3L655 716.7L654.8 723.6L652.1 730.6L645.4 729.5L628.9 742.3L621.4 760.1L620.1 769.1L628.1 782.6L633.6 798.5L629.2 814.9L654 815.5Z",649.4,760.1],["4315701","Rio Pardo","M634.2 397L618.6 396.9L612.1 404.2L613.8 413.3L617.8 421L626.3 426.5L622.2 439L624.5 458.1L628.8 464L630.7 477.2L637.6 475.6L640.6 467.4L639 448.1L645.7 441.5L658.9 439.7L663.5 448.2L671.9 447.5L671.8 459.5L679.6 465L687.4 474.7L688 455.5L686.6 445.8L689.5 430.4L689.3 420.2L694.8 419.4L683.3 413.3L685.5 401.9L669.1 408.6L668.2 403.2L657.3 403.9L647.3 409.1L634.2 397Z",670.5,428.3],["4315552","Rio dos Índios","M606.3 16.4L598.9 11.3L584.6 18.7L585.2 27L589.5 32.7L601.9 36L607.1 29.5L606.3 16.4Z",596.4,24.4],["4315750","Riozinho","M918.3 353.1L907.5 359.6L901.5 367.2L901.5 377L905.3 380.5L911.2 384.2L917 385.5L922.1 380.6L918.3 377.9L918.3 353.1Z",910.6,369.7],["4315800","Roca Sales","M738.9 307.6L722.6 305.6L725.2 321.1L720.9 323.9L719.6 332.2L728.6 331L736.6 330.8L736.1 324.4L739.9 311L738.9 307.6Z",731.6,313.4],["4315909","Rodeio Bonito","M562.7 46.2L557.5 46.6L549.6 59.5L556.1 63L562.6 63.4L564.1 51.9L565.1 50.5L562.7 46.2Z",558.7,53.7],["4315958","Rolador","M358.8 163.9L352.5 159.5L344.8 157.3L333.7 160.4L331.7 160.9L337.6 174.2L342.3 174.2L344.5 187.8L353.6 186.8L358.5 178.6L357.1 169.9L358.8 163.9Z",349.0,170.0],["4316006","Rolante","M905.3 380.5L901.5 377L901.5 367.2L907.5 359.6L891.8 359.8L887.5 361.8L875.6 379.9L891.2 387.5L905.3 380.5Z",892.4,372.9],["4316105","Ronda Alta","M611.5 88.1L597.6 85.3L594.3 97L611.6 115.2L609.9 121.1L613 125.2L619.7 122.5L630.7 124.3L632.1 116.9L626 111.9L622.1 103.7L613.7 94.9L611.5 88.1Z",606.2,96.5],["4316204","Rondinha","M609.9 121.1L611.6 115.2L594.3 97L592.1 95.1L582.9 102.8L578.6 104.9L583.6 114.5L590.6 117L604.2 117.1L609.9 121.1Z",591.9,108.0],["4316303","Roque Gonzales","M317.2 135L306.4 138.6L299.5 126.9L291.2 124.1L283.5 128.5L301.9 135.2L307.3 144.3L312.2 144.8L320.2 150.8L323.3 159.2L331.7 160.9L333.7 160.4L335.9 153.7L335.6 142L327.7 141.6L317.2 135Z",319.3,143.7],["4316402","Rosário do Sul","M364.4 431.7L358.9 430.8L349.8 443.1L339.8 440.9L335.1 436.6L325.6 446.2L317.8 448.1L315.3 437.8L309.1 433.5L302.5 439L286.6 439.3L267.4 439.6L258 451.4L243.5 448.9L240.5 460.6L240.8 468.4L244.7 469.8L247.8 480.8L253.2 484.4L270.2 488.4L282.8 501.8L296.9 503.5L308 494.8L318.8 492.4L328.4 499.9L322 504.8L319.5 519.6L325.3 528.4L325 533.8L336.9 533L347.3 534.9L354.6 529.7L361.5 515.4L360.3 505.1L363 495.7L352.7 484.1L354.5 480.4L342.1 467.8L364.9 467.3L365.7 456.8L373.8 445.1L368.5 441.6L364.4 431.7Z",294.5,471.9],["4316428","Sagrada Família","M571.4 85.8L566.5 82.1L561.2 83.9L561.6 89.3L555.8 94.3L558.1 97.9L566.6 98.1L571.4 85.8Z",563.5,92.3],["4316436","Saldanha Marinho","M580.7 187.7L578.2 180.2L567.9 174.6L565.7 177.3L561.1 185.7L560.1 199.6L563.4 204L570.9 205.9L574.6 198.4L573.6 191.9L580.7 187.7Z",567.8,190.1],["4316451","Salto do Jacuí","M561.6 284L553.4 273.8L548 274.4L542.2 282.1L534.5 277.7L529.2 280.7L524.2 293.2L531.9 298.7L547.6 301.7L557.3 299.6L569 301L572.8 307.3L578.8 303.3L571.2 298.9L571.4 292.1L561.6 284Z",548.9,288.9],["4316477","Salvador das Missões","M350.9 140.5L343.4 135L343.4 140.2L344.8 157.3L352.5 159.5L350.9 140.5Z",348.0,148.4],["4316501","Salvador do Sul","M775.3 344.9L764.2 343.9L761.1 340.3L758 340.9L758.8 350.3L760.6 350.5L769 355.7L777.2 353.2L775.3 344.9Z",767.9,348.6],["4316600","Sananduva","M715.8 102.8L714.6 108.2L716.2 116.6L719.7 126.6L717.2 132.2L736.6 137.6L737.7 142.4L747.4 147.1L754.8 140.6L749.3 131L742 123.7L742.2 117.5L738.1 110.8L733.6 114L715.8 102.8Z",731.8,125.4],["4317103","Sant' Ana do Livramento","M325 533.8L325.3 528.4L319.5 519.6L322 504.8L328.4 499.9L318.8 492.4L308 494.8L296.9 503.5L282.8 501.8L270.2 488.4L253.2 484.4L247.8 480.8L244.7 469.8L240.8 468.4L238.4 485L228.8 485.8L216.2 491.1L206 489.6L191.9 491.4L168.1 501.2L162.4 505.6L174.9 516.2L180.1 531.1L187.1 538.2L196.2 543L200.4 554.7L198.2 558.9L196.8 581.4L202 585.1L215.7 584.8L227.7 576.6L244.8 561.3L245.4 551.9L254.5 552L261.6 559.9L270.9 575L278.9 577.1L284.7 590.6L292 600.3L296.6 612.3L305 613.9L317 623.1L321.9 616.1L316.2 604.5L317.9 597.7L314.4 591.8L311.8 576.1L307.8 571.4L312.8 561.4L322.8 553L321.4 543.9L325 533.8Z",255.1,518.6],["4316709","Santa Bárbara do Sul","M565.3 171.1L552.5 155.1L548.4 157.7L541.3 162.2L538.8 167.8L530 169.3L533.5 190.4L522.4 205.8L522.2 214.9L527.4 220.2L537 216L548 216.4L550.1 203.9L556.3 201.7L563.4 204L560.1 199.6L561.1 185.7L565.7 177.3L565.3 171.1Z",546.6,182.5],["4316733","Santa Cecília do Sul","M718.6 150.1L709.8 153.1L712.2 174.4L719.1 169L727.7 169.8L734.7 162.2L734 157.9L718.6 150.1Z",718.8,158.3],["4316758","Santa Clara do Sul","M682.5 343L680.4 347.4L688.3 350.5L690.1 351.6L701.9 350.1L702.8 345.9L692.1 342.8L682.5 343Z",692.2,347.3],["4316808","Santa Cruz do Sul","M670.1 379.5L668.1 378.2L666.3 359.3L663.2 343.5L658.4 335.6L652.8 336.1L650 341.5L653.2 350.2L650.8 361.2L636.3 366.3L640.6 368.5L646.4 378.2L649.2 389.7L646.3 398.1L647.3 409.1L657.3 403.9L668.2 403.2L669.4 399.2L665.6 386.9L670.1 379.5Z",657.5,372.4],["4316972","Santa Margarida do Sul","M452.7 463.6L441.3 455.1L432.9 453.1L421.1 460.3L419.5 466.1L422.6 478.2L419.2 485.7L424.4 494.1L435.9 503.8L442 495.5L447.6 507.5L462 511.8L468.1 500.4L458.7 498.2L461.5 485.2L450.6 466.2L452.7 463.6Z",438.8,477.8],["4316907","Santa Maria","M491.7 361.2L488.8 374.8L482.8 377L472 367.5L461 368.1L453.7 363.8L454.5 373.7L444.1 374.2L436.8 381.4L458.3 400.8L445 410.5L448.6 415.3L453.1 425L470.3 426.5L481.2 427.7L498 411.6L511.1 408L510 396.7L512 384.2L500.6 378.9L501.1 369.3L491.7 361.2Z",479.1,399.2],["4316956","Santa Maria do Herval","M837.7 337.8L833.5 346L827.4 349.3L839.4 360.7L842.1 361.6L848.3 361.5L846.8 356.3L846.8 354.1L846.8 346.6L837.7 337.8Z",839.7,349.9],["4317202","Santa Rosa","M406.7 109.3L400.1 89.8L397.3 90.5L395.5 101.7L384.6 97.9L378.2 103.1L382.4 110.2L366.5 117.3L375.2 124.2L377.9 125.4L383.3 130.7L393.4 131.3L399.7 122.3L405.3 121.3L406.7 109.3Z",392.5,114.6],["4317251","Santa Tereza","M750.7 308.1L746.9 303.7L746.9 294.8L744.5 293.7L741.3 300.6L738.9 307.6L739.9 311L748.4 311.7L752.2 309.8L750.7 308.1Z",745.5,307.6],["4317301","Santa Vitória do Palmar","M654 815.5L629.2 814.9L612.7 847.9L605.8 854.3L598.3 854.7L582.8 841.2L580.7 835.2L571.7 843.5L564.8 837.8L561.1 844.6L560.6 863.6L547.6 884.2L535.8 883.8L526.1 891L521 906.4L526.6 933.7L525.6 941.3L515.4 949.5L514.4 969.4L520 958.8L528.1 950.6L542.6 965.3L527.1 977.5L533.5 977.6L561.6 954.7L575.4 941.2L606.9 912.5L623.9 891.7L631.6 878.5L643 853.8L648.6 838.5L654 815.5Z",579.9,893.1],["4317004","Santana da Boa Vista","M582.4 527L569.5 520.6L553.8 493.8L553.4 503.8L549.3 511.6L557.1 523.2L557.6 531.8L550.6 542.3L535.2 541.4L528.3 545.7L525.8 557.4L527.8 569.3L542.9 574.8L559.8 577.8L569.9 569.7L578.1 572.2L578.4 562.7L586.8 551.6L585.8 535.2L582.4 527Z",568.3,546.6],["4317400","Santiago","M349.9 261.2L346.6 256.1L331.5 252.3L319.7 257.8L317.2 270.5L328.1 288.6L322.8 290.2L316.5 301.8L309.6 309.6L324 316.3L335.7 328.5L344 328.3L355.1 331.6L358.1 338L366.4 338.3L366.3 328.1L374.1 326.5L378.4 330.9L384.7 326.1L389.8 328.6L399.6 323.4L398.7 317.8L407.1 308L401.5 302.3L398.7 293.7L395.9 299.3L386.8 306.7L378.8 298.4L372.8 300.2L371.6 287.6L366.6 284.6L363.3 273.8L354.8 268.8L349.9 261.2Z",347.5,300.4],["4317608","Santo Antônio da Patrulha","M905.3 380.5L891.2 387.5L875.6 379.9L874 396.5L876 411.1L870.2 424.5L873.5 432.4L879.3 433.7L904.5 434.9L904.1 429.9L911.8 423.2L915.2 406.6L904.3 398.1L911.2 384.2L905.3 380.5Z",891.9,410.4],["4317707","Santo Antônio das Missões","M300.9 183.3L285.5 174.7L286 164.2L278 175.8L270 170.1L264.6 173.6L262 192.7L259.2 200.8L251.3 205.3L240.1 206.8L233.7 216.9L232.7 224.4L256.5 237.5L274 228.9L286.3 230.1L293.9 227.3L301.9 209.6L305.6 196.3L302 193.3L300.9 183.3Z",278.2,205.6],["4317558","Santo Antônio do Palma","M718.3 206.1L709.3 198.1L700.2 203.2L696.9 206.3L696.7 212.2L718.8 208.5L718.3 206.1Z",705.9,205.5],["4317756","Santo Antônio do Planalto","M631.7 182.4L622.5 173.2L618 175.8L615.6 185.1L609.7 188L620 202.4L628.5 193.8L626.3 188.3L631.7 182.4Z",619.8,189.9],["4317806","Santo Augusto","M481.7 97.5L476.4 98.9L472.2 99.2L470.7 109.8L466.7 118.3L473.3 127L485.6 132.5L492.3 131.7L497.1 138.7L506.4 139.4L508.7 133.8L501.5 125.6L493.5 123.5L493.1 115.6L488.2 109.7L485.8 99.7L481.7 97.5Z",482.7,120.7],["4317905","Santo Cristo","M378.2 103.1L373.2 98.8L368.6 87.5L349 95.3L345.2 101.7L348 110.2L363.1 113.8L366.5 117.3L382.4 110.2L378.2 103.1Z",363.2,102.7],["4317954","Santo Expedito do Sul","M758 116.2L749.9 114.6L742.2 117.5L742 123.7L749.3 131L757 129.1L760.6 118.7L758 116.2Z",752.2,122.5],["4317509","Santo Ângelo","M430.8 153.8L420.2 157.8L403.2 156.8L402.4 154.1L401.5 161.9L391.7 169.8L385.9 174.4L394.7 182.8L406.8 184.9L410 180.9L418.2 186.1L435.4 183L440.1 167.5L430.8 153.8Z",416.4,168.6],["4319901","Sapiranga","M839.4 360.7L829.1 362.9L828.1 370.9L834.5 376.1L835.9 384.2L842.2 382.3L842.6 381.9L842.1 368.2L842.1 361.6L839.4 360.7Z",835.4,368.7],["4320008","Sapucaia do Sul","M826.7 399.7L814.3 397.8L811.3 394.8L810.8 398.6L812.3 402.3L822.5 408L822.5 408.1L825.1 402.4L826.7 399.7Z",818.5,401.9],["4320107","Sarandi","M578.6 104.9L573.8 103.8L572.1 106.2L574.7 116.3L585.2 121L583.9 126.7L589.2 127.9L592.5 135.7L588 140.1L598 143.8L601.8 140.7L604.4 133.5L613 125.2L609.9 121.1L604.2 117.1L590.6 117L583.6 114.5L578.6 104.9Z",597.4,126.6],["4320206","Seberi","M544.3 44.7L526.6 49L518.3 52.7L526.1 63.1L532.4 76.3L540.4 75L545.8 62.7L546.1 57.3L541.5 49.7L544.3 44.7Z",535.8,59.1],["4320230","Sede Nova","M466.7 74.1L449.7 78.7L449 82.9L450.3 84.7L464.2 88.4L468.8 80.2L466.7 74.1Z",461.8,81.3],["4320263","Segredo","M591.4 307.8L579.6 318.4L577.8 330L588.7 338.6L600 337.4L603.2 328.6L596.3 327.6L595.7 310.6L591.4 307.8Z",587.6,326.7],["4320305","Selbach","M590.2 219.4L578.7 220.1L577.1 235L576.5 245.8L587 242.5L590.5 240.8L591.5 221.1L590.2 219.4Z",583.0,231.6],["4320321","Senador Salgado Filho","M393.4 131.3L383.3 130.7L377.9 125.4L379.3 147.3L384.4 150.6L388 147.2L395.7 134.5L393.4 131.3Z",385.3,137.7],["4320354","Sentinela do Sul","M772.8 501.2L768.6 502.4L753.8 506.8L751.7 503.6L752.9 517.5L746.7 528.8L746.6 536.9L754.6 537.6L755.2 536.9L760.9 531.7L772.8 501.2Z",759.4,516.8],["4320404","Serafina Corrêa","M727.5 231L708.8 232.3L708.6 223.2L700 223.8L707.7 230.6L709.8 237.4L713.4 245.4L726.5 244.5L728.9 233.4L727.5 231Z",716.5,238.5],["4320503","Sertão","M665.5 130.1L656.7 132.3L641.6 125.1L634.4 125.6L643.7 138.8L647.8 143.8L659.5 145.5L661.2 137.6L667.4 138.4L671.4 144.9L687.2 144.3L692.4 137.1L696.8 130.2L696.6 124.2L686.6 125.2L679.3 129.1L674 126.9L665.5 130.1Z",673.4,135.3],["4320552","Sertão Santana","M768.6 502.4L767.1 488L748.7 483.7L748.9 491.7L738.8 501.6L741 504.9L751.7 503.6L753.8 506.8L768.6 502.4Z",756.4,494.9],["4320578","Sete de Setembro","M402.4 154.1L399.4 147.3L388 147.2L384.4 150.6L391.2 151.9L391.7 169.8L401.5 161.9L402.4 154.1Z",396.1,155.2],["4320602","Severiano de Almeida","M701.9 37.5L694.5 37.1L683.5 46.6L686.7 54.1L699.6 57.2L704.4 50.7L700.3 43.6L701.9 37.5Z",693.1,48.7],["4320651","Silveira Martins","M520.2 370.4L511 364.8L506.7 365.2L501.1 369.3L500.6 378.9L512 384.2L511.3 377.6L520.2 370.4Z",507.6,372.6],["4320677","Sinimbu","M640.1 328.8L639.1 335.8L617.8 325.5L612.2 334L611.7 340L625.2 337.8L634.3 348.8L621.7 353.9L626.3 356.9L629.2 365.8L636.3 366.3L650.8 361.2L653.2 350.2L650 341.5L652.8 336.1L649.4 335.4L640.1 328.8Z",642.5,344.7],["4320701","Sobradinho","M588.7 338.6L577.8 330L569.3 334.8L569.7 347.9L579.1 348.7L588.7 338.6Z",576.7,340.4],["4320800","Soledade","M636.3 229.6L630 227.2L631.6 233.4L628.8 245.1L616 241.5L617.9 249.6L616.8 281.9L605.8 286.8L607.6 297.7L612.7 301.6L620.2 288.1L622.5 276.3L625.8 273.5L636.6 276.3L645.2 285.4L644 273.1L648.5 266.8L661.7 262.3L670 262.2L666.5 253L675.4 233.5L676.4 230.9L671.4 227.9L668.2 228.8L665.8 235.9L653.8 236.6L636.3 229.6Z",633.7,259.9],["4318002","São Borja","M262 192.7L252.3 183.4L238.6 194.7L230.5 187.9L214.9 186.7L211.8 194.8L213.7 204.1L197.8 208L199.2 219.6L183.3 234.5L175.1 247L165.7 247.8L161 253.1L161.3 264.4L158 269.3L166.4 272.4L172.8 269.2L178.3 260.3L188.9 259.4L199.9 272.3L218.2 275.3L222.4 279.4L234.1 277.9L239.7 282.9L262.7 281L267.3 292.5L274 287.4L279 276.3L289.2 279.2L285.8 273.7L279 268.8L256.5 237.5L232.7 224.4L233.7 216.9L240.1 206.8L251.3 205.3L259.2 200.8L262 192.7Z",215.1,244.5],["4318051","São Domingos do Sul","M733.1 212.7L719.3 204.7L718.3 206.1L718.8 208.5L718.8 216L726.8 220.3L733.1 212.7Z",724.9,213.0],["4318101","São Francisco de Assis","M309.6 309.6L302.5 311.4L296.6 308.1L286.7 310.6L278.8 315.3L268.1 312L273 320.2L268.1 328.3L267.7 335.9L274.7 341.8L284.5 356.5L279.8 362.3L278.4 370.8L285 374.8L295.5 371.6L308.3 382.6L312 377.1L321.3 384.1L331.3 382.7L336.3 377.9L345 377.1L351.8 372.2L354 369.2L344 360.5L347.5 354.7L339.8 331.8L335.7 328.5L324 316.3L309.6 309.6Z",309.8,344.7],["4318200","São Francisco de Paula","M872.8 250.4L865.5 249.2L854.6 255.9L862.8 277.4L858.3 286.3L846.9 292.7L855.9 299.7L853.2 317L865.7 321.2L867.9 328.6L877 330.4L880.5 336.1L879 342.5L875 351.5L879.8 354.4L882.3 362.6L887.5 361.8L891.8 359.8L907.5 359.6L918.3 353.1L926 346L941.2 359.2L932.1 343.3L938.3 330.5L949.5 328.4L952.2 332.1L957.8 332.1L943.4 321.9L936.8 324.2L925.5 323.6L917 308.2L917 297.6L908.3 299.9L904.6 286L903.7 274.6L885.7 252.5L872.8 250.4Z",882.6,302.0],["4318309","São Gabriel","M448.6 415.3L429.1 416.6L422.1 411.7L417.3 417.4L412 416.8L394.1 421.4L388.7 419.1L379.1 422L370.7 431L364.4 431.7L368.5 441.6L373.8 445.1L365.7 456.8L364.9 467.3L342.1 467.8L354.5 480.4L352.7 484.1L363 495.7L360.3 505.1L361.5 515.4L366 519.7L386.7 517.6L397.9 518.9L407.6 529.3L410.1 535.7L418.2 534.6L430.3 539.3L436.3 531.7L451.4 529.2L455.4 517.9L462 511.8L447.6 507.5L442 495.5L435.9 503.8L424.4 494.1L419.2 485.7L422.6 478.2L419.5 466.1L421.1 460.3L432.9 453.1L441.3 455.1L452.7 463.6L459.5 457.8L456.8 452.4L470.3 426.5L453.1 425L448.6 415.3Z",392.4,475.6],["4318408","São Jerônimo","M756.6 419.4L742.9 419.5L735.9 421.4L727.5 422.9L726.2 433L719.3 435.4L729.3 444.1L726.3 450.9L717.5 460.7L709.9 464.2L703.4 485.8L695.9 486.9L688 492.4L700.4 501.8L710.4 512L711.6 521.1L720.3 512L717.2 489.7L727.4 480L727.8 469.2L727.2 457.3L733.3 449.1L732.1 442.1L741.8 436.3L748.7 429L756.6 419.4Z",716.6,473.9],["4318440","São Jorge","M756.6 204.1L746.1 204L738.7 199.6L735.8 203L733.9 211.8L741.2 214.2L743 210.7L756 209.3L756.6 204.1Z",744.3,207.5],["4318457","São José das Missões","M566.6 98.1L558.1 97.9L555.1 104.7L556.5 108.5L566.4 109.5L572.1 106.2L573.8 103.8L566.6 98.1Z",564.3,103.3],["4318465","São José do Herval","M679.4 286L667.1 282.7L665.4 288.9L671.2 299.5L681.2 294.4L679.4 286Z",673.2,290.3],["4318481","São José do Hortêncio","M812.7 353L801.7 354.6L796.8 357.3L798.2 366.3L804.2 366.2L806.9 360.9L812.7 353Z",802.0,358.7],["4318499","São José do Inhacorá","M444.8 95.2L432.2 88.3L428.6 94.1L437.7 99.6L445.2 95.9L444.8 95.2Z",438.8,94.2],["4318507","São José do Norte","M810.9 647.1L805 641.5L795 649.6L788.2 652.1L779 647.1L759.9 678L747.1 689.2L733.8 690L732.5 697.4L719.8 701.9L707.6 694.6L700.2 694.2L696.4 700.8L704.7 708.8L703.1 726.6L710.8 727.6L731.4 708.1L775.5 681L803.5 657.6L810.9 647.1Z",774.2,672.5],["4318606","São José do Ouro","M776.4 117.9L778.4 111L773 105.7L763.9 79.6L747 89.5L755 95.5L759 102.2L758 116.2L760.6 118.7L766.2 115.2L776.4 117.9Z",764.3,98.8],["4318614","São José do Sul","M777.2 353.2L769 355.7L771.3 365.3L776 371.8L776.7 363.8L778 354.3L777.2 353.2Z",773.1,359.3],["4318622","São José dos Ausentes","M967.7 265.2L968.6 248.7L976.8 243.2L990.5 226.2L1000 225.8L997.3 209.9L980 201.6L969.7 204.4L966.2 198L953.9 203.9L953.4 208.2L959.8 226.9L950.1 231.7L939.1 243.5L935.6 254.4L938 256.9L946.3 254.1L955 256.7L967.7 265.2Z",972.6,221.5],["4318424","São João da Urtiga","M739.6 101.6L726.5 97L723.3 92.4L717.7 97.1L715.8 102.8L733.6 114L738.1 110.8L739.6 101.6Z",731.1,105.0],["4318432","São João do Polêsine","M529.5 370.1L520.2 370.4L511.3 377.6L512 384.2L532.1 373.4L529.5 370.1Z",525.1,373.2],["4318705","São Leopoldo","M826.7 399.7L824.4 389.2L818.1 389.2L812.8 379.2L810.7 380.4L808.7 388.5L811.3 394.8L814.3 397.8L826.7 399.7Z",815.5,392.6],["4318804","São Lourenço do Sul","M734.9 592.4L731.3 592L723.4 579.7L716.8 582.1L713.4 589.9L700.5 597.7L696.8 595.8L690.8 575.1L677 572.1L671.4 587.3L663 590.3L656.1 596.6L647.6 610.3L654.4 623.7L670.9 628.3L672.8 631.6L682 629.7L692.4 637.3L702.9 650.5L706.9 647.9L709 635L718.4 620L728 621.7L732.1 616.3L736.1 608.6L734.9 592.4Z",692.6,614.0],["4318903","São Luiz Gonzaga","M331.7 160.9L323.3 159.2L321.9 165.3L327.7 171.7L319.3 180.8L312.7 183L306.2 180L300.9 183.3L302 193.3L305.6 196.3L309.4 200.5L321.6 204.9L338.2 206.6L335.8 215.7L348.5 224L360.9 219.7L366.9 215.7L370.8 200.4L378.9 204.3L380.5 194L385.3 192.9L383.5 187L377.6 198L361.3 186.9L353.6 186.8L344.5 187.8L342.3 174.2L337.6 174.2L331.7 160.9Z",330.3,189.7],["4319000","São Marcos","M819.2 262.5L815 261.9L811.8 272L819.8 277.9L821 285.3L845 282.8L840.8 274.7L819.2 262.5Z",826.8,276.4],["4319109","São Martinho","M464.2 88.4L450.3 84.7L444.8 95.2L445.2 95.9L456.4 101.3L472.2 99.2L476.4 98.9L472.8 93.4L464.2 88.4Z",459.4,93.9],["4319125","São Martinho da Serra","M493.4 348.9L492.3 340.8L484.9 335L472.5 334.9L467.9 338.6L450.3 339.9L441 348.2L448.9 361.2L453.7 363.8L461 368.1L472 367.5L473.8 363.7L493.4 348.9Z",467.7,352.4],["4319158","São Miguel das Missões","M394.8 205.5L385.3 192.9L380.5 194L378.9 204.3L370.8 200.4L366.9 215.7L360.9 219.7L368.3 238.7L386.5 261L398.3 265.4L405.3 281.3L411.6 270.4L408.1 264.1L407.6 248.9L402.5 237.6L405.5 235.5L405.5 230.5L400.4 223.2L400.2 210.1L394.8 205.5Z",382.6,227.2],["4319208","São Nicolau","M307.9 161L295.4 152.9L278.9 138.8L270.8 146.2L281.2 151.6L279.9 157.8L286 164.2L285.5 174.7L300.9 183.3L306.2 180L312.7 183L319.3 180.8L311.9 172L307.9 161Z",298.7,166.2],["4319307","São Paulo das Missões","M334.1 123.3L327.9 119.6L320.3 122.2L316.3 125L317.2 135L327.7 141.6L335.6 142L343.4 140.2L343.4 135L334.1 123.3Z",329.8,132.6],["4319356","São Pedro da Serra","M780 343.9L775.1 339.3L761.1 340.3L764.2 343.9L775.3 344.9L780 343.9Z",774.6,342.1],["4319364","São Pedro das Missões","M548.2 93.4L543.7 97.5L546.8 109.8L555.1 104.7L558.1 97.9L555.8 94.3L548.2 93.4Z",549.7,102.4],["4319372","São Pedro do Butiá","M344.8 157.3L343.4 140.2L335.6 142L335.9 153.7L333.7 160.4L344.8 157.3Z",340.3,151.8],["4319406","São Pedro do Sul","M441 348.2L429.4 351.3L423.8 351.8L410.2 361.1L400.3 365L392.9 375.6L391 389.6L414.7 388.8L421.6 382.4L436.8 381.4L444.1 374.2L454.5 373.7L453.7 363.8L448.9 361.2L441 348.2Z",426.2,367.7],["4319505","São Sebastião do Caí","M796.8 357.3L792.6 356.3L787.5 361.6L786.2 366.2L785.6 376.5L789.2 373.8L800.2 376.8L798.2 366.3L796.8 357.3Z",791.7,367.0],["4319604","São Sepé","M548.9 421.6L535.6 429.7L520.2 434.1L505.4 442L500.2 441L494.7 433.7L499.5 427.5L498 411.6L481.2 427.7L470.3 426.5L456.8 452.4L459.5 457.8L474.7 465.9L481.7 464.9L482.5 484.7L473.3 498.4L476.7 503.6L486.1 502.8L490.4 498.3L490.8 489.1L497.5 490.9L502.8 482.9L510.9 481.1L513.8 486.6L521.5 475.9L520.7 467L528.6 458.2L542.3 447.8L550.3 440.6L565.1 422.9L548.9 421.6Z",502.0,462.2],["4319703","São Valentim","M641.8 56.5L632.7 55.3L634.4 65.3L623.7 65.1L622.9 71.8L627.9 70.7L637.3 75.2L647.5 75.3L647 66.7L643 58.1L641.8 56.5Z",638.0,69.0],["4319711","São Valentim do Sul","M744.5 293.7L738.7 279.9L731.8 282.6L732.5 292.4L736.2 294.3L741.3 300.6L744.5 293.7Z",738.1,288.8],["4319737","São Valério do Sul","M466.7 118.3L470.7 109.8L472.2 99.2L456.4 101.3L458 107.8L459.5 111.8L466.7 118.3Z",465.3,107.3],["4319752","São Vendelino","M793.1 340.7L790.3 332.2L784.9 332.1L784.4 342L793.1 340.7Z",787.4,336.0],["4319802","São Vicente do Sul","M381.2 358.5L366.9 363.5L351.8 372.2L345 377.1L336.3 377.9L331.3 382.7L321.3 384.1L312 377.1L308.3 382.6L311.1 393.3L321.5 395.7L332 394.8L341.9 399.7L347.5 406.3L353.2 402.5L364.1 402.3L366.4 399.2L377.8 401.1L391 389.6L392.9 375.6L380.9 366.5L381.2 358.5Z",361.3,385.1],["4320453","Sério","M682.5 343L683.7 333.4L669.9 332.5L667.9 338.2L680.4 347.4L682.5 343Z",676.4,338.3],["4320859","Tabaí","M751.6 375.1L746.4 368.6L738.6 375.8L735.9 383.1L743.3 385.6L751.6 375.1Z",742.5,378.2],["4320909","Tapejara","M716.5 133.5L708.1 135.4L696.8 130.2L692.4 137.1L696.6 139L698 151.1L709.8 153.1L718.6 150.1L719.8 137.3L716.5 133.5Z",706.6,143.7],["4321006","Tapera","M611.1 225.7L591.5 221.1L590.5 240.8L602 240L610.3 228.7L611.1 225.7Z",597.5,229.5],["4321105","Tapes","M801.9 497.2L772.8 501.2L760.9 531.7L755.2 536.9L767.2 545.1L774.4 557L778.4 555.7L785.8 556.6L783.9 542.4L786.1 523.6L796.9 520.6L797.4 509.5L801.9 497.2Z",775.0,525.2],["4321204","Taquara","M887.5 361.8L882.3 362.6L879.8 354.4L875 351.5L871.5 356.4L874.1 367.5L860.1 371.1L861 380.1L855.9 386.8L844.5 379.7L842.6 381.9L842.2 382.3L843.7 393.5L840.8 396.5L851.4 397.6L859.3 394.2L870.5 393.4L874 396.5L875.6 379.9L887.5 361.8Z",867.7,381.2],["4321303","Taquari","M738.6 375.8L733.8 370.7L724.2 374.8L714 385.2L715.4 391.9L718.2 396.3L728.4 401.5L731.6 407.1L744.2 406.9L738.9 400.8L743.3 385.6L735.9 383.1L738.6 375.8Z",728.1,391.4],["4321329","Taquaruçu do Sul","M526.6 49L522.3 38.3L513.2 43.7L510.9 44.6L518.3 52.7L526.6 49Z",519.7,47.8],["4321352","Tavares","M854.7 603.1L840.1 601.1L837.2 604.6L828.8 598.4L812.4 594L815.1 615.7L812.5 627.7L805 641.5L810.9 647.1L844.1 614.7L854.7 603.1Z",826.3,615.0],["4321402","Tenente Portela","M483.8 27.6L483 25.1L481 31L465.6 35.6L466.5 42.7L475.8 51.1L491.7 52.4L498.5 48.3L499.3 36.9L496.6 33.1L483.8 27.6Z",484.0,41.3],["4321436","Terra de Areia","M964.2 369L962.1 359.3L952.5 360.2L942.9 367.2L947.2 375.7L956.3 376.4L963.6 369.3L970.9 372.2L972.4 369.6L964.2 369Z",953.8,368.7],["4321451","Teutônia","M747.5 341.4L736 337.4L731.6 337.4L728.2 342.8L724.4 360.4L731.5 358.2L742.2 357.4L747.5 354L750.4 349.6L747.5 342.7L747.5 341.4Z",732.0,351.3],["4321469","Tio Hugo","M637.9 211.6L629.6 209.6L624.1 223.4L630 227.2L636.3 229.6L638.9 227L638.7 213.8L637.9 211.6Z",631.4,215.4],["4321477","Tiradentes do Sul","M439.5 31.1L429.4 31.7L426.1 43.3L434.2 45.5L441.7 52.4L449 53.2L450.5 45.4L439.5 31.1Z",438.4,39.7],["4321493","Toropi","M427.2 343.1L419.8 340.6L414.5 343.9L406.6 340.8L400.9 348.2L410.2 361.1L423.8 351.8L429.4 351.3L427.2 343.1Z",413.2,351.8],["4321501","Torres","M987.7 345.6L996.8 333.1L994.4 324.2L985.8 322.5L980.4 314.5L975.1 312.1L977.1 318.5L976.8 326.4L984.2 328L987.7 338L983.5 342.7L987.7 345.6Z",990.7,331.8],["4321600","Tramandaí","M942.9 425.4L933.3 423.2L918.3 435.1L929.9 437L941.2 441.7L947.6 423.8L942.9 425.4Z",933.2,429.3],["4321626","Travesseiro","M693.7 314.5L687.8 312L687.2 313.8L700.1 332.5L703.9 328.8L703.5 319.7L693.9 320.2L693.7 314.5Z",700.0,323.9],["4321956","Trindade do Sul","M576.4 53.3L580.9 71.7L585.7 72L595.2 67.4L603.8 74.3L610.4 72.6L613.1 65.7L606.4 59.5L604 60.5L598 55.9L580.9 57.1L578.8 54.4L576.4 53.3Z",591.9,62.7],["4322004","Triunfo","M788.7 403.5L779.6 404.5L772.5 400.8L763.4 388.6L754.2 372.9L751.6 375.1L743.3 385.6L738.9 400.8L744.2 406.9L739.9 411L742.9 419.5L756.6 419.4L770.9 416.8L780.2 425L796.4 420.1L801.6 417.7L795.9 417.3L788.8 411.4L788.7 403.5Z",762.2,406.8],["4321634","Três Arroios","M683.5 46.6L679 46.6L677.7 57.5L678 70.3L684.5 70.1L684.4 66.5L696.8 61.2L699.6 57.2L686.7 54.1L683.5 46.6Z",684.4,59.6],["4321667","Três Cachoeiras","M983.5 342.7L976.5 335.2L970.5 339.2L958.5 342.5L962.1 359.3L964.2 369L979.1 346.2L983.5 342.7Z",967.5,349.5],["4321709","Três Coroas","M879 342.5L874.6 339.6L859.7 344.4L856.6 350.2L846.8 354.1L846.8 356.3L864.1 359.9L871.5 356.4L875 351.5L879 342.5Z",865.6,352.1],["4321832","Três Forquilhas","M957.8 332.1L952.2 332.1L943.7 332.3L939.4 337.8L949.9 351.7L952.5 360.2L962.1 359.3L958.5 342.5L958.7 330.8L958.3 331.8L957.8 332.1Z",951.0,340.4],["4321857","Três Palmeiras","M610.4 72.6L603.8 74.3L595.2 67.4L585.7 72L587.7 73.1L591.2 76.1L597.6 85.3L611.5 88.1L614.2 79.4L614.2 73.9L610.4 72.6Z",600.8,79.1],["4321907","Três Passos","M465.6 35.6L464.1 34.2L456.4 43.9L450.5 45.4L449 53.2L456.1 63.7L465.6 64.5L475.6 58.5L475.8 51.1L466.5 42.7L465.6 35.6Z",461.5,52.5],["4321808","Três de Maio","M435.6 78.6L428.4 73.5L420.1 79.5L417.5 85.9L412.4 88.7L400.1 89.8L406.7 109.3L411.3 107.3L416 105.3L428 107.7L433.2 103.8L437.7 99.6L428.6 94.1L432.2 88.3L435.6 78.6Z",420.3,96.2],["4322103","Tucunduva","M417.5 85.9L406.4 81.9L403 70.3L399.8 67.1L397.3 71.8L381.7 79.3L395.6 84.7L397.3 90.5L400.1 89.8L412.4 88.7L417.5 85.9Z",398.6,78.7],["4322152","Tunas","M605.8 286.8L599.4 286.7L585.9 289.6L581 300.9L591.4 307.8L595.7 310.6L601.1 301.1L607.6 297.7L605.8 286.8Z",594.5,297.8],["4322186","Tupanci do Sul","M776.4 117.9L766.2 115.2L760.6 118.7L757 129.1L768.5 131.2L777.1 123.1L776.4 117.9Z",766.1,123.0],["4322202","Tupanciretã","M479.6 251.6L465.6 252.8L459.6 265.6L441.5 266.3L437 263.3L411.6 270.4L405.3 281.3L395.2 290.4L398.7 293.7L401.5 302.3L407.1 308L409.2 303.1L417.6 297.6L432.1 308.7L444.8 309.7L452.3 298L456.4 299.5L463.9 312.8L470.4 301.8L484 304.6L492 299.7L508.9 275.1L508.7 273.9L495.8 271.1L488.1 260.3L484.2 260.6L479.6 251.6Z",435.2,286.7],["4322251","Tupandi","M780 343.9L775.3 344.9L777.2 353.2L778 354.3L784.9 357.6L784 344.1L780 343.9Z",781.6,350.2],["4322301","Tuparendi","M397.3 90.5L395.6 84.7L381.7 79.3L378.2 74.6L368.8 81.5L368.6 87.5L373.2 98.8L378.2 103.1L384.6 97.9L395.5 101.7L397.3 90.5Z",380.8,90.3],["4322327","Turuçu","M706.9 647.9L702.9 650.5L692.4 637.3L682 629.7L672.8 631.6L677.2 639.9L684.9 645.4L688 652.9L702.3 656.5L706.4 662L706.9 647.9Z",689.7,643.2],["4322343","Ubiretama","M377.9 125.4L375.2 124.2L375.2 135.3L362.4 135.2L359.8 142.2L365.1 143.5L379.3 147.3L377.9 125.4Z",373.7,140.2],["4322376","Unistalda","M309.6 309.6L316.5 301.8L322.8 290.2L328.1 288.6L317.2 270.5L313.6 273.8L303.8 272.1L297.5 277.8L285.8 273.7L289.2 279.2L292 288.6L292.3 301.4L286.7 310.6L296.6 308.1L302.5 311.4L309.6 309.6Z",306.7,291.0],["4322350","União da Serra","M713.4 245.4L709.8 237.4L697.8 238.2L698.2 242.5L700.1 252.5L706 257.2L713.7 254.3L713.4 245.4Z",705.2,247.2],["4322400","Uruguaiana","M115.2 342.7L109.8 339.2L100.2 342.1L95.5 351.3L84.3 359L76 368.7L66.2 383.6L56.6 392.9L43.1 395L34.5 402.6L30.3 409.7L30.2 423.2L36.1 420.3L42.7 430.1L54.7 436.8L57.4 444.3L73 440.1L86.6 440.4L96.6 442.9L99.5 450.1L115.5 457L123.7 448.8L135.2 449.1L147.6 444.5L163.8 444.1L176.1 440L180.2 435.4L175.8 427.6L168.6 424.6L159 406.7L151.9 399.4L152 389.8L148.6 382L153.2 378.9L151.1 367L145.5 359.8L139.8 358.6L138.8 349.3L115.2 342.7Z",107.5,396.8],["4322509","Vacaria","M867.3 170.1L865.1 161.2L850.4 146.9L851.3 139.6L845.2 135.3L844.4 129L835.2 128.2L825 167.8L824.7 178.6L829.3 189.4L823.5 194.4L826.1 201.8L815.1 203.8L816 216.5L820.4 215.1L825.7 225.2L832.1 225.3L832.8 233.9L840.7 249.7L849 236.3L846.5 230.8L857.2 214.9L870.2 221.7L868.7 208.5L872.1 197.1L872.5 187.7L865.3 175.8L867.3 170.1Z",850.3,192.5],["4322541","Vale Real","M808.3 333.1L801.5 323.8L801.1 326.4L799.7 339.9L806.6 337.7L808.3 333.1Z",803.8,335.5],["4322525","Vale Verde","M705.9 418.2L700.7 400.1L706.3 388.6L703.4 383.9L692.8 386.8L690.7 390.6L678.6 394.4L685.5 401.9L683.3 413.3L694.8 419.4L705.9 418.2Z",693.6,403.6],["4322533","Vale do Sol","M621.7 353.9L622.4 349.3L615.1 344.1L609.9 345.7L606.6 353.2L612.7 354.6L614.4 360.9L610.9 369L617.2 382.1L631.9 388.9L629.2 365.8L626.3 356.9L621.7 353.9Z",621.7,367.3],["4322558","Vanini","M735.8 203L720.1 202.2L719.3 204.7L733.1 212.7L733.9 211.8L735.8 203Z",729.3,205.7],["4322608","Venâncio Aires","M667.9 338.2L657.1 334.2L649.4 335.4L652.8 336.1L658.4 335.6L663.2 343.5L666.3 359.3L668.1 378.2L670.1 379.5L675.1 383.7L685.2 379L692.8 386.8L703.4 383.9L715.4 391.9L714 385.2L712 373.6L695.3 361.3L686.9 360.7L688.3 350.5L680.4 347.4L667.9 338.2Z",677.3,366.2],["4322707","Vera Cruz","M636.3 366.3L629.2 365.8L631.9 388.9L634.2 397L647.3 409.1L646.3 398.1L649.2 389.7L646.4 378.2L640.6 368.5L636.3 366.3Z",640.3,384.4],["4322806","Veranópolis","M756.4 263.8L747.1 270.5L755.5 269.8L755.2 283.7L769.2 292.1L774.7 283.2L776.4 269.6L777.4 263.9L762 265.4L756.4 263.8Z",765.4,273.7],["4322855","Vespasiano Correa","M731.8 282.6L718.5 283.8L717.6 291.5L719.9 296.2L725.6 297.5L736.2 294.3L732.5 292.4L731.8 282.6Z",724.9,289.2],["4322905","Viadutos","M721.9 71.7L711.3 71.4L713.5 61.8L704.4 50.7L699.6 57.2L696.8 61.2L701.1 66.3L702.8 81.5L708 88.7L710.3 93.3L711.5 85.5L721.3 82.4L721.9 71.7Z",706.4,69.3],["4323002","Viamão","M858.2 427.3L852.8 429.7L841.8 422.4L824.4 434.1L819.8 435.7L825.4 453.6L833.7 456.5L826.7 464.2L831.5 467.7L829.3 483.4L838.7 487.2L847.2 474.9L861.2 477.1L863.1 469.2L877 470.9L878.8 456.7L883.6 456.5L883.5 445L879.3 433.7L873.5 432.4L870.2 424.5L858.2 427.3Z",852.0,452.1],["4323101","Vicente Dutra","M540.1 17.4L543.6 7.4L532.4 0.4L528.6 7.3L516.6 10L518.8 15.1L530.7 21.7L536.5 21.8L539.3 19L540.1 17.4Z",533.7,12.7],["4323200","Victor Graeff","M629.6 209.6L633.3 196.6L628.5 193.8L620 202.4L611.5 213.3L611.1 225.7L610.3 228.7L615.5 234.2L624.1 223.4L629.6 209.6Z",621.1,216.8],["4323309","Vila Flores","M776.5 259.4L772.5 254.6L750.5 256.2L756.4 263.8L762 265.4L777.4 263.9L776.5 259.4Z",765.0,259.1],["4323358","Vila Lângaro","M698 151.1L696.6 139L692.4 137.1L687.2 144.3L682.3 159.6L683.6 166.4L689.9 169.3L698 151.1Z",690.6,152.6],["4323408","Vila Maria","M696.9 206.3L687.2 203.7L677 207.9L678.2 214.1L686.6 217.2L691.6 223.8L688.3 229.3L695.5 232L696.3 224L696.7 212.2L696.9 206.3Z",690.5,213.5],["4323457","Vila Nova do Sul","M459.5 457.8L452.7 463.6L450.6 466.2L461.5 485.2L458.7 498.2L468.1 500.4L473.3 498.4L482.5 484.7L481.7 464.9L474.7 465.9L459.5 457.8Z",470.3,478.0],["4323507","Vista Alegre","M519 29.3L510.6 21.6L509.5 22.6L513.2 43.7L522.3 38.3L519 29.3Z",515.5,33.6],["4323606","Vista Alegre do Prata","M744.5 248.7L729.3 247.8L729.8 261.2L734.7 263.4L744.8 256.3L744.5 248.7Z",734.7,254.4],["4323705","Vista Gaúcha","M499.7 25L491 15.8L483.8 27.6L496.6 33.1L499.7 25Z",491.7,26.1],["4323754","Vitória das Missões","M385.9 174.4L380.8 177.5L383.5 187L385.3 192.9L394.8 205.5L406.6 196.4L406.8 184.9L394.7 182.8L385.9 174.4Z",396.9,192.4],["4323770","Westfalia","M747.5 341.4L742.7 333.6L736 337.4L747.5 341.4Z",741.0,337.7],["4323804","Xangri-lá","M960.3 393.9L955.6 392.3L948.5 395.8L950.4 405.7L954.4 407.1L960.3 393.9Z",953.6,399.2],["4300059","Água Santa","M709.8 153.1L698 151.1L689.9 169.3L699 178.5L705.8 178.1L712.2 174.4L709.8 153.1Z",701.9,165.5],["4301552","Áurea","M708 88.7L702.8 81.5L698.2 85.3L688.3 85.1L689.1 94.5L696.5 103.4L697.3 104.2L708 88.7Z",697.5,92.6]]};
+window.UVERGS_FILIADAS=["4300034", "4300406", "4300455", "4300505", "4300638", "4300661", "4301107", "4301206", "4301602", "4301750", "4302006", "4302154", "4302501", "4302709", "4302808", "4302907", "4303004", "4303301", "4303509", "4304200", "4304358", "4304655", "4304663", "4304671", "4305108", "4305132", "4305173", "4305355", "4305454", "4305504", "4305603", "4306106", "4306205", "4306502", "4306601", "4306908", "4306924", "4307500", "4307815", "4307831", "4308409", "4308458", "4308508", "4309803", "4309951", "4310009", "4310801", "4311155", "4311239", "4311627", "4311718", "4311759", "4311908", "4312252", "4312302", "4312385", "4312427", "4312450", "4312658", "4312674", "4312708", "4313003", "4313037", "4313201", "4313300", "4313656", "4313953", "4314050", "4314076", "4314407", "4314498", "4315008", "4315131", "4315156", "4315305", "4315404", "4315909", "4316402", "4316451", "4316733", "4316907", "4317004", "4317103", "4317400", "4317608", "4318002", "4318309", "4318424", "4318432", "4318507", "4318804", "4318903", "4319802", "4320230", "4320263", "4320354", "4320404", "4320503", "4320800", "4321105", "4321303", "4321600", "4322533", "4322707", "4323200", "4323457", "4322525"];
+</script>
+<script>
+(function(){
+  // ---------- adicionar à agenda ----------
+  var EV={
+    rosa:{t:'Outubro Rosa UVERGS | Encontro de Formação',s:'20261006',e:'20261010',l:'AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre/RS',d:'Encontro de formação da UVERGS. Programação e inscrições: https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao'},
+    aparte:{t:'Aparte Artístico UVERGS 2026',s:'20261103',e:'20261107',l:'Sindilojas, R. dos Andradas, 1234, 9º andar, Porto Alegre/RS',d:'Seminário Estadual de Vereadores com shows de Dartagnan Portella, Desidério Souza, Camila Regio e Quinto Manancial. https://uvergs.com.br/aparte-artistico-uvergs'}
+  };
+  function iso(d){return d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6)}
+  [].forEach.call(document.querySelectorAll('.addcal'),function(el){
+    var e=EV[el.dataset.cal],q=encodeURIComponent;
+    var g='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+q(e.t)+'&dates='+e.s+'/'+e.e+'&details='+q(e.d)+'&location='+q(e.l);
+    var o='https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&allday=true&subject='+q(e.t)+'&startdt='+iso(e.s)+'&enddt='+iso(e.e)+'&location='+q(e.l)+'&body='+q(e.d);
+    var o365=o.replace('outlook.live.com','outlook.office.com');
+    el.querySelector('.menu').innerHTML=
+      '<a href="'+g+'" target="_blank" rel="noopener"><b style="background:#1A73E8">G</b>Google Agenda</a>'+
+      '<a href="'+o+'" target="_blank" rel="noopener"><b style="background:#0F6CBD">O</b>Outlook.com</a>'+
+      '<a href="'+o365+'" target="_blank" rel="noopener"><b style="background:#0F6CBD">365</b>Outlook do trabalho</a>';
+  });
+  document.addEventListener('click',function(ev){[].forEach.call(document.querySelectorAll('.addcal[open]'),function(d){if(!d.contains(ev.target))d.removeAttribute('open')})});
+
+  // ---------- mapa das Câmaras associadas ----------
+  var M=window.RS_MAP,F={};(window.UVERGS_FILIADAS||[]).forEach(function(id){F[id]=1});
+  var svg=document.getElementById('rs-svg'),NS='http://www.w3.org/2000/svg',card=document.getElementById('map-card'),tip=document.getElementById('tip');
+  var base=[0,0,M.w,M.h],vb=base.slice();
+  function setVB(){svg.setAttribute('viewBox',vb.map(function(v){return v.toFixed(1)}).join(' '))}
+  setVB();
+  var g=document.createElementNS(NS,'g'),pins=document.createElementNS(NS,'g'),byId={},byName={};
+  M.mun.forEach(function(r){
+    var p=document.createElementNS(NS,'path');p.setAttribute('d',r[2]);p.setAttribute('class','mun'+(F[r[0]]?' on':''));
+    p.dataset.id=r[0];p.dataset.n=r[1];g.appendChild(p);byId[r[0]]=r;byName[r[1].toLowerCase()]=r;r.el=p;
+    if(F[r[0]]){var c=document.createElementNS(NS,'circle');c.setAttribute('cx',r[3]);c.setAttribute('cy',r[4]);c.setAttribute('r',3.2);c.setAttribute('class','pin');pins.appendChild(c)}
+  });
+  var ol=document.createElementNS(NS,'path');ol.setAttribute('d',M.outline);ol.setAttribute('class','rs-outline');
+  svg.appendChild(g);svg.appendChild(ol);svg.appendChild(pins);
+  var nF=Object.keys(F).length,pct=Math.round(nF/497*100);
+  document.getElementById('k-fil').textContent=nF;document.getElementById('k-pct').textContent=pct+'%';document.getElementById('k-bar').style.width=pct+'%';
+
+  function showTip(r,x,y){tip.innerHTML=r[1]+'<small>'+(F[r[0]]?'Câmara filiada':'Ainda não filiada')+'</small>';tip.style.left=x+'px';tip.style.top=y+'px';tip.style.display='block'}
+  svg.addEventListener('pointermove',function(e){if(drag)return;var t=e.target.closest('.mun');if(!t){tip.style.display='none';return}var b=card.getBoundingClientRect();showTip(byId[t.dataset.id],e.clientX-b.left,e.clientY-b.top)});
+  svg.addEventListener('pointerleave',function(){tip.style.display='none'});
+
+  var res=document.getElementById('m-res'),sel=null;
+  function select(r,zoom){
+    if(sel)sel.el.classList.remove('sel');sel=r;r.el.classList.add('sel');
+    var yes=!!F[r[0]];res.hidden=false;res.className='result '+(yes?'yes':'no');
+    res.innerHTML=yes?'<b>Sim! '+r[1]+' é associada.</b><span>A Câmara Municipal de '+r[1]+' é filiada à UVERGS e tem valores reduzidos em todos os cursos e eventos.</span><a class="btn btn-blue" href="#eventos" style="justify-self:start">Ver próximos eventos</a>'
+                 :'<b>'+r[1]+' ainda não é associada.</b><span>Associe a sua Câmara e garanta assessoria jurídica, legislativa e contábil, além de valores reduzidos nos eventos.</span><a class="btn btn-gold" href="#inscricao" data-event="Associar minha Câmara" data-city="'+r[1]+'" style="justify-self:start">Quero associar minha Câmara</a>';
+    if(zoom){var w=M.w/3.2,h=M.h/3.2;vb=[r[3]-w/2,r[4]-h/2,w,h];setVB()}
+  }
+  svg.addEventListener('click',function(e){if(moved)return;var t=e.target.closest('.mun');if(t){select(byId[t.dataset.id],false);document.getElementById('m-busca').value=t.dataset.n}});
+  var dl=document.getElementById('m-lista'),inp=document.getElementById('m-busca');
+  dl.innerHTML=M.mun.map(function(r){return '<option value="'+r[1]+'">'}).join('');
+  inp.addEventListener('change',function(){var r=byName[inp.value.trim().toLowerCase()];if(r)select(r,true)});
+  inp.addEventListener('input',function(){var r=byName[inp.value.trim().toLowerCase()];if(r)select(r,true)});
+  document.getElementById('m-only').addEventListener('change',function(){var on=this.checked;M.mun.forEach(function(r){r.el.classList.toggle('dim',on&&!F[r[0]])})});
+  var chips=document.getElementById('m-chips');
+  M.mun.filter(function(r){return F[r[0]]}).forEach(function(r){var b=document.createElement('button');b.type='button';b.textContent=r[1];b.addEventListener('click',function(){inp.value=r[1];select(r,true);card.scrollIntoView({behavior:'smooth',block:'center'})});chips.appendChild(b)});
+  document.addEventListener('click',function(e){var a=e.target.closest('[data-city]');if(a){var c=document.getElementById('f-cidade');if(c)c.value=a.dataset.city}});
+
+  // zoom e arrastar
+  function zoom(f,cx,cy){var w=vb[2]*f,h=vb[3]*f;if(w>base[2]){vb=base.slice();setVB();return}if(w<M.w/12)return;cx=cx==null?vb[0]+vb[2]/2:cx;cy=cy==null?vb[1]+vb[3]/2:cy;vb=[cx-(cx-vb[0])*f,cy-(cy-vb[1])*f,w,h];setVB()}
+  document.getElementById('zin').onclick=function(){zoom(.7)};
+  document.getElementById('zout').onclick=function(){zoom(1/.7)};
+  document.getElementById('zreset').onclick=function(){vb=base.slice();setVB()};
+  svg.addEventListener('wheel',function(e){if(!e.ctrlKey&&!e.metaKey&&vb[2]>=base[2]&&e.deltaY>0)return;e.preventDefault();var b=svg.getBoundingClientRect();var x=vb[0]+(e.clientX-b.left)/b.width*vb[2],y=vb[1]+(e.clientY-b.top)/b.height*vb[3];zoom(e.deltaY<0?.85:1/.85,x,y)},{passive:false});
+  var drag=null,moved=false;
+  svg.addEventListener('pointerdown',function(e){if(vb[2]>=base[2])return;drag={x:e.clientX,y:e.clientY,v:vb.slice()};moved=false;svg.classList.add('drag')});
+  window.addEventListener('pointermove',function(e){if(!drag)return;var b=svg.getBoundingClientRect(),dx=(e.clientX-drag.x)/b.width*vb[2],dy=(e.clientY-drag.y)/b.height*vb[3];if(Math.abs(dx)+Math.abs(dy)>2)moved=true;vb=[drag.v[0]-dx,drag.v[1]-dy,vb[2],vb[3]];setVB()});
+  window.addEventListener('pointerup',function(){if(drag){drag=null;svg.classList.remove('drag');setTimeout(function(){moved=false},0)}});
+})();
+</script>
+</body>
+</html>
