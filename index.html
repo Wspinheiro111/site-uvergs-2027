@@ -311,7 +311,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 @media (max-width:900px){.pillars{grid-template-columns:1fr}.future .swoosh{opacity:.35}}
 
 /* agenda */
-.event{overflow:visible}.event .ph{overflow:hidden;border-radius:12px 12px 0 0}
+.event{overflow:visible}.event .ph{overflow:visible}.event .ph img{border-radius:12px 12px 0 0}
 .next{overflow:visible}.next img{border-radius:14px 14px 0 0}
 .addcal{position:relative}
 .addcal summary{list-style:none;cursor:pointer}
@@ -433,6 +433,66 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 .partner:hover .nm svg{color:var(--blue);transform:translateX(2px)}
 @media (max-width:980px){.inst-grid{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr}.inst-stats{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.board{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr;gap:10px}.partner .lg{height:72px;padding:10px 12px}.partner .ab{font-size:1.1rem}.partner .nm{font-size:.76rem;padding:9px 10px 10px}.partner .lg img{max-height:40px}}
+/* ===== v7: movimento ===== */
+/* 1 contagem regressiva */
+.cdband{position:relative;background:var(--surface);padding:26px 0}
+.cdband::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--rs-flag)}
+.cdband .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px}
+.cdband .who h2{font-size:clamp(1.3rem,2.4vw,1.7rem);margin-top:6px}
+.cdband .who p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
+.clock{display:flex;gap:10px}
+.clock div{background:var(--blue);color:#fff;border-radius:10px;min-width:74px;padding:10px 6px 8px;text-align:center;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18)}
+.clock b{display:block;font-family:var(--display);font-weight:900;font-stretch:82%;font-size:2.2rem;line-height:1;font-variant-numeric:tabular-nums}
+.clock b.tick{animation:cdflip .45s ease}
+@keyframes cdflip{from{transform:translateY(-35%);opacity:.2}to{transform:none;opacity:1}}
+.clock small{display:block;margin-top:4px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#D8E3FF}
+@media (max-width:760px){.cdband .wrap{flex-direction:column;align-items:stretch;text-align:center}.clock{justify-content:center}.clock div{min-width:0;flex:1}.clock b{font-size:1.9rem}.cdband .btn{width:100%}}
+/* 2 números */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.stat{border-top:5px solid var(--c,var(--gold));padding-top:14px}
+.stat b{display:block;font-family:var(--display);font-weight:900;font-stretch:82%;font-size:clamp(2.8rem,6vw,4rem);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:#D8E3FF;font-size:.95rem}
+@media (max-width:540px){.stats{grid-template-columns:1fr;gap:14px}}
+/* 3 faixa das Câmaras filiadas */
+.marq{display:grid;gap:10px;margin:-8px 0 30px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marq .track{display:flex;width:max-content;gap:10px;animation:mqslide 90s linear infinite}
+.marq .track.rev{animation-direction:reverse;animation-duration:105s}
+.marq:hover .track{animation-play-state:paused}
+.marq span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 15px;white-space:nowrap;font-weight:600;font-size:.88rem}
+.marq span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c,var(--rs-green));margin-right:8px;vertical-align:1px}
+@keyframes mqslide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq{overflow-x:auto}}
+/* 4 cartões com profundidade */
+.event{will-change:transform}
+.event.tilting{transition:box-shadow .2s,transform .08s linear}
+.event::after{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 45%);opacity:0;transition:opacity .25s;z-index:2}
+.event{position:relative}
+.event.tilting::after{opacity:1}
+.event .date{transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.event:hover .date{transform:translateY(-4px) scale(1.07)}
+/* 5 fotos ganham foco ao rolar */
+@media (prefers-reduced-motion:no-preference){@supports ((animation-timeline:view()) and (animation-range:entry)){
+ .mosaic figure,.done img{animation:focusin linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ @keyframes focusin{from{opacity:.25;scale:.9;filter:blur(6px)}to{opacity:1;scale:1;filter:none}}}}
+/* 6 foto que se expande */
+.mosaic figure{cursor:zoom-in}
+.mosaic figure:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(4,26,79,.92);display:grid;place-items:center;align-content:center;gap:12px;padding:24px;cursor:zoom-out}
+.lightbox img{max-width:min(1100px,100%);max-height:80vh;width:auto;height:auto;border-radius:12px;view-transition-name:foto;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.lightbox p{margin:0;color:#fff;font-weight:600;text-align:center}
+.lightbox button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+::view-transition-group(foto){animation-duration:.45s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+/* 7 WhatsApp que chama atenção */
+.wa::before,.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--green);animation:waring 2.6s ease-out infinite;pointer-events:none}
+.wa::after{animation-delay:1.3s}
+@keyframes waring{to{transform:scale(1.75);opacity:0}}
+.wa-bubble{position:fixed;right:88px;bottom:calc(26px + env(safe-area-inset-bottom,0px));z-index:60;max-width:260px;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:14px 14px 4px 14px;padding:12px 36px 12px 14px;font-size:.9rem;line-height:1.4;box-shadow:0 14px 34px -12px rgba(6,36,110,.45);animation:wapop .5s cubic-bezier(.3,1.6,.5,1) both}
+.wa-bubble[hidden]{display:none}
+.wa-bubble a{color:inherit;text-decoration:none;display:block}
+.wa-bubble a b{color:var(--green);display:block;margin-top:4px;font-size:.85rem}
+.wa-bubble button{position:absolute;top:4px;right:4px;width:28px;height:28px;border:0;background:none;color:var(--muted);font-size:1.2rem;line-height:1;cursor:pointer;border-radius:50%}
+@keyframes wapop{from{transform:scale(.6) translateY(10px);opacity:0}}
+@media (max-width:520px){.wa-bubble{right:84px;max-width:200px;font-size:.84rem}}
 </style>
 </head>
 <body>
@@ -538,6 +598,16 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
     </div>
   </section>
 
+  <section class="cdband" id="contagem" aria-label="Contagem regressiva para o próximo evento">
+    <div class="wrap">
+      <div class="who"><span class="eyebrow f">Falta pouco</span><h2 id="cd-nome">Outubro Rosa UVERGS</h2><p id="cd-info">6 a 9 de outubro · AIAMU, Porto Alegre</p></div>
+      <div class="clock" role="timer" aria-label="Tempo até o início do evento">
+        <div><b id="cd-d">00</b><small>dias</small></div><div><b id="cd-h">00</b><small>horas</small></div><div><b id="cd-m">00</b><small>min</small></div><div><b id="cd-s">00</b><small>seg</small></div>
+      </div>
+      <a class="btn btn-gold" id="cd-cta" href="#inscricao" data-event="Outubro Rosa UVERGS">Garantir minha vaga <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
   <section class="block" id="eventos">
     <div class="wrap">
       <div class="head">
@@ -582,6 +652,11 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
       </div>
       <div class="topics" aria-label="Temas dos eventos de 2026">
         <span>Processo legislativo</span><span>Reforma tributária</span><span>Controladoria e ética</span><span>Licitações</span><span>Controle eficaz</span><span>Eficiência administrativa</span><span>Regularização</span><span>Gestão pública</span>
+      </div>
+      <div class="stats" id="stats">
+        <div class="stat" style="--c:var(--rs-green)"><b data-to="107">107</b><span>Câmaras filiadas</span></div>
+        <div class="stat" style="--c:var(--rs-red)"><b data-to="51">51</b><span>anos de história</span></div>
+        <div class="stat" style="--c:var(--rs-yellow)"><b data-to="497">497</b><span>municípios gaúchos</span></div>
       </div>
     </div>
   </section>
@@ -636,6 +711,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
       <div class="head">
         <div><span class="eyebrow f">Câmaras associadas</span><h2>A UVERGS em todo o Rio Grande do Sul</h2><p>Passe o mouse ou toque em um município para ver se a Câmara é filiada. Use + e − para aproximar e arraste para mover o mapa.</p></div>
       </div>
+      <div class="marq" aria-hidden="true"><div class="track" id="mq1"></div><div class="track rev" id="mq2"></div></div>
       <div class="map-grid">
         <div class="map-card" id="map-card">
           <svg id="rs-svg" role="img" aria-label="Mapa do Rio Grande do Sul com as Câmaras filiadas à UVERGS em destaque"></svg>
@@ -896,6 +972,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 </footer>
 
 <a class="wa" href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener" aria-label="Falar com a UVERGS no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<div class="wa-bubble" id="wa-bubble" hidden><a href="https://api.whatsapp.com/send?phone=555191665195&amp;text=Ol%C3%A1%2C%20UVERGS!%20Quero%20saber%20sobre%20o%20pr%C3%B3ximo%20encontro." target="_blank" rel="noopener">Olá, vereador! Quer garantir sua vaga no próximo encontro?<b>Falar com a UVERGS</b></a><button type="button" aria-label="Fechar">×</button></div>
 
 <script>
 (function(){
@@ -1011,6 +1088,75 @@ window.UVERGS_FILIADAS=["4300034", "4300406", "4300455", "4300505", "4300638", "
   svg.addEventListener('pointerdown',function(e){if(vb[2]>=base[2])return;drag={x:e.clientX,y:e.clientY,v:vb.slice()};moved=false;svg.classList.add('drag')});
   window.addEventListener('pointermove',function(e){if(!drag)return;var b=svg.getBoundingClientRect(),dx=(e.clientX-drag.x)/b.width*vb[2],dy=(e.clientY-drag.y)/b.height*vb[3];if(Math.abs(dx)+Math.abs(dy)>2)moved=true;vb=[drag.v[0]-dx,drag.v[1]-dy,vb[2],vb[3]];setVB()});
   window.addEventListener('pointerup',function(){if(drag){drag=null;svg.classList.remove('drag');setTimeout(function(){moved=false},0)}});
+})();
+</script>
+<script>
+(function(){
+  var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){return document.getElementById(id)}
+
+  // 1. contagem regressiva para o próximo evento
+  var EVS=[
+    {n:'Outubro Rosa UVERGS',i:'6 a 9 de outubro · AIAMU, Porto Alegre',s:'2026-10-06T08:30:00-03:00'},
+    {n:'Aparte Artístico UVERGS',i:'3 a 6 de novembro · Sindilojas e CTG Estância da Azenha, Porto Alegre',s:'2026-11-03T08:30:00-03:00'}
+  ];
+  var band=$('contagem'),alvo=null,prev={};
+  function escolher(){var now=new Date();alvo=null;
+    for(var k=0;k<EVS.length;k++){if(new Date(EVS[k].s)>now){alvo=EVS[k];break}}
+    if(!alvo){band.hidden=true;return}
+    $('cd-nome').textContent=alvo.n;$('cd-info').textContent=alvo.i;$('cd-cta').dataset.event=alvo.n;alvo.t=new Date(alvo.s)}
+  function tick(){if(!alvo)return;var r=alvo.t-new Date();if(r<=0){escolher();return}
+    var v={d:Math.floor(r/864e5),h:Math.floor(r/36e5)%24,m:Math.floor(r/6e4)%60,s:Math.floor(r/1e3)%60};
+    ['d','h','m','s'].forEach(function(k){var t=String(v[k]).padStart(2,'0');if(prev[k]===t)return;var el=$('cd-'+k);el.textContent=t;prev[k]=t;
+      if(!calm){el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick')}})}
+  escolher();tick();setInterval(tick,1000);
+
+  // 2. números que sobem quando aparecem na tela
+  var stats=$('stats');
+  function contar(){if(calm)return;[].forEach.call(stats.querySelectorAll('b[data-to]'),function(b){var to=+b.dataset.to,t0=performance.now(),d=1600;
+    (function step(n){var p=Math.min(1,(n-t0)/d);b.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)})}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es,o){if(es[0].isIntersecting){contar();o.disconnect()}},{threshold:.6}).observe(stats);
+
+  // 3. faixa com as Câmaras filiadas
+  var M=window.RS_MAP,F={};(window.UVERGS_FILIADAS||[]).forEach(function(id){F[id]=1});
+  if(M){var nomes=M.mun.filter(function(r){return F[r[0]]}).map(function(r){return r[1]}).sort(function(a,b){return a.localeCompare(b,'pt')});
+    var cores=['var(--rs-green)','var(--rs-red)','var(--rs-yellow)'],meio=Math.ceil(nomes.length/2);
+    [['mq1',nomes.slice(0,meio)],['mq2',nomes.slice(meio)]].forEach(function(x){var l=x[1].concat(x[1]);
+      $(x[0]).innerHTML=l.map(function(n,i){return '<span style="--c:'+cores[i%3]+'">'+n+'</span>'}).join('')})}
+
+  // 4. cartões de evento com profundidade (só com mouse)
+  if(!calm&&matchMedia('(hover: hover) and (pointer: fine)').matches)[].forEach.call(document.querySelectorAll('.event'),function(c){
+    c.addEventListener('pointermove',function(e){if(c.querySelector('details[open]'))return;var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      c.classList.add('tilting');c.style.transform='perspective(1100px) rotateY('+((x-.5)*8).toFixed(2)+'deg) rotateX('+((.5-y)*8).toFixed(2)+'deg) translateY(-3px)';
+      c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%')});
+    function solta(){c.classList.remove('tilting');c.style.transform=''}
+    c.addEventListener('pointerleave',solta);c.addEventListener('toggle',function(){if(c.querySelector('details[open]'))solta()},true)});
+
+  // 6. foto da galeria que se expande
+  var vt=!!document.startViewTransition&&!calm;
+  [].forEach.call(document.querySelectorAll('.mosaic figure'),function(fig){
+    var img=fig.querySelector('img'),cap=fig.querySelector('figcaption');
+    fig.tabIndex=0;fig.setAttribute('role','button');fig.setAttribute('aria-label','Ampliar foto: '+img.alt);
+    function abrir(){
+      var ov=document.createElement('div');ov.className='lightbox';ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label',img.alt);
+      ov.innerHTML='<img src="'+img.getAttribute('src')+'" alt="'+img.alt.replace(/"/g,'&quot;')+'">'+(cap?'<p>'+cap.textContent+'</p>':'')+'<button type="button" aria-label="Fechar">×</button>';
+      function fechar(){document.removeEventListener('keydown',esc);
+        var tirar=function(){ov.remove();document.documentElement.style.overflow='';if(vt)img.style.viewTransitionName='foto'};
+        if(vt){document.startViewTransition(tirar).finished.then(function(){img.style.viewTransitionName=''})}else tirar();fig.focus({preventScroll:true})}
+      function esc(e){if(e.key==='Escape')fechar()}
+      ov.addEventListener('click',fechar);document.addEventListener('keydown',esc);
+      var por=function(){img.style.viewTransitionName='';document.body.appendChild(ov);document.documentElement.style.overflow='hidden';ov.querySelector('button').focus({preventScroll:true})};
+      if(vt){img.style.viewTransitionName='foto';document.startViewTransition(por)}else por()}
+    fig.addEventListener('click',abrir);
+    fig.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();abrir()}})});
+
+  // 7. balão do WhatsApp: aparece depois de alguns segundos, some ao fechar ou na pré-inscrição
+  var bub=$('wa-bubble'),fechado=false,naInscricao=false;
+  try{fechado=sessionStorage.getItem('uvergs-wa-bubble')==='x'}catch(e){}
+  function atualizar(){bub.hidden=fechado||naInscricao}
+  if(!fechado)setTimeout(function(){if(!fechado&&!naInscricao)bub.hidden=false},5000);
+  bub.querySelector('button').addEventListener('click',function(){fechado=true;atualizar();try{sessionStorage.setItem('uvergs-wa-bubble','x')}catch(e){}});
+  if('IntersectionObserver' in window&&$('inscricao'))new IntersectionObserver(function(es){naInscricao=es[0].isIntersecting;if(naInscricao)atualizar()},{threshold:.15}).observe($('inscricao'));
 })();
 </script>
 </body>
