@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Outubro Rosa UVERGS: encontro de formação de 6 a 9 de outubro | UVERGS</title>
-<meta name="description" content="Encontro de formação da UVERGS de 6 a 9 de outubro de 2026, em Porto Alegre. Programação, palestrantes, valores e pré-inscrição.">
+<title>Banco de boas práticas das Câmaras gaúchas | UVERGS</title>
+<meta name="description" content="Inscreva a boa prática da sua Câmara, receba o Selo Boas Práticas UVERGS e consulte as ideias que deram certo em outras Câmaras do RS.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="UVERGS">
-<meta property="og:title" content="Outubro Rosa UVERGS">
-<meta property="og:description" content="Encontro de formação da UVERGS de 6 a 9 de outubro de 2026, em Porto Alegre. Programação, palestrantes, valores e pré-inscrição.">
-<meta property="og:image" content="https://uvergs-kappa.vercel.app/img/ev-rosa-capa.jpg">
-<meta property="og:url" content="https://uvergs-kappa.vercel.app/eventos/outubro-rosa.html">
+<meta property="og:title" content="Banco de boas práticas das Câmaras gaúchas">
+<meta property="og:description" content="Inscreva a boa prática da sua Câmara, receba o Selo Boas Práticas UVERGS e consulte as ideias que deram certo em outras Câmaras do RS.">
+<meta property="og:image" content="https://uvergs-kappa.vercel.app/img/sede-capa.jpg">
+<meta property="og:url" content="https://uvergs-kappa.vercel.app/ferramentas/boas-praticas.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=Public+Sans:wght@400;500;600;700&display=swap">
@@ -564,9 +564,6 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
  @keyframes focusslide{0%,100%{scale:.86;opacity:.45}50%{scale:1;opacity:1}}}}
 /* 12 páginas de evento com transição suave */
 @media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto;types:ev}}
-html:active-view-transition-type(ev) header.site{view-transition-name:site-header}
-html:active-view-transition-type(ev) .event[data-ev="rosa"] .ph img{view-transition-name:ev-rosa-img}
-html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-transition-name:ev-aparte-img}
 ::view-transition-group(*){animation-duration:.5s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
 .event h3 a{color:inherit;text-decoration:none}
 .event h3 a:hover{color:var(--blue)}
@@ -643,7 +640,63 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
 .ev-band .acts{display:flex;flex-wrap:wrap;gap:10px}
 @media (max-width:900px){.ev-grid,.shows{grid-template-columns:1fr;gap:40px}.ev-other{grid-template-columns:1fr}}
 @media (max-width:640px){.pday{grid-template-columns:1fr;gap:14px;padding:18px}.pday .d{display:flex;align-items:baseline;gap:10px;text-align:left;border-right:0;border-bottom:4px solid var(--c,var(--blue));padding:0 0 12px}.pday .d b{font-size:2.2rem}.pday .d span{margin:0 0 0 auto}.pday li{grid-template-columns:54px 1fr}.prices{grid-template-columns:1fr}}
-html:active-view-transition-type(ev) .ev-ph img{view-transition-name:ev-rosa-img}
+
+/* ---------- página ---------- */
+.bp-hero{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+.bp-hero .crumbs{color:#AFC2EE}.bp-hero .crumbs a{color:#fff}
+.bp-hero .in{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;padding-block:26px 64px}
+.bp-hero h1{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:900;font-stretch:86%;text-transform:uppercase;margin-top:10px}
+.bp-hero h1 em{font-style:normal;color:var(--gold)}
+.bp-hero .lead{font-size:1.1rem;color:#D6E1FC;max-width:56ch;margin:16px 0 26px}
+.bp-hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.seal{width:min(300px,100%);aspect-ratio:1;justify-self:center}
+.seal svg{width:100%;height:100%;display:block}
+@media (prefers-reduced-motion:no-preference){.seal .ring{transform-origin:150px 150px;animation:sealspin 40s linear infinite}}
+@keyframes sealspin{to{transform:rotate(360deg)}}
+@media (max-width:860px){.bp-hero .in{grid-template-columns:1fr}.seal{width:200px;justify-self:start;order:-1}}
+
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;list-style:none;margin:0;padding:0;counter-reset:h}
+.how li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;counter-increment:h;display:grid;gap:8px;align-content:start}
+.how li::before{content:counter(h);font:900 2.4rem/1 var(--display);font-stretch:80%;color:var(--blue)}
+.how h3{font-size:1.15rem}.how p{margin:0;color:var(--muted);font-size:.94rem}
+@media (max-width:900px){.how{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.how{grid-template-columns:1fr}}
+.crit{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+@media (max-width:760px){.crit{grid-template-columns:1fr}}
+.crit h3{font-size:1.25rem;margin-bottom:12px}
+.crit ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.crit li{display:grid;grid-template-columns:24px 1fr;gap:10px}
+.crit li svg{width:20px;height:20px;color:var(--green);margin-top:3px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.86rem;font-weight:600;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+
+.bank-tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:22px}
+@media (max-width:720px){.bank-tools{grid-template-columns:1fr}}
+.bank-count{font-size:.9rem;color:var(--muted);margin:0 0 14px}
+.bp-bank{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+@media (max-width:360px){.bp-bank{grid-template-columns:1fr}}
+.pr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start}
+.pr .m{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pr .m span{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:4px;background:var(--surface);color:var(--blue)}
+.pr .m .sel{background:var(--gold);color:#1B1400}
+.pr h3{font-size:1.2rem}
+.pr .cam{font-weight:700;font-size:.92rem;margin:0}
+.pr p{margin:0;font-size:.94rem;color:var(--muted)}
+.pr .res{color:var(--text)}
+.pr.sample{border-style:dashed;background:transparent}
+.pr.sample .m .ex{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
+.empty{grid-column:1/-1;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:8px}
+.empty h3{font-size:1.3rem}.empty p{margin:0;color:var(--muted);max-width:62ch}
+
+.bp-form{display:grid;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;max-width:860px}
+.bp-form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.bp-form .two{grid-template-columns:1fr}}
+.bp-form textarea{min-height:96px;resize:vertical}
+.bp-form .req{color:var(--rs-red)}
+.bp-form .err{color:var(--rs-red);font-size:.86rem;font-weight:600;margin:0;min-height:1.2em}
+.bp-form input[aria-invalid="true"],.bp-form select[aria-invalid="true"],.bp-form textarea[aria-invalid="true"]{border-color:var(--rs-red)}
+.bp-form .foot-acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.bp-form .foot-acts p{margin:0;font-size:.86rem;color:var(--muted);flex:1;min-width:220px}
 </style>
 </head>
 <body>
@@ -710,45 +763,108 @@ html:active-view-transition-type(ev) .ev-ph img{view-transition-name:ev-rosa-img
 </header>
 
 <main id="inicio">
-  <section class="ev-hero">
+  <section class="bp-hero">
     <div class="wrap">
-      <nav class="crumbs" aria-label="Você está em"><a href="../">Início</a><span aria-hidden="true">›</span><a href="../#eventos">Agenda</a><span aria-hidden="true">›</span><span aria-current="page">Outubro Rosa UVERGS</span></nav>
-      <div class="ev-grid">
-        <div class="ev-ph"><img src="../img/ev-rosa-capa.jpg" alt="Arte do Outubro Rosa UVERGS" width="750" height="415"><div class="date"><b>06–09</b><small>Out</small></div></div>
-        <div class="ev-bd">
-          <div class="top"><span class="type">Encontro de formação</span><span class="pill" id="ev-pill">Vagas abertas</span></div>
-          <h1>Outubro Rosa UVERGS</h1>
-          <p class="lead">Um encontro de formação que une conhecimento, capacitação e a importância de cuidar da saúde, com programação preparada para fortalecer e valorizar quem faz parte do Legislativo gaúcho.</p>
-          <p class="ev-count" id="ev-count" hidden></p>
-          <ul class="facts"><li><span class="ic"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><div><small>Quando</small><span>6 a 9 de outubro de 2026, de terça a sexta-feira</span></div></li><li><span class="ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><small>Onde</small><span>AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre</span><a href="https://www.google.com/maps/search/?api=1&query=AIAMU%20Rua%20dos%20Andradas%201234%20Porto%20Alegre" target="_blank" rel="noopener">Abrir no mapa</a></div></li><li><span class="ic"><svg aria-hidden="true"><use href="#i-users"/></svg></span><div><small>Para quem</small><span style="font-weight:500">Presidentes, membros de Mesas Diretoras, vereadores, diretores, técnicos legislativos, servidores, assessores, chefes de gabinete dos Poderes Executivo e Legislativo, prefeitos e secretários municipais do RS</span></div></li></ul>
-          <div class="prices"><div class="yes"><small>Câmara associada</small><b>R$ 1.200</b><span>por inscrição</span></div><div><small>Câmara não associada</small><b>R$ 1.700</b><span>por inscrição</span></div></div><p class="prices-note">Sua Câmara ainda não é associada? <a href="../#associe">Veja como associar e pagar menos</a></p>
-          <div class="cta"><a class="btn btn-gold" href="../?evento=Outubro%20Rosa%20UVERGS#inscricao">Quero participar <svg class="i"><use href="#i-arrow"/></svg></a><details class="addcal" data-cal="rosa"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details></div>
-          <a class="more" href="../ferramentas/oficio.html?evento=rosa">Precisa de autorização da Câmara? Gere o ofício <svg class="i"><use href="#i-arrow"/></svg></a>
-          <a class="more" href="https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao" target="_blank" rel="noopener">Ver no site da UVERGS <svg class="i"><use href="#i-arrow"/></svg></a>
+      <nav class="crumbs" aria-label="Você está em"><a href="../">Início</a><span aria-hidden="true">›</span><span aria-current="page">Boas práticas</span></nav>
+      <div class="in">
+        <div>
+          <span class="eyebrow" style="color:var(--gold)">Selo Boas Práticas UVERGS</span>
+          <h1>O que deu certo na sua Câmara <em>merece palco</em></h1>
+          <p class="lead">Inscreva uma prática da sua Câmara, receba o Selo Boas Práticas UVERGS em um evento da entidade e entre no banco que todas as Câmaras do Rio Grande do Sul podem consultar. Sem disputa: toda prática que cumpre os critérios recebe o selo.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="#inscrever">Inscrever uma prática <svg class="i"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="#banco">Consultar o banco</a>
+          </div>
+        </div>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 300 300">
+            <defs><path id="sealtxt" d="M150,150 m-112,0 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0"/></defs>
+            <circle cx="150" cy="150" r="146" fill="#F4B400"/>
+            <circle cx="150" cy="150" r="134" fill="none" stroke="#041A4F" stroke-width="2"/>
+            <g class="ring"><text font-family="Archivo, Arial Narrow, Arial, sans-serif" font-weight="800" font-size="19" letter-spacing="4.6" fill="#041A4F"><textPath href="#sealtxt">BOAS PRÁTICAS · CÂMARAS DO RS · UVERGS ·</textPath></text></g>
+            <circle cx="150" cy="150" r="92" fill="#0B3FB8"/>
+            <rect x="96" y="104" width="36" height="9" fill="#009A3D"/><rect x="132" y="104" width="36" height="9" fill="#E1251B"/><rect x="168" y="104" width="36" height="9" fill="#FFD500"/>
+            <text x="150" y="160" text-anchor="middle" font-family="Archivo, Arial Narrow, Arial, sans-serif" font-weight="900" font-size="46" fill="#fff">SELO</text>
+            <text x="150" y="192" text-anchor="middle" font-family="Archivo, Arial Narrow, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="3" fill="#F4B400">UVERGS</text>
+          </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="programacao" style="background:var(--surface)">
+  <section class="block" style="background:var(--surface)">
     <div class="wrap">
-      <div class="head"><div><span class="eyebrow f">Programação</span><h2>Quatro dias de formação</h2><p>Palestras com especialistas, conforme o cartaz oficial da UVERGS.</p></div></div>
-      <div class="prog"><article class="pday" style="--c:var(--rs-green)"><div class="d"><b>06</b><small>Out</small><span>Terça-feira</span></div><div><ol><li><time></time><div><h3>Inscrição, credenciamento e entrega do material</h3><p class="sub">Com o conteúdo a ser trabalhado, na sede da UVERGS.</p></div></li><li><time>15h</time><div><h3>Atendimento de Consultoria Técnica e Jurídica</h3></div></li></ol><p class="note"><b>Coordenação técnica:</b> Dr. Silomar Garcia Silveira, advogado, professor e parecerista, especialista em Direito Público (ULBRA), em Advocacia Municipal (UFRGS) e em Direito Político, coordenador do DEJUR/UVERGS.</p></div></article><article class="pday" style="--c:var(--rs-red)"><div class="d"><b>07</b><small>Out</small><span>Quarta-feira</span></div><div><ol><li><time>9h</time><div><h3>Abertura oficial: Escutar o corpo, acolher a mente e escolher viver</h3><p class="who"><b>Rita Cunha</b>, diretora executiva do IMAMA</p></div></li><li><time>10h30</time><div><h3>A psicologia social como fator de performance na administração pública</h3><p class="who"><b>Camila Fonseca</b>, psicopedagoga social e mentora sistêmica para mulheres</p></div></li><li><time>14h</time><div><h3>Compras e contratos administrativos</h3><p class="sub">Lei Federal nº 14.133/21 (Licitações e Contratos Administrativos), sistema e comissão/departamento de compras, formação dos contratos, dolo e sanções.</p><p class="who"><b>Dra. Crislei Lima</b>, advogada, parecerista, especialista em licitações e contratos administrativos, parceira docente da UVERGS</p></div></li><li><time>16h</time><div><h3>O empoderamento da mulher na política</h3><p class="who"><b>Dra. Ginevra Silveira</b>, advogada, vereadora, ativista da causa do empoderamento do mandato parlamentar pela mulher</p></div></li></ol></div></article><article class="pday" style="--c:var(--rs-yellow)"><div class="d"><b>08</b><small>Out</small><span>Quinta-feira</span></div><div><ol><li><time>9h</time><div><h3>O papel do vereador na história democrática brasileira</h3><p class="sub">Processo legislativo: princípios, fases, processo legislativo eletrônico sustentável, aplicabilidade e inovação legislativa.</p><p class="who"><b>Dep. Estadual Marcus Vinícius</b>, advogado, ex-presidente da FAMURS, especialista em defesa de demandas regionais</p></div></li><li><time>10h30</time><div><h3>Inclusão na prática: do laço familiar à ação pública</h3><p class="who"><b>Suziane Dias e Mariana Dias Zahn</b>, especialistas em políticas públicas do TEA, Transtorno do Espectro Autista</p></div></li><li><time>14h</time><div><h3>Reforma tributária e recuperação fiscal de entidades sem fins lucrativos</h3><p class="who"><b>Dra. Acácia Sayuri Wakasugi</b>, advogada, doutoranda em Políticas Públicas pela UFRGS</p></div></li><li><time>15h30</time><div><h3>A responsabilidade dos prefeitos e vereadores em face de infração político-administrativa</h3><p class="who"><b>Dra. Neriany Simionato Ortiz</b>, advogada, especialista em assessoramento municipal</p></div></li></ol></div></article><article class="pday" style="--c:var(--blue)"><div class="d"><b>09</b><small>Out</small><span>Sexta-feira</span></div><div><ol><li><time>9h</time><div><h3>As relações entre os Parlamentos Municipais e o Tribunal de Contas</h3><p class="who"><b>Dra. Ana Cristina Morais</b>, conselheira substituta do Tribunal de Contas do Estado do RS</p></div></li><li><time>10h30</time><div><h3>Entrega dos certificados</h3></div></li></ol></div></article></div>
-      <div class="prog-foot"><span>Realização UVERGS · Promoção Escola de Formação e Aperfeiçoamento de Legisladores · Apoio Assembleia Legislativa do RS · Parceria TCE-RS · Patrocínio Corsan e Portal de Compras Públicas</span><a class="more" href="../img/ev-rosa-2.jpg" target="_blank" rel="noopener">Ver o cartaz oficial <svg class="i"><use href="#i-arrow"/></svg></a></div>
+      <div class="head"><div><span class="eyebrow">Como funciona</span><h2>Da inscrição ao selo</h2><p>Aberto a todas as Câmaras Municipais do Rio Grande do Sul, associadas ou não.</p></div></div>
+      <ol class="how">
+        <li><h3>A Câmara inscreve</h3><p>Preencha o formulário desta página. A inscrição chega à equipe da UVERGS pelo WhatsApp.</p></li>
+        <li><h3>A UVERGS avalia</h3><p>A equipe técnica confere a prática pelos critérios abaixo e pode pedir fotos, números ou documentos.</p></li>
+        <li><h3>O selo é entregue</h3><p>A Câmara recebe o Selo Boas Práticas UVERGS em um evento da entidade, na frente de vereadores de todo o estado.</p></li>
+        <li><h3>A prática entra no banco</h3><p>Fica publicada nesta página para qualquer Câmara consultar e copiar a ideia.</p></li>
+      </ol>
+      <div class="crit">
+        <div>
+          <h3>Critérios</h3>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Já está em funcionamento na Câmara, não é só um projeto.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Tem resultado que dá para mostrar: números, antes e depois, participação.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Pode ser copiada por outra Câmara, inclusive as pequenas.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Está dentro da lei e usa bem o dinheiro público.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Temas</h3>
+          <div class="tags" id="bp-tags"></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="block">
+  <section class="block" id="banco">
     <div class="wrap">
-      <div class="head"><div><span class="eyebrow f">Também na agenda</span><h2>Próximo encontro da UVERGS</h2></div><a class="more" href="../#eventos">Voltar para a agenda <svg class="i"><use href="#i-arrow"/></svg></a></div>
-      <a class="ev-other" href="aparte-artistico.html"><img src="../img/aparte-capa.jpg" alt="" loading="lazy"><div><small>Seminário Estadual + cultura</small><h3>Aparte Artístico UVERGS</h3><p>3 a 6 de novembro · Sindilojas e CTG Estância da Azenha, Porto Alegre</p></div></a>
+      <div class="head"><div><span class="eyebrow">Banco de boas práticas</span><h2>Ideias que deram certo nas Câmaras gaúchas</h2><p>Pesquise por tema, por Câmara ou por palavra.</p></div></div>
+      <div class="bank-tools" role="search">
+        <label for="bk-q">Buscar<input id="bk-q" type="search" placeholder="Ex.: transparência, escola, sessão"></label>
+        <label for="bk-t">Tema<select id="bk-t"><option value="">Todos os temas</option></select></label>
+        <label for="bk-a">Ano do selo<select id="bk-a"><option value="">Todos os anos</option></select></label>
+      </div>
+      <p class="bank-count" id="bk-n" aria-live="polite"></p>
+      <div class="bp-bank" id="bk"></div>
+    </div>
+  </section>
+
+  <section class="block" id="inscrever" style="background:var(--surface)">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Inscrição</span><h2>Inscreva a prática da sua Câmara</h2><p>Leva uns cinco minutos. A equipe da UVERGS responde pelo WhatsApp.</p></div></div>
+      <form class="bp-form" id="bp-f" novalidate>
+        <div class="two">
+          <label for="f-cam"><span>Câmara Municipal de <span class="req" aria-hidden="true">*</span></span><input id="f-cam" list="f-cams" autocomplete="off" required placeholder="Ex.: Alegrete"></label>
+          <label for="f-tema"><span>Tema <span class="req" aria-hidden="true">*</span></span><select id="f-tema" required><option value="">Escolha um tema</option></select></label>
+        </div>
+        <datalist id="f-cams"></datalist>
+        <label for="f-tit"><span>Nome da prática <span class="req" aria-hidden="true">*</span></span><input id="f-tit" required maxlength="120" placeholder="Ex.: Sessões com resumo em linguagem simples"></label>
+        <label for="f-oq"><span>O que é e como funciona <span class="req" aria-hidden="true">*</span></span><textarea id="f-oq" required maxlength="1200" placeholder="Conte em poucas linhas o que a Câmara faz, desde quando e quem participa."></textarea></label>
+        <label for="f-res"><span>Qual foi o resultado? <span class="req" aria-hidden="true">*</span></span><textarea id="f-res" required maxlength="800" placeholder="Números, mudanças percebidas, participação da comunidade."></textarea></label>
+        <div class="two">
+          <label for="f-desde">Funciona desde<input id="f-desde" type="month"></label>
+          <label for="f-link">Link com mais informações<input id="f-link" type="url" placeholder="Site da Câmara, notícia, vídeo"></label>
+        </div>
+        <div class="two">
+          <label for="f-nome"><span>Seu nome <span class="req" aria-hidden="true">*</span></span><input id="f-nome" required autocomplete="name"></label>
+          <label for="f-cargo">Seu cargo<input id="f-cargo" placeholder="Ex.: Presidente da Câmara"></label>
+        </div>
+        <p class="err" id="f-err" role="alert"></p>
+        <div class="foot-acts">
+          <button class="btn btn-wa" type="submit"><svg class="i"><use href="#i-wa"/></svg>Enviar inscrição pelo WhatsApp</button>
+          <p>O WhatsApp abre com a inscrição escrita. É só tocar em enviar.</p>
+        </div>
+      </form>
     </div>
   </section>
 
   <section class="ev-band">
     <div class="wrap">
-      <div><h2>Garanta sua vaga no Outubro Rosa UVERGS</h2><p>Faça a pré-inscrição. A equipe da UVERGS confirma sua vaga pelo WhatsApp.</p></div>
-      <div class="acts"><a class="btn btn-gold" href="../?evento=Outubro%20Rosa%20UVERGS#inscricao">Fazer pré-inscrição</a><a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=555191665195&amp;text=Ol%C3%A1%2C%20UVERGS%21%20Quero%20saber%20mais%20sobre%20o%20Outubro%20Rosa%20UVERGS." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+      <div><h2>Venha receber o selo e conhecer outras ideias</h2><p>As Câmaras com selo são reconhecidas nos eventos da UVERGS.</p></div>
+      <div class="acts"><a class="btn btn-gold" href="../#eventos">Ver próximos eventos</a><a class="btn btn-ghost" href="../#associe">Associar minha Câmara</a></div>
     </div>
   </section>
 </main>
@@ -759,7 +875,7 @@ html:active-view-transition-type(ev) .ev-ph img{view-transition-name:ev-rosa-img
       <a class="logo" href="../#inicio"><img class="logo-img" src="../img/logo.png" alt="UVERGS" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"><svg aria-hidden="true"><use href="#logo-mark"/></svg><span><b>UVERGS</b><small>União dos Vereadores do Rio Grande do Sul</small></span></a>
       <p>Entidade Oficial dos Vereadores do RS, reconhecida pela Lei Estadual n.º 12.023/03.</p>
     </div>
-    <div><h4>Eventos</h4><ul><li><a href="../#eventos">Próximos eventos</a></li><li><a href="../#realizados">Realizados</a></li><li><a href="../#galeria">Galeria</a></li><li><a href="../#inscricao">Pré-inscrição</a></li><li><a href="../ferramentas/oficio.html">Ofício de participação</a></li><li><a href="../ferramentas/boas-praticas.html">Boas práticas</a></li></ul></div>
+    <div><h4>Eventos</h4><ul><li><a href="../#eventos">Próximos eventos</a></li><li><a href="../#realizados">Realizados</a></li><li><a href="../#galeria">Galeria</a></li><li><a href="../#inscricao">Pré-inscrição</a></li><li><a href="oficio.html">Ofício de participação</a></li><li><a href="boas-praticas.html">Boas práticas</a></li></ul></div>
     <div><h4>UVERGS</h4><ul><li><a href="../#associe">Associe sua Câmara</a></li><li><a href="../#associadas">Câmaras associadas</a></li><li><a href="../#institucional">Institucional</a></li><li><a href="../#servicos">Serviços</a></li><li><a href="../#uvergs-2027">UVERGS 2027</a></li><li><a href="../#presidente">Mensagem do Presidente</a></li><li><a href="../#noticias">Notícias</a></li><li><a href="https://webmail.uvergs.com.br/" target="_blank" rel="noopener">Webmail</a></li></ul></div>
     <div><h4>Redes</h4><ul><li><a href="https://www.instagram.com/uvergs" target="_blank" rel="noopener">Instagram @uvergs</a></li><li><a href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener">WhatsApp (51) 9166-5195</a></li><li><a href="https://uvergs.com.br/rss-feeds" target="_blank" rel="noopener">RSS</a></li></ul></div>
   </div>
@@ -773,37 +889,79 @@ html:active-view-transition-type(ev) .ev-ph img{view-transition-name:ev-rosa-img
   var t=document.getElementById('menu-toggle'),m=document.getElementById('menu');
   t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
   m.addEventListener('click',function(e){if(e.target.closest('a'))m.classList.remove('open')});
-
-  // ---------- adicionar à agenda ----------
-  var EV={
-    rosa:{t:'Outubro Rosa UVERGS | Encontro de Formação',s:'20261006',e:'20261010',l:'AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre/RS',d:'Encontro de formação da UVERGS. Programação e inscrições: https://uvergs.com.br/outubro-rosa-uvergs-encontro-de-formacao'},
-    aparte:{t:'Aparte Artístico UVERGS 2026',s:'20261103',e:'20261107',l:'Sindilojas, R. dos Andradas, 1234, 9º andar, Porto Alegre/RS',d:'Seminário Estadual de Vereadores com shows de Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial. https://uvergs.com.br/aparte-artistico-uvergs'}
-  };
-  function iso(d){return d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6)}
-  [].forEach.call(document.querySelectorAll('.addcal'),function(el){
-    var e=EV[el.dataset.cal],q=encodeURIComponent;
-    var g='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+q(e.t)+'&dates='+e.s+'/'+e.e+'&details='+q(e.d)+'&location='+q(e.l);
-    var o='https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&allday=true&subject='+q(e.t)+'&startdt='+iso(e.s)+'&enddt='+iso(e.e)+'&location='+q(e.l)+'&body='+q(e.d);
-    var o365=o.replace('outlook.live.com','outlook.office.com');
-    el.querySelector('.menu').innerHTML=
-      '<a href="'+g+'" target="_blank" rel="noopener"><b style="background:#1A73E8">G</b>Google Agenda</a>'+
-      '<a href="'+o+'" target="_blank" rel="noopener"><b style="background:#0F6CBD">O</b>Outlook.com</a>'+
-      '<a href="'+o365+'" target="_blank" rel="noopener"><b style="background:#0F6CBD">365</b>Outlook do trabalho</a>';
-  });
-  document.addEventListener('click',function(ev){[].forEach.call(document.querySelectorAll('.addcal[open]'),function(d){if(!d.contains(ev.target))d.removeAttribute('open')})});
-
-
-  // quanto falta para o evento
-  var ini=new Date('2026-10-06T08:30:00-03:00'),fim=new Date('2026-10-09T23:59:59-03:00'),now=new Date(),c=document.getElementById('ev-count');
-  if(now>fim){var pl=document.getElementById('ev-pill');pl.textContent='Realizado';pl.classList.add('done')}
-  else if(now<ini){var d=Math.floor((ini-now)/864e5);c.innerHTML=d>1?'Faltam <b>'+d+'</b> dias':d===1?'Falta <b>1</b> dia':'Começa amanhã';c.hidden=false}
-  else{c.textContent='Acontecendo agora';c.hidden=false}
-
-  // barra de leitura (sem suporte nativo ou com movimento reduzido)
   var bar=document.querySelector('.progress'),calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(bar&&(calm||!(window.CSS&&CSS.supports&&CSS.supports('animation-timeline','scroll()')))){
     var ler=function(){var h=document.documentElement;bar.style.setProperty('--p',Math.min(1,h.scrollTop/((h.scrollHeight-h.clientHeight)||1)))};
     addEventListener('scroll',ler,{passive:true});addEventListener('resize',ler);ler()}
+})();
+</script>
+<script>
+(function(){
+  var CAM=["Aceguá", "Alegrete", "Alegria", "Alpestre", "Amaral Ferrador", "André da Rocha", "Arroio dos Ratos", "Arroio do Tigre", "Bagé", "Barão do Triunfo", "Barros Cassal", "Boa Vista das Missões", "Bossoroca", "Butiá", "Caçapava do Sul", "Cacequi", "Cachoeira do Sul", "Caibaté", "Camaquã", "Candelária", "Candiota", "Capão do Cipó", "Capão do Leão", "Capivari do Sul", "Caxias do Sul", "Cerro Branco", "Cerro Grande do Sul", "Charqueadas", "Cidreira", "Ciríaco", "Colorado", "Cruz Alta", "Cruzeiro do Sul", "Dom Feliciano", "Dom Pedrito", "Encruzilhada do Sul", "Engenho Velho", "Espumoso", "Estrela Velha", "Eugênio de Castro", "Formigueiro", "Fortaleza dos Valos", "Frederico Westphalen", "Ibiaçá", "Ibirapuitã", "Ibirubá", "Ivoti", "Jóia", "Lagoa Bonita do Sul", "Lindolfo Collor", "Maçambará", "Manoel Viana", "Marcelino Ramos", "Minas do Leão", "Miraguaí", "Monte Belo do Sul", "Mormaço", "Morro Redondo", "Não-Me-Toque", "Nicolau Vergueiro", "Nonoai", "Nova Bréscia", "Nova Esperança do Sul", "Nova Petrópolis", "Nova Prata", "Palmares do Sul", "Pantano Grande", "Parobé", "Passo do Sobrado", "Pelotas", "Pinheirinho do Vale", "Porto Lucena", "Pouso Novo", "Progresso", "Quaraí", "Redentora", "Rodeio Bonito", "Rosário do Sul", "Salto do Jacuí", "Santa Cecília do Sul", "Santa Maria", "Santana da Boa Vista", "Sant' Ana do Livramento", "Santiago", "Santo Antônio da Patrulha", "São Borja", "São Gabriel", "São João da Urtiga", "São João do Polêsine", "São José do Norte", "São Lourenço do Sul", "São Luiz Gonzaga", "São Vicente do Sul", "Sede Nova", "Segredo", "Sentinela do Sul", "Serafina Corrêa", "Sertão", "Soledade", "Tapes", "Taquari", "Tramandaí", "Vale do Sol", "Vera Cruz", "Victor Graeff", "Vila Nova do Sul", "Vale Verde"];
+  var WA='555191665195';
+  var TEMAS=['Transparência','Participação da comunidade','Gestão e economia','Inclusão e acessibilidade','Educação e Câmara Mirim','Saúde','Mulher na política','Meio ambiente'];
+  var $=function(id){return document.getElementById(id)};
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var norm=function(s){return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+
+  $('bp-tags').innerHTML=TEMAS.map(function(t){return '<span>'+t+'</span>'}).join('');
+  TEMAS.forEach(function(t){['bk-t','f-tema'].forEach(function(id){var o=document.createElement('option');o.textContent=t;$(id).appendChild(o)})});
+  $('f-cams').innerHTML=CAM.map(function(c){return '<option value="'+esc(c)+'">'}).join('');
+
+  // ---------- banco ----------
+  // Cada prática aprovada entra em data/boas-praticas.json:
+  // {"camara":"...","tema":"(um dos TEMAS)","titulo":"...","resumo":"...","resultado":"...","ano":2026,"link":"https://..."}
+  var PR=[];
+  function card(p){
+    return '<article class="pr"><div class="m"><span class="sel">Selo '+esc(p.ano)+'</span><span>'+esc(p.tema)+'</span></div>'+
+      '<h3>'+esc(p.titulo)+'</h3><p class="cam">Câmara Municipal de '+esc(p.camara)+'</p><p>'+esc(p.resumo)+'</p>'+
+      (p.resultado?'<p class="res"><b>Resultado:</b> '+esc(p.resultado)+'</p>':'')+
+      (/^https?:\/\//.test(p.link||'')?'<a class="more" href="'+esc(p.link)+'" target="_blank" rel="noopener">Saiba mais <svg class="i"><use href="#i-arrow"/></svg></a>':'')+'</article>';
+  }
+  function filtra(){
+    var q=norm($('bk-q').value.trim()),t=$('bk-t').value,a=$('bk-a').value;
+    var r=PR.filter(function(p){return(!t||p.tema===t)&&(!a||String(p.ano)===a)&&(!q||norm([p.titulo,p.resumo,p.resultado,p.camara,p.tema].join(' ')).indexOf(q)>-1)});
+    if(!PR.length){
+      $('bk-n').textContent='';
+      $('bk').innerHTML='<div class="empty"><h3>O banco abre com as primeiras inscrições</h3><p>As práticas aparecem aqui assim que recebem o selo. A sua Câmara pode ser uma das primeiras do Rio Grande do Sul.</p><p><a class="more" href="#inscrever">Inscrever uma prática <svg class="i"><use href="#i-arrow"/></svg></a></p></div>'+
+        '<article class="pr sample" aria-label="Exemplo de como a prática aparece"><div class="m"><span class="ex">Exemplo de como vai aparecer</span></div><h3>[Nome da prática]</h3><p class="cam">Câmara Municipal de [sua cidade]</p><p>[O que é e como funciona, em poucas linhas.]</p><p class="res"><b>Resultado:</b> [o que mudou depois da prática]</p></article>';
+      return;
+    }
+    $('bk-n').textContent=r.length+(r.length===1?' prática encontrada':' práticas encontradas')+' de '+PR.length;
+    $('bk').innerHTML=r.length?r.map(card).join(''):'<div class="empty"><h3>Nenhuma prática com esse filtro</h3><p>Tente outra palavra ou escolha “Todos os temas”.</p></div>';
+  }
+  ['bk-q','bk-t','bk-a'].forEach(function(id){$(id).addEventListener('input',filtra)});
+  filtra();
+  fetch('../data/boas-praticas.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[]}).then(function(d){
+    PR=Array.isArray(d)?d.filter(function(p){return p&&p.titulo&&p.camara}):[];
+    PR.sort(function(x,y){return(y.ano||0)-(x.ano||0)||String(x.camara).localeCompare(y.camara,'pt-BR')});
+    var anos=PR.map(function(p){return p.ano}).filter(function(v,i,a){return v&&a.indexOf(v)===i});
+    anos.forEach(function(y){var o=document.createElement('option');o.textContent=y;$('bk-a').appendChild(o)});
+    filtra();
+  }).catch(function(){});
+
+  // ---------- inscrição ----------
+  $('bp-f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var req=['f-cam','f-tema','f-tit','f-oq','f-res','f-nome'],falta=[];
+    req.forEach(function(id){var el=$(id),ok=el.value.trim()!=='';el.setAttribute('aria-invalid',!ok);if(!ok)falta.push(el)});
+    var link=$('f-link').value.trim();
+    if(link&&!/^https?:\/\/\S+\.\S+/.test(link)){$('f-link').setAttribute('aria-invalid','true');falta.push($('f-link'))}else $('f-link').removeAttribute('aria-invalid');
+    if(falta.length){$('f-err').textContent=falta.length===1&&falta[0].id==='f-link'?'O link precisa começar com https://':'Preencha os campos marcados com *.';falta[0].focus();return}
+    $('f-err').textContent='';
+    var d=$('f-desde').value.trim(),desde=/^\d{4}-\d{2}$/.test(d)?d.slice(5)+'/'+d.slice(0,4):d;
+    var t='Olá, UVERGS! Quero inscrever uma prática no Selo Boas Práticas UVERGS.\n\n'+
+      '*Câmara Municipal de '+$('f-cam').value.trim()+'*\n'+
+      'Tema: '+$('f-tema').value+'\n'+
+      'Prática: '+$('f-tit').value.trim()+'\n'+
+      (desde?'Funciona desde: '+desde+'\n':'')+
+      '\nO que é: '+$('f-oq').value.trim()+'\n\n'+
+      'Resultado: '+$('f-res').value.trim()+'\n'+
+      (link?'\nMais informações: '+link+'\n':'')+
+      '\nResponsável: '+$('f-nome').value.trim()+($('f-cargo').value.trim()?', '+$('f-cargo').value.trim():'');
+    window.open('https://api.whatsapp.com/send?phone='+WA+'&text='+encodeURIComponent(t),'_blank','noopener');
+  });
+  $('bp-f').addEventListener('input',function(e){if(e.target.getAttribute('aria-invalid')==='true'&&e.target.value.trim())e.target.setAttribute('aria-invalid','false')});
 })();
 </script>
 </body>

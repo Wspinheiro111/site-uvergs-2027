@@ -275,7 +275,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 .why-item .ic.g{background:var(--rs-green);color:#fff}.why-item .ic.r{background:var(--rs-red);color:#fff}.why-item .ic.y{background:var(--rs-yellow);color:#1B1400}
 
 /* serviços */
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 24px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
 .svc::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--c)}
 .svc .ic{width:52px;height:52px;border-radius:12px;background:var(--blue);color:#fff;display:grid;place-items:center}
@@ -564,6 +564,9 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
 .event h3 a{color:inherit;text-decoration:none}
 .event h3 a:hover{color:var(--blue)}
 .event .ph>a{display:block}
+/* ofício e boas práticas */
+.event .oficio-link{margin:0;font-size:.88rem}
+.event .oficio-link a{color:var(--blue);font-weight:600}
 </style>
 </head>
 <body>
@@ -695,6 +698,7 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
             <p>Um encontro de formação que une conhecimento, capacitação e a importância de cuidar da saúde, com programação preparada para fortalecer e valorizar quem faz parte do Legislativo gaúcho.</p>
             <div class="meta"><span><svg class="i"><use href="#i-pin"/></svg>AIAMU, R. dos Andradas, 1234, 8º andar, Porto Alegre</span></div>
             <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Outubro Rosa UVERGS">Quero participar</a><details class="addcal" data-cal="rosa"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="eventos/outubro-rosa.html" style="align-self:center">Ver programação <svg class="i"><use href="#i-arrow"/></svg></a></div>
+            <p class="oficio-link"><a href="ferramentas/oficio.html?evento=rosa">Precisa de autorização da Câmara? Gere o ofício</a></p>
           </div>
         </article>
         <article class="event" data-end="2026-11-06" data-ev="aparte">
@@ -705,6 +709,7 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
             <p>O Seminário Estadual de Vereadores com noites de música e tradição gaúcha no CTG Estância da Azenha: Dartagnan Portella, Desidério Souza, Camila Régio e Quinto Manancial.</p>
             <div class="meta"><span><svg class="i"><use href="#i-pin"/></svg>Sindilojas, R. dos Andradas, 1234, 9º andar, e CTG Estância da Azenha, Porto Alegre</span></div>
             <div class="cta"><a class="btn btn-blue" href="#inscricao" data-event="Aparte Artístico UVERGS">Quero participar</a><details class="addcal" data-cal="aparte"><summary class="btn btn-line"><svg class="i"><use href="#i-calplus"/></svg>Adicionar à minha agenda</summary><div class="menu"></div></details><a class="more" href="eventos/aparte-artistico.html" style="align-self:center">Ver página do evento <svg class="i"><use href="#i-arrow"/></svg></a></div>
+            <p class="oficio-link"><a href="ferramentas/oficio.html?evento=aparte">Precisa de autorização da Câmara? Gere o ofício</a></p>
           </div>
         </article>
       </div>
@@ -825,6 +830,8 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
         <article class="svc" style="--c:var(--rs-red)"><span class="ic"><svg><use href="#i-doc"/></svg></span><h3>Assessoria legislativa</h3><p>Apoio no processo legislativo e no regimento interno, e na construção de projetos de lei, indicações e requerimentos, do texto à justificativa.</p><a class="more" href="#inscricao" data-event="Construção de projetos">Solicitar <svg class="i"><use href="#i-arrow"/></svg></a></article>
         <article class="svc" style="--c:var(--rs-yellow)"><span class="ic"><svg><use href="#i-calc"/></svg></span><h3>Assessoria contábil</h3><p>Apoio em orçamento, prestação de contas e controle, com base na Lei nº 4.320 e nas orientações do TCE-RS.</p><a class="more" href="#inscricao" data-event="Serviços de assessoria">Solicitar <svg class="i"><use href="#i-arrow"/></svg></a></article>
         <article class="svc" style="--c:var(--blue)"><span class="ic"><svg><use href="#i-book"/></svg></span><h3>Legislação</h3><p>Acervo com as leis de referência para o Legislativo municipal.</p><ul><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l4320.htm" target="_blank" rel="noopener">Lei nº 4.320/1964</a>, orçamentos públicos</li><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8429.htm" target="_blank" rel="noopener">Lei nº 8.429/1992</a>, improbidade</li><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8666cons.htm" target="_blank" rel="noopener">Lei nº 8.666/1993</a>, licitações</li></ul></article>
+        <article class="svc" style="--c:var(--gold)"><span class="ic"><svg><use href="#i-doc"/></svg></span><h3>Ofício de participação</h3><p>Gere o requerimento de autorização, inscrição e diárias para ir a um evento da UVERGS e protocole na sua Câmara.</p><a class="more" href="ferramentas/oficio.html">Gerar ofício <svg class="i"><use href="#i-arrow"/></svg></a></article>
+        <article class="svc" style="--c:var(--rs-green)"><span class="ic"><svg><use href="#i-check"/></svg></span><h3>Boas práticas</h3><p>Inscreva o que deu certo na sua Câmara, receba o Selo Boas Práticas UVERGS e consulte ideias de outras Câmaras do RS.</p><a class="more" href="ferramentas/boas-praticas.html">Conhecer o selo <svg class="i"><use href="#i-arrow"/></svg></a></article>
       </div>
     </div>
   </section>
@@ -1037,7 +1044,7 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
       <a class="logo" href="#inicio"><img class="logo-img" src="img/logo.png" alt="UVERGS" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"><svg aria-hidden="true"><use href="#logo-mark"/></svg><span><b>UVERGS</b><small>União dos Vereadores do Rio Grande do Sul</small></span></a>
       <p>Entidade Oficial dos Vereadores do RS, reconhecida pela Lei Estadual n.º 12.023/03.</p>
     </div>
-    <div><h4>Eventos</h4><ul><li><a href="#eventos">Próximos eventos</a></li><li><a href="#realizados">Realizados</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#inscricao">Pré-inscrição</a></li></ul></div>
+    <div><h4>Eventos</h4><ul><li><a href="#eventos">Próximos eventos</a></li><li><a href="#realizados">Realizados</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#inscricao">Pré-inscrição</a></li><li><a href="ferramentas/oficio.html">Ofício de participação</a></li><li><a href="ferramentas/boas-praticas.html">Boas práticas</a></li></ul></div>
     <div><h4>UVERGS</h4><ul><li><a href="#associe">Associe sua Câmara</a></li><li><a href="#associadas">Câmaras associadas</a></li><li><a href="#institucional">Institucional</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#uvergs-2027">UVERGS 2027</a></li><li><a href="#presidente">Mensagem do Presidente</a></li><li><a href="#noticias">Notícias</a></li><li><a href="https://webmail.uvergs.com.br/" target="_blank" rel="noopener">Webmail</a></li></ul></div>
     <div><h4>Redes</h4><ul><li><a href="https://www.instagram.com/uvergs" target="_blank" rel="noopener">Instagram @uvergs</a></li><li><a href="https://api.whatsapp.com/send?phone=555191665195" target="_blank" rel="noopener">WhatsApp (51) 9166-5195</a></li><li><a href="https://uvergs.com.br/rss-feeds" target="_blank" rel="noopener">RSS</a></li></ul></div>
   </div>
