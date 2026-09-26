@@ -420,7 +420,9 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 .timeline li::before{content:"";position:absolute;left:-9px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--c,var(--blue));border:3px solid var(--bg)}
 .timeline b{font-family:var(--display);color:var(--blue);font-size:1.05rem}
 .timeline p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
-.expres{margin-top:8px;display:grid;gap:8px}
+.expres{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.expres .lead{grid-column:1/-1}
+.member .av img.pf{transform:none;object-position:center}
 .partners{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:12px}
 .partner{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color .15s,transform .15s,box-shadow .15s}
 .partner:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 12px 26px -16px rgba(6,36,110,.5)}
@@ -432,7 +434,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;back
 .partner .nm svg{width:14px;height:14px;flex:none;color:var(--muted);transition:transform .15s,color .15s}
 .partner:hover .nm svg{color:var(--blue);transform:translateX(2px)}
 @media (max-width:980px){.inst-grid{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr}.inst-stats{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.board{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr;gap:10px}.partner .lg{height:72px;padding:10px 12px}.partner .ab{font-size:1.1rem}.partner .nm{font-size:.76rem;padding:9px 10px 10px}.partner .lg img{max-height:40px}}
+@media (max-width:520px){.board,.expres{grid-template-columns:1fr}.partners{grid-template-columns:1fr 1fr;gap:10px}.partner .lg{height:72px;padding:10px 12px}.partner .ab{font-size:1.1rem}.partner .nm{font-size:.76rem;padding:9px 10px 10px}.partner .lg img{max-height:40px}}
 /* ===== v7: movimento ===== */
 /* 1 contagem regressiva */
 .cdband{position:relative;background:var(--surface);padding:26px 0}
@@ -970,7 +972,7 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
 
   <section class="block pres" id="presidente">
     <div class="wrap pres-grid">
-      <img src="img/goergen.jpg" alt="Dr. Silomar Garcia, presidente da UVERGS, à direita, com Jerônimo Goergen" loading="lazy" style="object-position:70% center">
+      <img src="img/presidente.jpg" alt="Dr. Silomar Garcia Silveira, presidente da UVERGS" loading="lazy" width="320" height="400">
       <div>
         <span class="eyebrow f">Mensagem do Presidente</span>
         <blockquote>“Somos os primeiros representantes da sociedade. A Câmara de Vereadores é a caixa de ressonância de toda a sociedade.”</blockquote>
@@ -996,16 +998,20 @@ html:active-view-transition-type(ev) .event[data-ev="aparte"] .ph img{view-trans
         <div>
           <h3 class="sub">Diretoria</h3>
           <div class="board">
-            <div class="member lead"><span class="av"><img src="img/goergen.jpg" alt=""></span><div><b>Dr. Silomar Garcia Silveira</b><small>Presidente · Vereador de Novo Cabrais</small></div></div>
-            <div class="member tbd"><span class="av">VP</span><div><b>Nome a confirmar</b><small>Vice-presidente</small></div></div>
-            <div class="member tbd"><span class="av">SG</span><div><b>Nome a confirmar</b><small>Secretário(a)-geral</small></div></div>
-            <div class="member tbd"><span class="av">TG</span><div><b>Nome a confirmar</b><small>Tesoureiro(a)-geral</small></div></div>
-            <div class="member tbd"><span class="av">CF</span><div><b>Nomes a confirmar</b><small>Conselho fiscal</small></div></div>
+            <div class="member lead"><span class="av"><img class="pf" src="img/presidente-av.jpg" alt=""></span><div><b>Dr. Silomar Garcia Silveira</b><small>Presidente · Vereador de Novo Cabrais</small></div></div>
+            <div class="member"><span class="av">CS</span><div><b>Clairton Neves Sessim</b><small>Presidente do Conselho Deliberativo · Vereador de Tramandaí</small></div></div>
+            <div class="member"><span class="av">EN</span><div><b>Evânia Nunes</b><small>Presidente do Conselho Fiscal · Vereadora de Tapes</small></div></div>
+            <div class="member tbd lead"><span class="av">+</span><div><b>Nomes a confirmar</b><small>Vice-presidente, secretário(a)-geral e tesoureiro(a)</small></div></div>
           </div>
           <h3 class="sub" style="margin-top:32px">Ex-presidentes</h3>
           <div class="expres">
-            <div class="member"><span class="av">RP</span><div><b>Reginaldo Pujol</b><small>Dez mandatos como vereador de Porto Alegre · nome da Medalha de Honra da UVERGS</small></div></div>
-            <div class="member tbd"><span class="av">+</span><div><b>Galeria completa a confirmar</b><small>Nomes e mandatos dos demais ex-presidentes</small></div></div>
+            <div class="member"><span class="av">RP</span><div><b>Reginaldo Pujol</b><small>1979–1982 · Porto Alegre · patrono da Medalha de Honra da UVERGS</small></div></div>
+            <div class="member"><span class="av">JM</span><div><b>Juarez Molinari</b><small>Gestão iniciada em 1983</small></div></div>
+            <div class="member"><span class="av">JD</span><div><b>José Antônio Moreira Davila Junior</b><small>Presidente em 1986 · in memoriam</small></div></div>
+            <div class="member"><span class="av">GS</span><div><b>Giovani Garcia dos Santos</b><small>1991–1992</small></div></div>
+            <div class="member"><span class="av">JF</span><div><b>Jocelei Luiz Consalter Flôres</b><small>1993–1997</small></div></div>
+            <div class="member"><span class="av">AB</span><div><b>Antônio Inácio Baccarin</b><small>Presidente em 2010 e em 2012</small></div></div>
+            <div class="member tbd lead"><span class="av">+</span><div><b>Demais gestões a confirmar</b><small>Desde a fundação, em 23 de maio de 1975</small></div></div>
           </div>
         </div>
         <div>
